@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>User guide | Cutline</title>
+<meta name="description" content="Everything Cutline Beta does, how to ask for edits, and what to expect from Premiere Pro and After Effects.">
+<meta property="og:title" content="User guide | Cutline">
+<meta property="og:description" content="Everything Cutline Beta does, how to ask for edits, and what to expect from Premiere Pro and After Effects.">
+<meta property="og:image" content="https://cutlineai.com/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<header class="top"><div class="wrap">
+ <a class="brand" href="../index.html" aria-label="Cutline home"><svg class="mark" viewBox="0 0 200 112" aria-hidden="true"><rect x="4" y="4" width="112" height="48" fill="#fff"/><rect x="128" y="4" width="68" height="48" fill="#8A8A8A"/><rect x="26" y="60" width="62" height="48" fill="#8A8A8A"/><rect x="100" y="60" width="96" height="48" fill="#fff"/></svg><span>Cutline</span></a>
+ <nav><a href="../features.html">Features</a><a href="../help/index.html" aria-current="page">Help</a><a href="../index.html#beta">Beta access</a></nav>
+</div><span class="bars" aria-hidden="true"><i style="background:#C0C0C0"></i><i style="background:#C0C000"></i><i style="background:#00C0C0"></i><i style="background:#00C000"></i><i style="background:#C000C0"></i><i style="background:#C00000"></i><i style="background:#0000C0"></i></span></header>
+<main>
+<section class="doc"><div class="wrap docgrid"><nav class="side" aria-label="Help pages"><a href="quick-start.html">Quick start</a><a href="user-guide.html" aria-current="page">User guide</a><a href="commands.html">Commands</a><a href="faq.html">FAQ</a><a href="troubleshooting.html">Troubleshooting</a><a href="requirements.html">System requirements</a><a href="licence-and-devices.html">Licence and devices</a></nav><article><h1>User guide</h1><p>Cutline is an assistant editor for Premiere Pro and After Effects. You type what you want in plain English in the Claude desktop app. Cutline makes the edit in your real, open project, reads the result back and tells you what changed.</p>
+<p>It moves the clips and the keyframes. You keep the taste and the final say.</p>
+<h2 id="how-cutline-works">How Cutline works</h2>
+<p>Cutline has three parts.</p>
+<ul><li><strong>The Claude desktop app.</strong> This is where you type. The AI runs on your own Claude account and plan.</li><li><strong>The Cutline extension in Claude.</strong> A small background program that Claude starts for you. It passes requests between Claude and your Adobe apps, and installs updates. It has no window and you never run it by hand.</li><li><strong>The Cutline Beta panel.</strong> A panel inside Premiere Pro and After Effects. It carries out each edit in the app and shows you what's going on.</li></ul>
+<p>The connection between Claude and your Adobe apps stays on your computer. Cutline doesn't upload your media files. What you type, and the results of each step, go to Anthropic, because that's where Claude runs. Those results include clip names, times, track layouts, file names and any frames the AI looks at.</p>
+<h3 id="a-typical-request">A typical request</h3>
+<ol><li>You type: "Cut out 1:20 to 1:45 and close the gap."</li><li>Cutline checks what you're looking at: the open sequence, the playhead and your selection.</li><li>It makes the change.</li><li>It reads the timeline back and tells you what changed, with any warnings. For example, a track that had a gap and might now be out of sync.</li></ol>
+<h2 id="installing">Installing</h2>
+<p>You don't need Terminal, Adobe developer settings or a separate Adobe installer.</p>
+<ol><li>Make sure the Claude desktop app is installed and you're signed in.</li><li>Download the installer from the beta link you were sent.</li><li>Double-click it. It adds Cutline to the Claude desktop app and installs the panel.</li><li>Quit Premiere Pro or After Effects if it's open, then open it again. Adobe apps only look for new panels when they start.</li><li>Choose <strong>Window &gt; Extensions &gt; Cutline Beta</strong>.</li><li>Dock the panel somewhere out of the way and keep it open while you work. Docked is fine.</li></ol>
+<p>Cutline can only work in an app while its panel is open there. Do the last two steps in each app you want to use.</p>
+<p>The first time Cutline uses a tool, Claude may ask for your permission. Allow it.</p>
+<h2 id="your-licence">Your licence</h2>
+<p>You don't need a licence during the beta. For how licences will work from launch, see <a href="licence-and-devices.html">Licence and devices</a>.</p>
+<h2 id="the-panel">The panel</h2>
+<p>The panel looks the same in Premiere Pro and After Effects.</p>
+<h3 id="the-status-pill">The status pill</h3>
+<p>The pill at the top of the panel tells you whether Cutline can work in this app.</p>
+<div class="table"><table><thead><tr><th>Pill</th><th>What it means</th></tr></thead><tbody><tr><td><strong>Ready</strong> (green)</td><td>Cutline can work in this app.</td></tr><tr><td><strong>Connecting…</strong></td><td>It's starting up. Give it a few seconds.</td></tr><tr><td><strong>Updating…</strong></td><td>An update is installing. The panel reloads itself when it's done.</td></tr><tr><td><strong>Not connected</strong> (red)</td><td>The panel can't reach Cutline in Claude. Usually Claude isn't open, or Cutline is switched off in it.</td></tr><tr><td><strong>AI app closed</strong> (red)</td><td>The panel can see that Claude isn't running. Open it and the pill turns green.</td></tr><tr><td><strong>Not ready</strong> (red)</td><td>Connected, but the panel's scripts didn't load. Try <strong>Reload panel</strong> in Settings.</td></tr></tbody></table></div>
+<p>Click the pill to jump to the Home tab, which says what to do.</p>
+<h3 id="tabs">Tabs</h3>
+<p>From left to right: <strong>Home</strong>, a tab for each add-on you've switched on that has one, then <strong>Add-ons</strong> and <strong>Settings</strong>.</p>
+<p><strong>Home</strong></p>
+<ul><li>What to do if the panel isn't connected, step by step.</li><li>The last change Cutline made in this app, with a button to undo it.</li><li><strong>Try saying</strong>: example requests. Click one to copy it, then paste it into Claude.</li><li>A running list of every action in this app this session, with the time, whether it worked and any error.</li></ul>
+<p><strong>Add-ons</strong></p>
+<p>Lists the add-ons you can use. Nothing is on until you click <strong>Add</strong>, and <strong>Remove</strong> takes it away again. The panel reloads itself when you add or remove one. See the add-ons section below.</p>
+<p><strong>Settings</strong></p>
+<ul><li><strong>About</strong>: the connection status, your Premiere Pro or After Effects version, and the versions of Cutline's parts.</li><li><strong>Updates</strong>: when Cutline last checked, and a <strong>Check for updates</strong> button.</li><li><strong>Troubleshooting</strong>: <strong>Reload panel</strong>, and a button that opens Cutline's folder, where it keeps its logs and settings.</li></ul>
+<h2 id="asking-for-edits-well">Asking for edits well</h2>
+<p>Talk to Cutline the way you'd brief an assistant editor. Short and specific works better than long and vague.</p>
+<h3 id="say-where">Say where</h3>
+<ul><li><strong>Times</strong>: "between 1:20 and 1:45", "at 02:13:05", "the first 10 frames". Use the timecode you see on the timeline. If your sequence starts at 01:00:00:00, that's fine. Cutline allows for the start timecode.</li><li><strong>Tracks</strong>: "on V2", "A1 and A2", "every video track".</li><li><strong>Clips and layers by name</strong>: "the clip called Interview_B", "the Logo layer", "the lower third comp".</li><li><strong>What you're looking at</strong>: "this clip", "here", "the selected layers". Cutline reads your playhead, selection and open sequence or comp.</li></ul>
+<h3 id="say-what-you-want">Say what you want</h3>
+<p>Describe the result you want. You don't need to explain which buttons to click.</p>
+<ul><li>"Remove every silence longer than a second on A1 and A2, but keep a little padding."</li><li>"Duck the music on A3 under the dialogue on A1 by 12 dB."</li></ul>
+<p>A request like "do the thing with the audio" leaves Cutline guessing.</p>
+<h3 id="batch-where-it-makes-sense">Batch where it makes sense</h3>
+<p>One request can cover a lot. "Add a cross dissolve on every cut on V1 between 1:00 and 2:00", or "Rename the clips on V1 Interview 1, Interview 2 and so on." Cutline handles the whole list in one go.</p>
+<h3 id="look-first-when-it-matters">Look first when it matters</h3>
+<ul><li>"Show me the frame at the playhead."</li><li>"What's on V2 at 1:10?"</li><li>"List every red marker with its time."</li></ul>
+<p>Looking first is quick, and it means the edit lands where you meant.</p>
+<h3 id="duplicate-before-big-changes">Duplicate before big changes</h3>
+<p>Before anything destructive, like removing dozens of sections or rebuilding a timeline, Cutline offers to duplicate the sequence first. Say yes. In Premiere Pro it also keeps a backup copy of the sequence before big batch edits.</p>
+<h3 id="read-the-report">Read the report</h3>
+<p>After every change, Cutline tells you what it did and where. Read it. If it mentions a warning, like a track that had a gap or clips that might be out of sync, check that spot by eye.</p>
+<h3 id="use-your-house-rules">Use your house rules</h3>
+<p>With the Context add-on switched on, you can drop in a brief, a style guide or a note like "the client hates wipes", and Cutline follows it. See the Context add-on below.</p>
+<h3 id="save-your-ai-allowance">Save your AI allowance</h3>
+<p>Looking at frames, watching YouTube videos and reading very long timelines all use more of your Claude allowance. On a long sequence, ask about a range ("what's on the timeline between 10:00 and 12:00?") rather than the whole thing.</p>
+<p>For more examples, see <a href="commands.html">Commands</a>.</p>
+<h2 id="undo">Undo</h2>
+<p>You have three ways back.</p>
+<ol><li>Say "undo that" in Claude.</li><li>Click the undo button under the last change on the panel's Home tab.</li><li>Press Cmd+Z in the app as normal.</li></ol>
+<p>The first two take back Cutline's whole last change in one go, even if it was dozens of cuts, and tell you what they undid.</p>
+<h3 id="undo-in-premiere-pro">Undo in Premiere Pro</h3>
+<p>Premiere's scripting can't group changes, so one Cutline change can be several steps in Premiere's History panel. That's why "undo that" and the undo button exist. They step Premiere back until the timeline matches how it was just before Cutline's change, and tell you if they couldn't.</p>
+<p>For big batch edits, like removing all the silences, Cutline first saves a copy of the sequence into a backups bin in your project. Undo swaps the original back in and keeps Cutline's version in that bin, so you can even undo the undo.</p>
+<p>If you press Cmd+Z yourself after a Cutline change, you may need to press it a few times. Check the timeline as you go.</p>
+<h3 id="undo-in-after-effects">Undo in After Effects</h3>
+<p>Each Cutline change is exactly one undo step. One Cmd+Z takes back the whole change, however many layers it touched.</p>
+<h3 id="good-to-know">Good to know</h3>
+<ul><li>Cutline only remembers its own changes since the app was last opened. After a restart, use the app's own undo or the backups bin.</li><li>Cutline never saves your project unless you ask it to.</li></ul>
+<h2 id="add-ons">Add-ons</h2>
+<p>Add-ons give Cutline extra tools. They're off until you switch them on.</p>
+<p>To switch one on, open the panel's <strong>Add-ons</strong> tab and click <strong>Add</strong>. The panel reloads, and the add-on's tab appears if it has one. Claude picks up the new tools straight away. If it doesn't seem to, start a new conversation in Claude.</p>
+<p>To switch one off, click <strong>Remove</strong> in the same place.</p>
+<h3 id="context">Context</h3>
+<p>Briefs, handbooks, scripts and notes that Cutline reads before it edits.</p>
+<ul><li>Open the <strong>Context</strong> tab. Drop in a file or click to choose one: PDF, Word (.docx), RTF, HTML, text, Markdown, CSV, subtitle files (.srt, .vtt) or reference images (PNG, JPEG, GIF, WebP).</li><li>You can also write a note, or paste a YouTube link to keep a video's details and transcript as a reference.</li><li>Choose who each item is for. <strong>This project</strong> means the project you have open, so save the project first. <strong>All projects</strong> means everything from now on. <strong>Next request only</strong> is read once, then moved to Used, and <strong>Use again</strong> brings it back.</li><li>Cutline reads your items before it edits and tells you which ones it's following. Each item has a button that shows exactly what Claude reads.</li><li>Pause or delete items at any time.</li><li>You can also just say "remember that the client hates wipes", and Cutline saves it as a note.</li></ul>
+<h3 id="colour">Colour</h3>
+<p>For Premiere Pro. It grades the way a colourist works: measure, balance, match, then one shared look.</p>
+<ul><li><strong>Look</strong> measures a frame of each camera like scopes: black point, mids, white point, clipping, how neutral the greys are, and skin on the face against the skin line.</li><li><strong>Balance</strong> brings the main camera's skin to a natural level and neutralises the greys, with small moves.</li><li><strong>Match</strong> brings another camera, or a new shoot, to a reference. That can be another track in this sequence or a grade you saved earlier.</li><li><strong>Save a reference</strong>: once you're happy with a grade, however you made it, save it by name and match future shoots to it.</li><li><strong>Grade</strong> sets a balance layer per shot and one look layer shared across matched shots, so they stay matched. It can also use Premiere's Color And Contrast zones, Film Color and a soft oval window around the subject.</li><li><strong>Read</strong> and <strong>Clear</strong> show what's on a clip's grade, or take Cutline's grade off so you can start again.</li></ul>
+<p>Every Colour change is one undo step. It never touches the clip's own Lumetri effect, which often holds your camera's conversion LUT.</p>
+<p>Colour uses Premiere's newer scripting through a small helper called the Companion, which Cutline installs for you. Restart Premiere Pro once after the first install. Colour needs Premiere Pro 25.6 or newer.</p>
+<p>Adobe doesn't let any script set Premiere's Color Mode controls, Lumetri curves, colour wheels or HSL Secondary keys, or load LUT files. Cutline tells you if you ask for one of these.</p>
+<p>Skin decides the grade. If something looks too dark or too colourful to you, say so. Your eye wins over the numbers.</p>
+<h3 id="review">Review</h3>
+<p>For Premiere Pro. A review tab for your revision notes.</p>
+<ul><li>Open the <strong>Review</strong> tab with a sequence open. Choose <strong>Linked to timeline</strong>, where the player follows Premiere's playhead, or <strong>Independent</strong>, where you play and scrub here without moving Premiere.</li><li>Click <strong>Render preview</strong> for smooth playback. It renders through Adobe Media Encoder while you keep editing. Without a preview, you see Premiere's frame.</li><li>Type a note at any moment. It's stamped with the time.</li><li>You can show open notes as markers on the timeline.</li><li>Click the button that copies a request for Claude, then paste it into Claude. Cutline works through the open notes in time order. It looks at each frame first, makes the change and marks the note done with a one-line reply saying what it changed. Notes it couldn't do stay open with the reason.</li><li>Notes stay on your computer.</li></ul>
+<h2 id="youtube">YouTube</h2>
+<p>These work without Premiere Pro or After Effects open.</p>
+<ul><li><strong>Read a video.</strong> Share a YouTube link and ask what it says. Cutline gets the title, channel, licence, chapters and the timestamped transcript.</li><li><strong>Watch a video.</strong> Cutline looks at frames from the video to describe shots, pacing and on-screen text, list cut times and average shot length, or look closely at specific moments.</li><li><strong>Search.</strong> Find references, with filters for length, upload date, HD or 4K, subtitles and Creative Commons only.</li></ul>
+<p>The first time Cutline watches a video, it sets up its video tools. That takes about a minute, and it's quick after that.</p>
+<h2 id="limits-and-known-issues">Limits and known issues</h2>
+<p>Adobe's scripting can't do everything. When Cutline can't do something, it tells you and explains how to do it by hand.</p>
+<h3 id="general">General</h3>
+<ul><li><strong>The panel must be open</strong> in an app for Cutline to work there. Docked is fine.</li><li><strong>Claude must be running.</strong> The panel only connects while it is.</li><li><strong>Undo in Premiere Pro</strong> can be several History steps per Cutline change. See the undo section above.</li><li><strong>Undo only covers this session.</strong> Cutline remembers its changes since the app was last opened.</li><li><strong>Very long results get cut short.</strong> On a long timeline, ask about a time range or fewer tracks.</li><li><strong>Check unusual timecode.</strong> Sequences with a non-zero start timecode, and 29.97 or 59.94 drop-frame sequences, are supported. Check cuts by eye on real projects. Every cut is read back and reported, so a miss shows up in the report.</li></ul>
+<h3 id="premiere-pro">Premiere Pro</h3>
+<ul><li>Duplicating clips lays the media down again, so effects, keyframes and speed changes aren't copied. Ask Cutline to copy the effects across afterwards.</li><li>Moving a clip to another track, replacing a clip or un-nesting doesn't carry effects across. Cutline says so in its report.</li><li>Adjustment layers: Cutline reuses one from your project. Scripts can't create them, so if there isn't one, Cutline tells you how to make one.</li><li>Captions: Cutline can make a caption track from an imported caption file, but it can't read the caption text back. Check it in the timeline.</li><li>Some Premiere versions don't let scripts remove effects, set poster frames or detach proxies. Cutline tells you, and you do that step by hand.</li><li>Premiere may refuse to change some settings on an existing sequence, often the frame rate. The fix is a new sequence, and Cutline can make one.</li><li>Scripts can switch Scale to Frame Size on, but they can't switch it off.</li><li>Scene Edit Detection and Auto Reframe keep Premiere busy until they finish. Long clips take minutes.</li><li>EDL import may show Premiere's own settings dialog.</li><li>Export progress is only tracked for exports queued since Premiere or the panel last started.</li></ul>
+<h3 id="after-effects">After Effects</h3>
+<ul><li>Rendering in After Effects keeps it busy until it's done. For long renders, Cutline can send the queue to Adobe Media Encoder instead.</li><li>To delete layers, name them. Cutline won't delete "whatever's selected", and it won't delete locked layers.</li><li>On After Effects versions before 2023, setting a track matte moves the matte layer directly above.</li></ul>
+<h3 id="adobe-s-panel-system">Adobe's panel system</h3>
+<p>Cutline's panel uses Adobe's CEP extension system. Adobe is gradually moving its apps to a newer system called UXP.</p>
+<h2 id="updates">Updates</h2>
+<p>New tools and fixes install themselves in the background while Claude is open. The panel reloads on its own when an update arrives.</p>
+<ul><li>To check now, click <strong>Check for updates</strong> in the panel's Settings tab, or ask Claude to "check for Cutline updates".</li><li>Updates are signed. Cutline only installs an update that carries Cutline's signature and matches its checksum.</li><li>Updates wait until Cutline isn't in the middle of an edit.</li><li>Now and then a bigger update needs a new installer. Cutline tells you when that happens.</li><li>Cutline's settings in Claude include an option to install tool updates automatically. Leave it on.</li></ul>
+<h2 id="uninstalling">Uninstalling</h2>
+<ol><li>In Claude, go to <strong>Settings &gt; Extensions</strong>, find Cutline Beta and uninstall it.</li><li>If you'd also like the panel and Cutline's saved data removed from your Mac, email <a href="mailto:hello@cutlineai.com">hello@cutlineai.com</a> and we'll help.</li></ol>
+<p>Cutline keeps its settings, logs, Context items, Review notes and saved Colour references in its own folder. The button under Troubleshooting in the panel's Settings tab shows you where.</p>
+<p>Uninstalling never touches your projects, sequences or media. Anything Cutline already did in a project stays as normal Premiere Pro or After Effects edits.</p>
+<h2 id="getting-help">Getting help</h2>
+<ul><li><a href="troubleshooting.html">Troubleshooting</a> covers the common problems.</li><li>Email <a href="mailto:hello@cutlineai.com">hello@cutlineai.com</a> with your Mac's macOS version, your Premiere Pro or After Effects version, what you typed and what happened.</li></ul></article></div></section>
+</main>
+<footer class="foot"><div class="wrap">
+ <div class="cols">
+  <div><a class="brand small" href="../index.html"><svg class="mark" viewBox="0 0 200 112" aria-hidden="true"><rect x="4" y="4" width="112" height="48" fill="#fff"/><rect x="128" y="4" width="68" height="48" fill="#8A8A8A"/><rect x="26" y="60" width="62" height="48" fill="#8A8A8A"/><rect x="100" y="60" width="96" height="48" fill="#fff"/></svg><span>Cutline</span></a><p>AI that does the clicking in Premiere Pro and After Effects. You make the calls.</p></div>
+  <div><h4>Product</h4><a href="../features.html">Features</a><a href="../help/index.html">Help</a><a href="../help/requirements.html">Requirements</a></div>
+  <div><h4>Legal</h4><a href="../legal/terms.html">Terms of sale and use</a><a href="../legal/licence.html">Licence agreement</a><a href="../legal/privacy.html">Privacy</a><a href="../legal/refunds.html">Refunds</a></div>
+  <div><h4>Contact</h4><span class="select">hello@cutlineai.com</span><a href="https://www.instagram.com/editcutline/" rel="me">Instagram</a><a href="https://x.com/editcutline" rel="me">X</a><a href="https://www.youtube.com/@CutlineAI" rel="me">YouTube</a></div>
+ </div>
+ <p class="tm">Cutline is independent software. Adobe, Premiere Pro and After Effects are trademarks of Adobe. Claude is a trademark of Anthropic. ChatGPT is a trademark of OpenAI. Cutline isn't made, endorsed or sponsored by any of them. &copy; 2026 Cutline.</p>
+</div></footer>
+</body>
+</html>

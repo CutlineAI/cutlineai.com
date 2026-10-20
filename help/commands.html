@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Commands | Cutline</title>
+<meta name="description" content="Example requests to type into Claude for Premiere Pro, After Effects, the add-ons and YouTube.">
+<meta property="og:title" content="Commands | Cutline">
+<meta property="og:description" content="Example requests to type into Claude for Premiere Pro, After Effects, the add-ons and YouTube.">
+<meta property="og:image" content="https://cutlineai.com/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<header class="top"><div class="wrap">
+ <a class="brand" href="../index.html" aria-label="Cutline home"><svg class="mark" viewBox="0 0 200 112" aria-hidden="true"><rect x="4" y="4" width="112" height="48" fill="#fff"/><rect x="128" y="4" width="68" height="48" fill="#8A8A8A"/><rect x="26" y="60" width="62" height="48" fill="#8A8A8A"/><rect x="100" y="60" width="96" height="48" fill="#fff"/></svg><span>Cutline</span></a>
+ <nav><a href="../features.html">Features</a><a href="../help/index.html" aria-current="page">Help</a><a href="../index.html#beta">Beta access</a></nav>
+</div><span class="bars" aria-hidden="true"><i style="background:#C0C0C0"></i><i style="background:#C0C000"></i><i style="background:#00C0C0"></i><i style="background:#00C000"></i><i style="background:#C000C0"></i><i style="background:#C00000"></i><i style="background:#0000C0"></i></span></header>
+<main>
+<section class="doc"><div class="wrap docgrid"><nav class="side" aria-label="Help pages"><a href="quick-start.html">Quick start</a><a href="user-guide.html">User guide</a><a href="commands.html" aria-current="page">Commands</a><a href="faq.html">FAQ</a><a href="troubleshooting.html">Troubleshooting</a><a href="requirements.html">System requirements</a><a href="licence-and-devices.html">Licence and devices</a></nav><article><h1>Commands</h1><p>These are real requests you can type into Claude. Copy one, change the times, tracks and names to match your project, and send it.</p>
+<h2 id="tips">Tips</h2>
+<ul><li>Times are what you see on your timeline: <code>1:20</code>, <code>00:01:20:12</code>, "the first 10 frames".</li><li>Tracks are <code>V1</code>, <code>V2</code>, <code>A1</code> and so on. You can name clips and layers, or say "this clip" or "the selected layers".</li><li>Cutline reports what it changed after every request. Read it.</li><li>Changed your mind? Say "undo that".</li></ul>
+<h2 id="premiere-pro">Premiere Pro</h2>
+<h3 id="cuts-and-trims">Cuts and trims</h3>
+<ul><li><code>Razor V1 and A1 at 1:10, 1:32 and 2:05.</code></li><li><code>Trim 12 frames off the end of the clip at the playhead and ripple everything after it.</code></li><li><code>Roll the cut at the playhead 6 frames later.</code></li><li><code>Slip the clip at 2:10 half a second later.</code></li></ul>
+<h3 id="gaps-ripple-and-silences">Gaps, ripple and silences</h3>
+<ul><li><code>Cut out 1:20 to 1:45 and close the gap.</code></li><li><code>Lift 3:00 to 3:08 but leave the gap.</code></li><li><code>Close all the gaps, keeping picture and sound in sync.</code></li><li><code>Are there any black holes where every video track is empty?</code></li><li><code>Find the silences on A1 and A2 and remove them.</code></li><li><code>Find pauses longer than a second on A1 and just mark them for now.</code></li></ul>
+<h3 id="switching-and-moving">Switching and moving</h3>
+<ul><li><code>Turn off V2 between 2:00 and 2:10.</code></li><li><code>Move the selected clips 2 seconds later.</code></li><li><code>Swap the clip at 1:30 on V1 for Interview_B, starting 10 seconds in.</code></li></ul>
+<h3 id="markers">Markers</h3>
+<ul><li><code>Add a red marker at the playhead called "check audio".</code></li><li><code>List every red marker with its time.</code></li><li><code>Turn the marker at 2:30 into a chapter marker called "Part two".</code></li><li><code>Run scene edit detection on the selected clip and add markers at each cut.</code></li></ul>
+<h3 id="titles-and-graphics">Titles and graphics</h3>
+<ul><li><code>Add the lower third template from my Desktop at 0:15 with "Guest Name" and "Director".</code></li><li><code>Change the title text on V3 to "Coming up next".</code></li><li><code>Make a caption track from the SRT I just imported.</code></li></ul>
+<h3 id="audio">Audio</h3>
+<ul><li><code>Set the music on A3 to -18 dB.</code></li><li><code>Duck the music on A3 by 12 dB under the dialogue on A1.</code></li><li><code>Fade the music out over the last two seconds.</code></li></ul>
+<h3 id="transitions-and-effects">Transitions and effects</h3>
+<ul><li><code>Add a cross dissolve on every cut on V1 between 1:00 and 2:00.</code></li><li><code>Apply Gaussian Blur at 30 to the selected clips.</code></li><li><code>Copy the effects from the clip at 0:10 onto every clip on V2.</code></li><li><code>Crop 10% off the top and bottom of this clip.</code></li><li><code>Warm the clips on V1 up a touch and bring saturation down to 90.</code></li></ul>
+<h3 id="motion-keyframes-and-speed">Motion, keyframes and speed</h3>
+<ul><li><code>Scale the clip at the playhead to 110% and move it 50 pixels left.</code></li><li><code>Add a slow push in on this clip, 100% to 110% over its length.</code></li><li><code>Slow this clip to 50% with optical flow.</code></li><li><code>Freeze the frame at the playhead for 2 seconds.</code></li></ul>
+<h3 id="sequences-and-reframing">Sequences and reframing</h3>
+<ul><li><code>Duplicate this sequence and call it "v2 client notes".</code></li><li><code>Make a 9:16 version of this sequence.</code></li><li><code>Make a new sequence from 2:00 to 3:30 of this one.</code></li><li><code>Add two video tracks and name V4 "Graphics".</code></li></ul>
+<h3 id="project-and-bins">Project and bins</h3>
+<ul><li><code>Import the Day 2 folder from my Desktop into a bin called "Day 2".</code></li><li><code>Make bins Footage/Cam A and Footage/Cam B and move the A-cam clips into Cam A.</code></li><li><code>Which clips are offline?</code></li><li><code>Rename the clips on V1 "Interview 1", "Interview 2" and so on.</code></li><li><code>Save the project.</code></li></ul>
+<h3 id="looking-and-checking">Looking and checking</h3>
+<ul><li><code>What have I got selected?</code></li><li><code>Show me the frame at the playhead.</code></li><li><code>What's on V2 at 1:10?</code></li></ul>
+<h3 id="export">Export</h3>
+<ul><li><code>Export this sequence with an H.264 1080p preset to my Desktop.</code></li><li><code>Export an XML of this sequence for Resolve.</code></li><li><code>Export an AAF for the sound mix with 2-second handles.</code></li></ul>
+<h2 id="after-effects">After Effects</h2>
+<h3 id="comps">Comps</h3>
+<ul><li><code>What's in this comp?</code></li><li><code>Make a new 1080x1920 comp called "Vertical", 25 fps, 15 seconds.</code></li><li><code>Precompose the selected layers.</code></li></ul>
+<h3 id="layers">Layers</h3>
+<ul><li><code>Add a null and parent the selected layers to it.</code></li><li><code>Stagger the selected layers by 5 frames.</code></li><li><code>Use the "Matte" layer as an alpha matte for the footage under it.</code></li></ul>
+<h3 id="text">Text</h3>
+<ul><li><code>Change the title text to "Coming up next".</code></li><li><code>Make all the text layers Inter Bold, 64 px, white.</code></li><li><code>Set the Title essential property on the lower third to "Guest Name".</code></li></ul>
+<h3 id="keyframes-and-easing">Keyframes and easing</h3>
+<ul><li><code>Fade the title in over the first 10 frames.</code></li><li><code>Make all the position keyframes on the selected layer easy ease, 75% influence.</code></li><li><code>Add wiggle(2, 20) to the camera's position.</code></li></ul>
+<h3 id="effects">Effects</h3>
+<ul><li><code>Add Gaussian Blur at 15 to the background layer.</code></li></ul>
+<h3 id="masks">Masks</h3>
+<ul><li><code>Add an ellipse mask to the footage with 80 pixels of feather.</code></li><li><code>Invert Mask 1 on the Background layer.</code></li></ul>
+<h3 id="frames-and-rendering">Frames and rendering</h3>
+<ul><li><code>Show me the comp at 3 seconds.</code></li><li><code>Add this comp to the render queue with my ProRes template, saving to my Desktop.</code></li><li><code>Render the queue through Media Encoder.</code></li></ul>
+<h2 id="colour-add-on-premiere-pro">Colour add-on (Premiere Pro)</h2>
+<ul><li><code>Look at V1 and V2 at 10:00 and tell me how the skin and greys read.</code></li><li><code>Balance the close-up on V1 for skin, then match V2 to it.</code></li><li><code>Save this grade as a reference called "Studio interview".</code></li><li><code>Match each camera on this new shoot to my "Studio interview" reference.</code></li><li><code>Clear the grade on V2 and start again.</code></li></ul>
+<h2 id="context-add-on">Context add-on</h2>
+<ul><li><code>Read the brief before you start.</code></li><li><code>Remember that the client hates wipes.</code></li><li><code>Keep this video as a style reference for this project:</code> then paste the YouTube link.</li></ul>
+<h2 id="review-add-on-premiere-pro">Review add-on (Premiere Pro)</h2>
+<ul><li><code>Action my review notes.</code></li><li><code>Go through my open notes in order and tell me which ones you couldn't do.</code></li></ul>
+<h2 id="youtube">YouTube</h2>
+<p>For the first two, paste the YouTube link after the request.</p>
+<ul><li><code>What does this video say about grading skin tones?</code></li><li><code>Watch this edit and give me a shot list with cut times.</code></li><li><code>Find Creative Commons drone shots of a coastline in 4K.</code></li></ul>
+<p>Only put footage in your edit when you have the right to use it.</p>
+<h2 id="undo-and-status">Undo and status</h2>
+<ul><li><code>Undo that.</code></li><li><code>Is Cutline connected to Premiere and After Effects?</code></li><li><code>Check for Cutline updates.</code></li></ul>
+<p>For how to phrase requests well, see the <a href="user-guide.html">User guide</a>.</p></article></div></section>
+</main>
+<footer class="foot"><div class="wrap">
+ <div class="cols">
+  <div><a class="brand small" href="../index.html"><svg class="mark" viewBox="0 0 200 112" aria-hidden="true"><rect x="4" y="4" width="112" height="48" fill="#fff"/><rect x="128" y="4" width="68" height="48" fill="#8A8A8A"/><rect x="26" y="60" width="62" height="48" fill="#8A8A8A"/><rect x="100" y="60" width="96" height="48" fill="#fff"/></svg><span>Cutline</span></a><p>AI that does the clicking in Premiere Pro and After Effects. You make the calls.</p></div>
+  <div><h4>Product</h4><a href="../features.html">Features</a><a href="../help/index.html">Help</a><a href="../help/requirements.html">Requirements</a></div>
+  <div><h4>Legal</h4><a href="../legal/terms.html">Terms of sale and use</a><a href="../legal/licence.html">Licence agreement</a><a href="../legal/privacy.html">Privacy</a><a href="../legal/refunds.html">Refunds</a></div>
+  <div><h4>Contact</h4><span class="select">hello@cutlineai.com</span><a href="https://www.instagram.com/editcutline/" rel="me">Instagram</a><a href="https://x.com/editcutline" rel="me">X</a><a href="https://www.youtube.com/@CutlineAI" rel="me">YouTube</a></div>
+ </div>
+ <p class="tm">Cutline is independent software. Adobe, Premiere Pro and After Effects are trademarks of Adobe. Claude is a trademark of Anthropic. ChatGPT is a trademark of OpenAI. Cutline isn't made, endorsed or sponsored by any of them. &copy; 2026 Cutline.</p>
+</div></footer>
+</body>
+</html>
