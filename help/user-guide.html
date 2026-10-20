@@ -12,7 +12,7 @@
 <link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:ital,wght@0,400;0,500;0,600;1,400&display=swap">
-<link rel="stylesheet" href="../assets/site.css?v=1792506187">
+<link rel="stylesheet" href="../assets/site.css?v=1792506298">
 </head>
 <body>
 <header class="top"><div class="wrap">
@@ -36,17 +36,26 @@
 <h2 id="your-licence" data-marker="Your licence">Your licence</h2>
 <p>You don't need a licence during the beta. For how licences will work from launch, see <a href="licence-and-devices.html">Licence and devices</a>.</p>
 <h2 id="the-panel" data-marker="The panel">The panel</h2>
-<p>The panel looks the same in Premiere Pro and After Effects.</p>
-<h3 id="the-status-pill">The status pill</h3>
-<p>The pill at the top of the panel tells you whether Cutline can work in this app.</p>
-<div class="table"><table><thead><tr><th>Pill</th><th>What it means</th></tr></thead><tbody><tr><td><strong>Ready</strong> (green)</td><td>Cutline can work in this app.</td></tr><tr><td><strong>Connecting…</strong></td><td>It's starting up. Give it a few seconds.</td></tr><tr><td><strong>Updating…</strong></td><td>An update is installing. The panel reloads itself when it's done.</td></tr><tr><td><strong>Not connected</strong> (red)</td><td>The panel can't reach Cutline in Claude. Usually Claude isn't open, or Cutline is switched off in it.</td></tr><tr><td><strong>AI app closed</strong> (red)</td><td>The panel can see that Claude isn't running. Open it and the pill turns green.</td></tr><tr><td><strong>Not ready</strong> (red)</td><td>Connected, but the panel's scripts didn't load. Try <strong>Reload panel</strong> in Settings.</td></tr></tbody></table></div>
-<p>Click the pill to jump to the Home tab, which says what to do.</p>
+<p>The panel looks the same in Premiere Pro and After Effects. It rearranges itself for however you dock it: narrow, wide, or short under the timeline.</p>
+<h3 id="the-top-bar">The top bar</h3>
+<p>Along the top are the Cutline name, a status light, and the tab buttons on the right. Hover over a tab button to see its name.</p>
+<h3 id="the-status-light">The status light</h3>
+<p>The small light next to the name tells you whether Cutline can work in this app. Hover over it to see what it says.</p>
+<div class="table"><table><thead><tr><th>Light</th><th>Says</th><th>What it means</th></tr></thead><tbody><tr><td>Green</td><td><strong>Ready</strong></td><td>Cutline can work in this app.</td></tr><tr><td>Grey</td><td><strong>Connecting…</strong></td><td>It's starting up. Give it a few seconds.</td></tr><tr><td>Green</td><td><strong>Updating…</strong></td><td>An update is installing. The panel reloads itself when it's done.</td></tr><tr><td>Hollow</td><td><strong>Not connected</strong></td><td>The panel can't reach Cutline in Claude. Usually Claude isn't open, or Cutline is switched off in it.</td></tr><tr><td>Hollow</td><td><strong>Claude closed</strong></td><td>The panel can see that Claude isn't running. Open it and the light turns green.</td></tr><tr><td>Hollow</td><td><strong>Not ready</strong></td><td>Connected, but the panel's scripts didn't load. Try <strong>Reload panel</strong> in Settings.</td></tr></tbody></table></div>
+<p>Click the light to jump to the Home tab, which says what to do.</p>
+<h3 id="the-status-bar">The status bar</h3>
+<p>Along the bottom of the panel, on every tab:</p>
+<ul><li>The sequence (Premiere Pro) or comp (After Effects) that's open, so you can see what Cutline is looking at.</li><li>The playhead timecode. Click it to copy it.</li><li>How many clips or layers are selected.</li><li><strong>Undo last change</strong>. Hover over it to see what it will undo. It's greyed out until Cutline has changed something.</li></ul>
 <h3 id="tabs">Tabs</h3>
-<p>From left to right: <strong>Home</strong>, a tab for each add-on you've switched on that has one, then <strong>Add-ons</strong> and <strong>Settings</strong>.</p>
+<p>From left to right: <strong>Home</strong>, a tab for each add-on you've switched on that has one, then <strong>Add-ons</strong>, <strong>History</strong> and <strong>Settings</strong>.</p>
 <p><strong>Home</strong></p>
-<ul><li>What to do if the panel isn't connected, step by step.</li><li>The last change Cutline made in this app, with a button to undo it.</li><li><strong>Try saying</strong>: example requests. Click one to copy it, then paste it into Claude.</li><li>A running list of every action in this app this session, with the time, whether it worked and any error.</li></ul>
+<p>Ideas for things to ask for, shown as tiles with a small picture of the edit.</p>
+<ul><li>If the panel isn't connected, a box at the top says what to do, step by step.</li><li>Search the ideas, or pick a category: <strong>All</strong>, <strong>Cutting</strong>, <strong>Audio</strong>, <strong>Graphics</strong>, <strong>Output</strong> or <strong>Ask</strong>.</li><li>Click a tile to copy its request, then paste it into Claude.</li></ul>
+<p>The tiles are only examples. You can ask for any edit in your own words.</p>
 <p><strong>Add-ons</strong></p>
 <p>Lists the add-ons you can use. Nothing is on until you click <strong>Add</strong>, and <strong>Remove</strong> takes it away again. The panel reloads itself when you add or remove one. See the add-ons section below.</p>
+<p><strong>History</strong></p>
+<p>Everything Cutline looked at or changed in this app this session, newest first. Each line has the time and says <strong>Edit</strong>, <strong>Look</strong> or <strong>Failed</strong>. A failed one shows the error underneath.</p>
 <p><strong>Settings</strong></p>
 <ul><li><strong>About</strong>: the connection status, your Premiere Pro or After Effects version, and the versions of Cutline's parts.</li><li><strong>Updates</strong>: when Cutline last checked, and a <strong>Check for updates</strong> button.</li><li><strong>Troubleshooting</strong>: <strong>Reload panel</strong>, and a button that opens Cutline's folder, where it keeps its logs and settings.</li></ul>
 <h2 id="asking-for-edits-well" data-marker="Asking for edits well">Asking for edits well</h2>
@@ -73,10 +82,10 @@
 <p>For more examples, see <a href="commands.html">Commands</a>.</p>
 <h2 id="undo" data-marker="Undo">Undo</h2>
 <p>You have three ways back.</p>
-<ol><li>Say "undo that" in Claude.</li><li>Click the undo button under the last change on the panel's Home tab.</li><li>Press Cmd+Z in the app as normal.</li></ol>
+<ol><li>Say "undo that" in Claude.</li><li>Click <strong>Undo last change</strong> at the bottom of the panel.</li><li>Press Cmd+Z in the app as normal.</li></ol>
 <p>The first two take back Cutline's whole last change in one go, even if it was dozens of cuts, and tell you what they undid.</p>
 <h3 id="undo-in-premiere-pro">Undo in Premiere Pro</h3>
-<p>Premiere's scripting can't group changes, so one Cutline change can be several steps in Premiere's History panel. That's why "undo that" and the undo button exist. They step Premiere back until the timeline matches how it was just before Cutline's change, and tell you if they couldn't.</p>
+<p>Premiere's scripting can't group changes, so one Cutline change can be several steps in Premiere's History panel. That's why "undo that" and <strong>Undo last change</strong> exist. They step Premiere back until the timeline matches how it was just before Cutline's change, and tell you if they couldn't.</p>
 <p>For big batch edits, like removing all the silences, Cutline first saves a copy of the sequence into a backups bin in your project. Undo swaps the original back in and keeps Cutline's version in that bin, so you can even undo the undo.</p>
 <p>If you press Cmd+Z yourself after a Cutline change, you may need to press it a few times. Check the timeline as you go.</p>
 <h3 id="undo-in-after-effects">Undo in After Effects</h3>
@@ -133,6 +142,6 @@
  </div>
  <p class="tm">Cutline is independent software. Adobe, Premiere Pro and After Effects are trademarks of Adobe. Claude is a trademark of Anthropic. ChatGPT is a trademark of OpenAI. Cutline isn't made, endorsed or sponsored by any of them. &copy; 2026 Cutline.</p>
 </div></footer><div class="seq" id="seq" aria-hidden="true"><div class="seq-track"><div class="seq-marks" id="seq-marks"></div><div class="seq-head" id="seq-head"></div></div><span class="seq-tc" id="seq-tc">00:00:00:00</span></div>
-<script src="../assets/site.js?v=1792506187" defer></script>
+<script src="../assets/site.js?v=1792506298" defer></script>
 </body>
 </html>
