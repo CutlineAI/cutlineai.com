@@ -1,6 +1,5 @@
 /* Home page: the site is a sequence. Layout: an edit workspace up top (pitch + command left, program monitor right,
    timeline full width), then shots and scenes, ending on a slate. */
-.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 body.home{padding-bottom:34px}
 body.home main>section{padding-block:0}
 
@@ -21,11 +20,12 @@ body.home .stage{padding-top:0}
 .caret{display:inline-block;width:2px;height:1.2em;background:var(--white);margin-left:2px;transform:translateY(.15em);animation:blink 1s steps(1) infinite}
 @keyframes blink{50%{opacity:0}}
 .try{color:var(--grey);font-size:var(--step-1);margin-top:6px}
-.try-list{display:flex;flex-direction:column;align-items:flex-start;gap:2px}
-.try-list{flex-direction:row;flex-wrap:wrap;gap:4px 18px}
-.try-list button{font:500 16px var(--body);color:var(--soft);background:none;border:0;padding:6px 0;cursor:pointer;text-align:left;text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:4px}
-.try-list button:hover{color:var(--white);text-decoration-color:var(--grey)}
-.try-list button[aria-pressed="true"]{color:var(--white);text-decoration-color:var(--white)}
+.try-list{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.try-list button{display:flex;flex-direction:column;gap:6px;background:#0E0E10;border:1px solid var(--line);border-radius:3px;padding:0 0 8px;color:var(--soft);font:500 13px/1.3 var(--body);text-align:left;cursor:pointer;overflow:hidden}
+.try-list button span:last-child{padding:0 8px}
+.try-list button .tile-art{aspect-ratio:16/9;background:#161618}
+.try-list button:hover{border-color:var(--grey);color:var(--white)}
+.try-list button[aria-pressed="true"]{border-color:var(--white);color:var(--white)}
 .demo.busy .try-list button{cursor:progress}
 .undo{align-self:flex-start;margin-top:4px;font:600 16px var(--body);color:var(--black);background:var(--white);border:0;padding:10px 16px;cursor:pointer}
 .undo:hover{background:#E6E6E6}
@@ -37,9 +37,6 @@ body.home .stage{padding-top:0}
 .burn{position:absolute;left:50%;bottom:7%;transform:translateX(-50%);display:flex;gap:14px;background:rgba(0,0,0,.85);padding:4px 10px;font-size:clamp(11px,1vw,14px);font-weight:500;color:#DADADA;font-variant-numeric:tabular-nums;white-space:nowrap}
 .burn b{font-weight:500}
 .picture .mon-strap{position:absolute;left:5%;bottom:18%;display:flex;flex-direction:column;align-items:flex-start;max-width:90%}
-.strap-cmd{background:var(--white);color:var(--black);font-family:var(--display);font-weight:800;text-transform:uppercase;font-size:clamp(14px,1.9vw,28px);line-height:1;padding:.45em .7em .38em;text-decoration:none}
-.strap-bars{display:block;align-self:stretch;height:4px;background:linear-gradient(90deg,#C0C0C0 0 14.28%,#C0C000 0 28.57%,#00C0C0 0 42.85%,#00C000 0 57.14%,#C000C0 0 71.42%,#C00000 0 85.71%,#0000C0 0)}
-.strap-res{background:var(--black);color:var(--white);font-weight:500;font-size:clamp(11px,1.15vw,17px);padding:.4em .9em .45em}
 .res-mark{position:absolute;left:.5em;right:-.5em;bottom:-.55em;width:auto;height:.7em;overflow:visible}
 .res-mark path,.marks path{fill:none;stroke:var(--marker);stroke-linecap:round;stroke-linejoin:round}
 .res-mark path{stroke-width:4;vector-effect:non-scaling-stroke}
@@ -101,15 +98,6 @@ svg.draw path{stroke-dasharray:100 100;animation:draw .32s linear .16s both}
 /* the EDL */
 .edl-sec{padding-top:clamp(80px,11vw,150px)!important}
 .edl-intro{color:var(--soft);max-width:40em;margin-top:-6px}
-.edl-scroll{overflow-x:auto;margin-top:26px;border-top:1px solid var(--line)}
-.edl{width:100%;min-width:720px;border-collapse:collapse;font-size:16px}
-.edl th{font-family:var(--body);font-weight:500;font-size:13px;color:var(--grey);text-align:left;padding:12px 18px 10px 0;border-bottom:1px solid var(--line)}
-.edl td{padding:13px 18px 13px 0;border-bottom:1px solid #1C1C20;vertical-align:top;color:var(--soft)}
-.edl td:nth-child(1){font-variant-numeric:tabular-nums;color:var(--grey);width:64px}
-.edl td:nth-child(2){color:var(--grey);width:86px;white-space:nowrap}
-.edl td:nth-child(3){color:var(--white);font-weight:500;width:40%}
-.edl tr.soon td{color:#55555B}
-.edl tr.soon td:nth-child(3){color:#77777C}
 
 .need-sec{padding-top:clamp(72px,9vw,120px)!important}
 .need-sec p{color:var(--soft)}
@@ -125,14 +113,10 @@ svg.draw path{stroke-dasharray:100 100;animation:draw .32s linear .16s both}
 .slate-strap .strap-res a{color:var(--white)}
 
 /* the sequence ruler that follows the scroll */
-.seq{position:fixed;left:0;right:0;bottom:0;z-index:6;height:34px;background:rgba(0,0,0,.92);border-top:1px solid var(--line);display:flex;align-items:center;gap:14px;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px));padding-bottom:env(safe-area-inset-bottom,0px)}
-.seq-track{position:relative;flex:1;height:100%;background:repeating-linear-gradient(90deg,#2A2A2F 0 1px,transparent 1px 2%) bottom/100% 7px no-repeat}
-.seq-marks i{position:absolute;top:7px;width:8px;height:8px;margin-left:-4px;background:var(--grey);clip-path:polygon(0 0,100% 0,100% 60%,50% 100%,0 60%)}
-.seq-head{position:absolute;top:4px;bottom:0;width:2px;margin-left:-1px;background:var(--white)}
-.seq-tc{font-size:13px;font-variant-numeric:tabular-nums;color:var(--soft);min-width:9ch;text-align:right}
 .home .foot{margin-top:0;border-top:0}
 
 @media (max-width:860px){
+  .try-list{grid-template-columns:repeat(2,minmax(0,1fr))}
   .demo-grid{grid-template-columns:minmax(0,1fr)}
   .monitor{order:-1}
   .sim{margin-top:6px}

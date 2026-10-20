@@ -193,6 +193,12 @@
     addEventListener("scroll", onScroll, { passive: true }); onScroll();
   } else if (lane) lane.dataset.shot = "static";
 
+  /* ---------------------------------------------------------------- tiles copy their line */
+  document.querySelectorAll("[data-copy]").forEach(b => b.addEventListener("click", async () => {
+    try { await navigator.clipboard.writeText(b.dataset.copy); } catch (e) { return; }
+    b.classList.add("copied"); setTimeout(() => b.classList.remove("copied"), 1400);
+  }));
+
   /* ---------------------------------------------------------------- scroll timecode */
   const seq = $("#seq");
   if (seq) {
