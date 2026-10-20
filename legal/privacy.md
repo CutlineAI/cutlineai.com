@@ -3,13 +3,13 @@
 What Cutline and this website collect, why, and what you can ask us to do with it.
 
 
-Last updated 20 October 2026.
+Version 2026-10-20. Last updated 20 October 2026.
 
 ## The short version
 
 - Your footage and projects stay on your computer. Cutline never uploads your media.
 - What you type, and what Cutline reports back, goes to your own AI provider, because that's where the AI runs. We never see it.
-- We see very little: your email if you buy or write to us, and your licence key and a random device ID when Cutline checks your licence.
+- We see very little: your email if you buy or write to us, and a scrambled (hashed) copy of your licence key, a random device ID and your computer's name when Cutline checks your licence.
 - No analytics, no tracking, no advertising cookies, on this site or in Cutline.
 
 ## Who we are
@@ -32,9 +32,20 @@ Your AI provider handles this under its own terms and privacy policy, and your a
 
 ### What comes to us
 
-- **Licence checks** (from public launch): your licence key, a random device ID that Cutline creates (not your Mac's serial number), your computer's name (so you can see where your licence is active when you move it), and Cutline's version. Our licence service runs on Cloudflare.
-- **Updates:** Cutline checks for signed updates and add-ons, and downloads them from our update server on GitHub. From public launch these checks include your licence key. They never include your projects, files or conversations.
-- **No usage analytics.** Cutline doesn't report how you use it.
+Cutline's licence service runs on Cloudflare (Workers and KV storage) at updates.cutlineai.com. It keeps only what it needs to run licences, trials and updates:
+
+- **Your licence key, hashed.** We store a SHA-256 hash of the key, never the key itself.
+- **A random device ID** that Cutline creates on your computer. It isn't your Mac's serial number or any hardware ID.
+- **Your computer's name**, so you can see where your licence is active when you move it. You can change it in the panel.
+- **When the key was activated** on that computer, and when it last checked in.
+- **When you moved your licence**: up to 3 move times in the last 30 days, so we can apply the move limit.
+- **Gumroad's answer** about whether your key and subscription are valid, cached for 12 hours so Cutline doesn't ask Gumroad every time.
+- **Your acceptance of these terms**: the terms version, when you accepted, and on which computer.
+- **Free trials**: the device ID, the computer name, when the trial started and ends, and a SHA-256 hash of your network's IP address. The hashed IP is used only to limit free trials to 3 per network.
+
+**Licence checks** also ask Gumroad's licence service whether your key is valid. **Update checks** send your licence key and device ID, so signed updates and add-ons only go to valid licences. They never include your projects, files or conversations.
+
+There are **no usage analytics**. Cutline doesn't report how you use it.
 
 ### Other services Cutline contacts
 
@@ -57,6 +68,8 @@ If you write to hello@cutlineai.com, we use what you send to answer you. If you 
 ## Why we're allowed to use it
 
 - To provide Cutline and your licence: because it's necessary for our contract with you.
+- To limit free trials to 3 per network, using a hashed IP address kept for 31 days: because we have a legitimate interest in stopping trial abuse.
+- To keep a record that you accepted these terms: because we have a legitimate interest in being able to show it.
 - To keep tax and accounting records: because the law requires it.
 - To answer your emails and keep Cutline secure: because we have a legitimate interest in doing so.
 
@@ -66,8 +79,12 @@ We'll only send you marketing email if you've asked for it, and you can stop it 
 
 | Data | How long |
 | --- | --- |
+| Hashed licence key, device ID, computer name, activation and last check-in | While your licence is active, then 12 months |
+| Licence move times | 30 days, rolling |
+| Gumroad's licence answer | 12 hours |
+| Free trial records, including the hashed network IP | 31 days |
+| Record of accepting these terms | While your licence is active, then 6 years |
 | Purchase and tax records | 6 years, as UK tax law requires |
-| Licence data | While your licence is active, then 12 months |
 | Support emails | 2 years after the conversation ends |
 
 ## Who else handles it
@@ -75,6 +92,11 @@ We'll only send you marketing email if you've asked for it, and you can stop it 
 We use a few providers to run Cutline: Gumroad (sales), Cloudflare (licence service and email forwarding), GitHub (updates and this website) and Google (fonts). Some of them process data in the United States. Where they do, they protect it with the safeguards UK law requires, such as the UK International Data Transfer Addendum or the UK-US data bridge.
 
 We never sell your data.
+
+## Removing your data
+
+- **From your computer:** in the Cutline panel, open **Settings** and choose **Remove from this computer**. That deletes the panel, the Cutline Companion and Cutline's data on that computer, and frees your licence. Then remove Cutline in the Claude desktop app under **Settings**, **Extensions**.
+- **From our licence service:** email hello@cutlineai.com from the address you bought with, and we'll delete your licence records within 30 days. We keep purchase and tax records for as long as the law requires.
 
 ## Your rights
 

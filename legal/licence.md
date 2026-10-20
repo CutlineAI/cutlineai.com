@@ -3,9 +3,11 @@
 The agreement you accept when you install or use Cutline.
 
 
-Last updated 20 October 2026.
+Version 2026-10-20. Last updated 20 October 2026.
 
-This agreement is between you and Cutline ("we", "us"). By installing or using Cutline you agree to it. If you don't agree, don't install or use Cutline. You can reach us at hello@cutlineai.com.
+This agreement is between you and Cutline ("we", "us"). You accept it by ticking "I agree to the licence agreement and the privacy policy" in the Cutline panel before you start a free trial or activate a licence key, or by installing or using Cutline. If you don't agree, don't install or use Cutline. You can reach us at hello@cutlineai.com.
+
+When we make a material change to this agreement or the privacy policy, the version number changes and Cutline asks you to accept the new version before you carry on.
 
 ## What Cutline is
 
@@ -23,7 +25,7 @@ When you buy Cutline or start a free trial, we give you a personal, non-exclusiv
 - active on one computer at a time, with the licence key we issue to you;
 - for your own work, including paid client work.
 
-You can move your licence between your own computers yourself, using the transfer option in Cutline, within the limits shown there.
+You can move your licence between your own computers yourself, from the Cutline panel, up to 3 times in any 30 days.
 
 Add-ons are covered by this licence when your plan includes them or you've bought them.
 
@@ -45,6 +47,19 @@ You may not:
 
 Nothing here limits rights you have by law that can't be excluded, such as decompiling for interoperability where the law allows it.
 
+## No piracy, and respect other services' rules
+
+Cutline's YouTube tools let your AI search YouTube, read a video's details and transcript, and look at frames, so it can find references and check footage. Cutline doesn't download videos and doesn't keep copies of anything it looks at. You agree not to use Cutline, or anything it finds or shows you, to:
+
+- copy, download, rip, record, re-upload or distribute anyone else's video, audio, images or other content without the right to do so;
+- get round any technical protection, paywall, access control or download restriction, on YouTube or anywhere else;
+- break the terms of YouTube or any other service you reach through Cutline (YouTube's terms apply to your use of YouTube, including through Cutline);
+- make or share infringing, pirated or unlawfully obtained material.
+
+You're responsible for having the rights, licences, permissions and credits for everything you put in your edits. If we reasonably believe Cutline is being used for piracy or to infringe rights, we can suspend or end your licence and stop sending you updates.
+
+If you use Cutline for a business, you also agree to cover our reasonable losses and costs, including legal fees, caused by claims that arise from your breaking this section.
+
 ## Other services
 
 Cutline works with services we don't control: your AI provider (for example Anthropic's Claude), Adobe's apps, Gumroad, and YouTube. You need your own accounts with them, and their terms apply when you use them. You pay any fees they charge, including for your AI plan. We aren't responsible for their services, changes they make, or how they handle your data.
@@ -57,7 +72,7 @@ Cutline acts on instructions given through an AI. AI can misunderstand, and edit
 
 - You're responsible for checking every change Cutline makes, and for your finished work.
 - Keep backups of your projects. Cutline offers undo and backup copies, but we can't promise they'll always be available or complete.
-- You're responsible for the material you use, including anything you find or read with Cutline's YouTube tools. Only use material you have the right to use.
+- You're responsible for the material you use, including anything you find, read or look at with Cutline's YouTube tools. Only use material you have the right to use: your own, your client's, with permission, or under a licence such as Creative Commons, with credit.
 
 ## Updates
 
@@ -67,9 +82,16 @@ Cutline updates itself. Updates can add, change or remove features, for example 
 
 Cutline is licensed, not sold. We and our licensors keep all rights in it. Open-source parts are licensed under their own licences, listed in the notices that come with Cutline. Your projects and your work are yours.
 
+## Removing Cutline
+
+To remove Cutline from a computer:
+
+1. In the Cutline panel, open **Settings** and choose **Remove from this computer**. This frees your licence for another computer and deletes the panel, the Cutline Companion and Cutline's data on that computer.
+2. In the Claude desktop app, open **Settings**, then **Extensions**, and remove Cutline.
+
 ## Ending this agreement
 
-We can end your licence if you seriously break this agreement, for example by sharing your key or getting round licensing. You can stop using Cutline at any time. When the licence ends, stop using Cutline and uninstall it. The sections "You check the edit", "Ownership", "No warranty", "Limits on our liability" and "Law" still apply after it ends.
+We can end your licence if you seriously break this agreement, for example by sharing your key or getting round licensing. You can stop using Cutline at any time. When the licence ends, stop using Cutline and uninstall it. The sections "No piracy, and respect other services' rules", "You check the edit", "Ownership", "No warranty", "Limits on our liability" and "Law" still apply after it ends.
 
 ## No warranty
 
