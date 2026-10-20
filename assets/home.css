@@ -72,17 +72,24 @@ svg.draw path{stroke-dasharray:100 100;animation:draw .32s linear .16s both}
 .playhead{position:absolute;top:-37px;bottom:0;width:2px;margin-left:-1px;background:#E8E8EC;pointer-events:none}
 .playhead::before{content:"";position:absolute;top:0;left:-6px;width:14px;height:12px;background:#E8E8EC;clip-path:polygon(0 0,100% 0,100% 55%,50% 100%,0 55%)}
 
-/* the middle lane: a cut */
-.lane-cut{height:220vh;position:relative;margin-top:clamp(64px,10vw,140px)}
-.lane-frame{position:sticky;top:0;height:100vh;overflow:hidden;background:#000}
+/* the middle lane: plays like a short clip once it's on screen (no scroll-locking) */
+.lane-cut{position:relative;margin-top:clamp(64px,10vw,140px)}
+.lane-frame{position:relative;width:100%;aspect-ratio:16/9;max-height:86svh;overflow:hidden;background:#000}
 .shot{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .lane-cut .shot-b,.lane-cut .sub-b{visibility:hidden}
 .lane-cut[data-shot="b"] .shot-a,.lane-cut[data-shot="b"] .sub-a{visibility:hidden}
 .lane-cut[data-shot="b"] .shot-b,.lane-cut[data-shot="b"] .sub-b{visibility:visible}
-.sub{position:absolute;left:0;right:0;bottom:12vh;display:flex;flex-direction:column;align-items:center;gap:4px;padding-inline:20px;text-align:center}
-.sub span{background:rgba(0,0,0,.84);color:#fff;font-weight:600;font-size:clamp(20px,3vw,44px);line-height:1.28;padding:2px 16px}
-.lane-cut[data-shot="static"]{height:auto}
-.lane-cut[data-shot="static"] .lane-frame{position:relative;height:auto;aspect-ratio:16/9}
+.sub{position:absolute;left:0;right:0;bottom:11%;display:flex;flex-direction:column;align-items:center;gap:4px;padding-inline:20px;text-align:center}
+.sub span{font-size:clamp(18px,3vw,44px)}
+.lane-bar{position:absolute;left:0;bottom:0;height:3px;width:100%;background:rgba(255,255,255,.12)}
+.lane-bar i{position:absolute;left:0;top:0;bottom:0;width:0;background:var(--white)}
+.lane-cut.playing .lane-bar i{animation:lanebar var(--lane-dur,4.8s) linear forwards}
+.lane-cut.done .lane-bar i{width:100%}
+@keyframes lanebar{to{width:100%}}
+.lane-replay{position:absolute;right:16px;top:14px;font:500 14px var(--body);color:var(--soft);background:rgba(0,0,0,.7);border:1px solid var(--line);padding:6px 10px;cursor:pointer}
+.lane-replay:hover{color:var(--white);border-color:var(--grey)}
+.lane-cut[data-shot="static"] .shot-b,.lane-cut[data-shot="static"] .sub-a,.lane-cut[data-shot="static"] .sub-b{visibility:visible}
+.lane-cut[data-shot="static"] .sub-a{bottom:calc(11% + 2.6em)}
 .lane-words{padding-top:clamp(56px,8vw,96px)!important}
 .narrow{max-width:760px}
 .lane-words p{font-size:clamp(19px,1.9vw,24px);line-height:1.5;color:var(--soft)}

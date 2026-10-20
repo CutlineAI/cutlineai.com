@@ -182,16 +182,28 @@
     io.observe(demo);
   }
 
-  /* ---------------------------------------------------------------- the middle-lane cut */
+  /* ---------------------------------------------------------------- the middle-lane clip */
+  // Plays once when it's mostly on screen: line one, a cut to line two, then holds. Replays on request or on re-entry.
   const lane = $("#lane");
-  if (lane && !reduce) {
-    const onScroll = () => {
-      const r = lane.getBoundingClientRect(), span = r.height - innerHeight;
-      const k = span > 0 ? Math.min(1, Math.max(0, -r.top / span)) : 0;
-      lane.dataset.shot = k < 0.5 ? "a" : "b";
+  if (lane && reduce) lane.dataset.shot = "static";
+  else if (lane) {
+    const replay = $("#lane-replay"), CUT = 2400, DURATION = 4800;
+    lane.style.setProperty("--lane-dur", DURATION + "ms");
+    let timers = [], played = false;
+    const reset = () => { timers.forEach(clearTimeout); timers = []; lane.classList.remove("playing", "done"); lane.dataset.shot = "a"; replay.hidden = true; };
+    const run = () => {
+      reset(); void lane.offsetWidth; lane.classList.add("playing"); played = true;
+      timers.push(setTimeout(() => { lane.dataset.shot = "b"; }, CUT));
+      timers.push(setTimeout(() => { lane.classList.remove("playing"); lane.classList.add("done"); replay.hidden = false; }, DURATION));
     };
-    addEventListener("scroll", onScroll, { passive: true }); onScroll();
-  } else if (lane) lane.dataset.shot = "static";
+    replay.addEventListener("click", run);
+    new IntersectionObserver((es) => {
+      for (const e of es) {
+        if (e.intersectionRatio >= 0.6 && !lane.classList.contains("playing") && !lane.classList.contains("done")) run();
+        else if (e.intersectionRatio === 0 && played) reset();
+      }
+    }, { threshold: [0, 0.6] }).observe(lane);
+  }
 
   /* ---------------------------------------------------------------- tiles copy their line */
   document.querySelectorAll("[data-copy]").forEach(b => b.addEventListener("click", async () => {
