@@ -57,7 +57,7 @@ No. You double-click the installer, restart your Adobe app, and open the panel f
 
 ### Do I need a licence key?
 
-Yes. Your licence key is in your Gumroad receipt and library, and it works on one computer at a time. You can also start a 7-day free trial from the panel with no key and no card. See [Licence and devices](licence-and-devices.html).
+Yes. Your licence key is in your Gumroad receipt and library, and it works on one computer at a time. Monthly and yearly plans start with a 7-day free trial, and you get your key straight away. See [Licence and devices](licence-and-devices.html).
 
 ## Your work and your data
 

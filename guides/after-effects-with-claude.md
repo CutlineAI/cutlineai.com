@@ -24,7 +24,7 @@ You still design the motion. Cutline moves the values so you don't have to dig t
 - A Mac. Cutline is tested on Apple silicon. Windows is coming soon.
 - After Effects, the current version from Creative Cloud. Cutline is tested on the latest versions (October 2026); tell us if your version gives you trouble.
 - The Claude desktop app, signed in on a paid Claude plan.
-- A Cutline licence, or the 7-day free trial, which needs no key and no card.
+- A Cutline plan. Plans start with a 7-day free trial; cancel before day 7 and you pay nothing.
 - Adobe Media Encoder, only if you want Cutline to send renders there.
 
 See [requirements](/help/requirements.html) for the details.

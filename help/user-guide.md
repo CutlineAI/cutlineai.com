@@ -41,7 +41,7 @@ The first time Cutline uses a tool, Claude may ask for your permission. Allow it
 
 ## Your licence
 
-The first time you open the panel, tick **I agree to the licence agreement and the privacy policy**, then paste your licence key and click **Activate**, or click **Try it free for 7 days**. See [Licence and devices](licence-and-devices.html).
+The first time you open the panel, tick **I agree to the licence agreement and the privacy policy**, then paste your licence key and click **Activate**. See [Licence and devices](licence-and-devices.html).
 
 ## The panel
 

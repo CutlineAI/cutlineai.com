@@ -34,7 +34,7 @@ The connection between Claude and Premiere Pro is a local one on your Mac. Your 
 - A Mac. Cutline is tested on Apple silicon. Windows is coming soon.
 - Premiere Pro, the current version from Creative Cloud. Cutline is tested on the latest versions (October 2026); tell us if your version gives you trouble.
 - The Claude desktop app, signed in on a paid Claude plan. Pro suits most editors, and Max suits heavy daily use.
-- A Cutline licence, or the 7-day free trial, which needs no key and no card.
+- A Cutline plan. Plans start with a 7-day free trial; cancel before day 7 and you pay nothing.
 
 You don't need Terminal, Adobe debug mode or any coding. Adobe Media Encoder is only needed for queued exports. The full list is on the [requirements](/help/requirements.html) page.
 

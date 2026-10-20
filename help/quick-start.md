@@ -12,7 +12,7 @@ Cutline lets you edit by typing. You say what you want in the Claude desktop app
 - The Claude desktop app, signed in to your Claude account. The AI runs on your own account, so a paid Claude plan is best.
 - Cutline.mcpb, from your Gumroad receipt email or your Gumroad library.
 
-- Your licence key, or nothing at all for the free trial. The 7-day trial needs no key and no card.
+- Your licence key, from your Gumroad receipt. Plans start with a 7-day free trial, and the key arrives straight away.
 
 ## Install
 

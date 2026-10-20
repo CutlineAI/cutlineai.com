@@ -5,7 +5,7 @@ Start a 7-day free trial, activate your licence key, and move it between compute
 
 ## The free trial
 
-The first time you open the Cutline panel, tick **I agree to the licence agreement and the privacy policy**, then click **Try it free for 7 days**. The trial needs no key and no card, and it ends by itself. You can add your key at any time.
+Monthly and yearly plans start with a 7-day free trial on Gumroad. You enter a card at checkout but pay nothing today, and your licence key arrives straight away. Cancel before day 7 in your Gumroad library and you won't be charged.
 
 ## Your licence key
 

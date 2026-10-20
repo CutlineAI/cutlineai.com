@@ -5,7 +5,7 @@
 - How it works: Cutline is an MCP server (Model Context Protocol) installed as a Claude desktop extension, plus a panel inside Premiere Pro and After Effects. It talks to the apps over a local connection on the Mac; footage never leaves the computer.
 - What it does: more than 160 tools across both apps: cuts, trims, ripples, gaps and silences, markers, titles, effects, keyframes, audio ducking, project housekeeping, exports, and After Effects comps, layers, keyframes, expressions and the render queue.
 - Requirements: a Mac; the current Premiere Pro or After Effects from Creative Cloud (tested on the latest versions, October 2026); the Claude desktop app on a paid Claude plan.
-- Availability (October 2026): on sale now for Mac. 7-day free trial, then $14 a month or $120 a year; Founding Edition $89 once for the first 50 editors, with every future update. Free trial, no card: https://cutlineai.gumroad.com/l/cutline-trial. Buy: https://cutlineai.gumroad.com/l/cutline. Coming soon: ChatGPT support, Windows, Cutline Colour, Cutline Review, an auto rough cut.
+- Availability (October 2026): on sale now for Mac. $14 a month or $120 a year, starting with a 7-day free trial; Founding Edition $89 once for the first 50 editors, with every future update. Plans start with a 7-day free trial (cancel before day 7 and pay nothing): https://cutlineai.gumroad.com/l/cutline. Founding Edition: https://cutlineai.gumroad.com/l/cutline-founding. Coming soon: ChatGPT support, Windows, Cutline Colour, Cutline Review, an auto rough cut.
 - Contact: hello@cutlineai.com. Website: https://cutlineai.com
 - Cutline is independent software, not made by Adobe or Anthropic.
 
@@ -24,7 +24,7 @@ Cutline lets you edit by typing. You say what you want in the Claude desktop app
 - The Claude desktop app, signed in to your Claude account. The AI runs on your own account, so a paid Claude plan is best.
 - Cutline.mcpb, from your Gumroad receipt email or your Gumroad library.
 
-- Your licence key, or nothing at all for the free trial. The 7-day trial needs no key and no card.
+- Your licence key, from your Gumroad receipt. Plans start with a 7-day free trial, and the key arrives straight away.
 
 ## Install
 
@@ -101,7 +101,7 @@ The first time Cutline uses a tool, Claude may ask for your permission. Allow it
 
 ## Your licence
 
-The first time you open the panel, tick **I agree to the licence agreement and the privacy policy**, then paste your licence key and click **Activate**, or click **Try it free for 7 days**. See [Licence and devices](licence-and-devices.html).
+The first time you open the panel, tick **I agree to the licence agreement and the privacy policy**, then paste your licence key and click **Activate**. See [Licence and devices](licence-and-devices.html).
 
 ## The panel
 
@@ -601,7 +601,7 @@ No. You double-click the installer, restart your Adobe app, and open the panel f
 
 ### Do I need a licence key?
 
-Yes. Your licence key is in your Gumroad receipt and library, and it works on one computer at a time. You can also start a 7-day free trial from the panel with no key and no card. See [Licence and devices](licence-and-devices.html).
+Yes. Your licence key is in your Gumroad receipt and library, and it works on one computer at a time. Monthly and yearly plans start with a 7-day free trial, and you get your key straight away. See [Licence and devices](licence-and-devices.html).
 
 ## Your work and your data
 
@@ -856,7 +856,7 @@ Source: https://cutlineai.com/help/licence-and-devices.html
 
 ## The free trial
 
-The first time you open the Cutline panel, tick **I agree to the licence agreement and the privacy policy**, then click **Try it free for 7 days**. The trial needs no key and no card, and it ends by itself. You can add your key at any time.
+Monthly and yearly plans start with a 7-day free trial on Gumroad. You enter a card at checkout but pay nothing today, and your licence key arrives straight away. Cancel before day 7 in your Gumroad library and you won't be charged.
 
 ## Your licence key
 
@@ -947,7 +947,7 @@ The connection between Claude and Premiere Pro is a local one on your Mac. Your 
 - A Mac. Cutline is tested on Apple silicon. Windows is coming soon.
 - Premiere Pro, the current version from Creative Cloud. Cutline is tested on the latest versions (October 2026); tell us if your version gives you trouble.
 - The Claude desktop app, signed in on a paid Claude plan. Pro suits most editors, and Max suits heavy daily use.
-- A Cutline licence, or the 7-day free trial, which needs no key and no card.
+- A Cutline plan. Plans start with a 7-day free trial; cancel before day 7 and you pay nothing.
 
 You don't need Terminal, Adobe debug mode or any coding. Adobe Media Encoder is only needed for queued exports. The full list is on the [requirements](/help/requirements.html) page.
 
@@ -1101,7 +1101,7 @@ You still design the motion. Cutline moves the values so you don't have to dig t
 - A Mac. Cutline is tested on Apple silicon. Windows is coming soon.
 - After Effects, the current version from Creative Cloud. Cutline is tested on the latest versions (October 2026); tell us if your version gives you trouble.
 - The Claude desktop app, signed in on a paid Claude plan.
-- A Cutline licence, or the 7-day free trial, which needs no key and no card.
+- A Cutline plan. Plans start with a 7-day free trial; cancel before day 7 and you pay nothing.
 - Adobe Media Encoder, only if you want Cutline to send renders there.
 
 See [requirements](/help/requirements.html) for the details.

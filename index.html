@@ -20,8 +20,8 @@
 <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:ital,wght@0,400;0,500;0,600;1,400&display=swap">
-<link rel="stylesheet" href="assets/site.css?v=1792517283">
-<link rel="stylesheet" href="assets/home.css?v=1792517283">
+<link rel="stylesheet" href="assets/site.css?v=1792518134">
+<link rel="stylesheet" href="assets/home.css?v=1792518134">
 </head>
 <body class="home">
 <header class="top"><div class="wrap">
@@ -45,7 +45,7 @@
      <button type="button" data-cmd="markers" aria-pressed="false"><span class="tile-art"><svg class="art" viewBox="0 0 160 90" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><rect x="12" y="30" width="40" height="14" rx="1.5" fill="#5c5c5c"/><rect x="12" y="48" width="40" height="12" rx="1.5" fill="#454545"/><rect x="54" y="30" width="34" height="14" rx="1.5" fill="#5c5c5c"/><rect x="54" y="48" width="34" height="12" rx="1.5" fill="#454545"/><rect x="90" y="30" width="30" height="14" rx="1.5" fill="#5c5c5c"/><rect x="90" y="48" width="30" height="12" rx="1.5" fill="#454545"/><rect x="122" y="30" width="26" height="14" rx="1.5" fill="#5c5c5c"/><rect x="122" y="48" width="26" height="12" rx="1.5" fill="#454545"/><path d="M52 16h7l-3.5 6z" fill="#ffffff"/><line x1="55.5" y1="22" x2="55.5" y2="62" stroke="#ffffff" stroke-width="1" stroke-linecap="round"/><path d="M88 16h7l-3.5 6z" fill="#ffffff"/><line x1="91.5" y1="22" x2="91.5" y2="62" stroke="#ffffff" stroke-width="1" stroke-linecap="round"/><path d="M120 16h7l-3.5 6z" fill="#ffffff"/><line x1="123.5" y1="22" x2="123.5" y2="62" stroke="#ffffff" stroke-width="1" stroke-linecap="round"/></svg></span><span>Mark every scene change</span></button>
     </div>
     <button type="button" id="undo" class="undo" hidden>Undo last change</button>
-    <p class="sim">A simulation of what Cutline does in your timeline. Mac only. <a href="https://cutlineai.gumroad.com/l/cutline-trial">Try it free for 7 days</a>, no card needed.</p>
+    <p class="sim">A simulation of what Cutline does in your timeline. Mac only. <a href="#slate">Try it free for 7 days</a>, and cancel before day 7 to pay nothing.</p>
    </div>
 
    <div class="monitor" aria-hidden="true">
@@ -146,17 +146,27 @@
  </div>
 </section>
 
-<section class="slate" id="slate" data-marker="Try it">
+<section class="slate" id="slate" data-marker="Pricing">
  <div class="slate-frame">
-  <p class="sub"><span>Try Cutline free for 7 days.</span><span>No card, no key. Then $14 a month or $120 a year.</span></p>
-  <div class="slate-strap">
-   <a class="strap-cmd" href="https://cutlineai.gumroad.com/l/cutline-trial">Start your free trial</a>
-   <span class="strap-bars"></span>
-   <span class="strap-res">or <a href="https://cutlineai.gumroad.com/l/cutline">buy Cutline</a> now, or get the <a href="https://cutlineai.gumroad.com/l/cutline-founding">Founding Edition</a>: $89 once, every future update, first 50 editors only</span>
+  <p class="sub"><span>Try Cutline free for 7 days.</span><span>Cancel before day 7 and you pay nothing.</span></p>
+  <div class="plans">
+   <a class="plan main" href="https://cutlineai.gumroad.com/l/cutline?wanted=true">
+    <span class="plan-name">Cutline</span>
+    <span class="plan-price">$14 a month, or $120 a year</span>
+    <span class="plan-note">Starts with a 7-day free trial. Your licence key arrives straight away. Cancel any time from your Gumroad library.</span>
+    <span class="plan-cta">Start free trial</span>
+   </a>
+   <a class="plan" href="https://cutlineai.gumroad.com/l/cutline-founding?wanted=true">
+    <span class="plan-name">Founding Edition</span>
+    <span class="plan-price">$89 once</span>
+    <span class="plan-note">Every future update, for as long as Cutline is made. For the first 50 editors only.</span>
+    <span class="plan-cta">Get the Founding Edition</span>
+   </a>
   </div>
-  <p class="slate-small">Needs a Mac, Premiere Pro or After Effects, and the Claude desktop app on a paid Claude plan. Questions: <span class="select">hello@cutlineai.com</span>. Follow along on <a href="https://www.instagram.com/editcutline/">Instagram</a>, <a href="https://x.com/editcutline">X</a> and <a href="https://www.youtube.com/@CutlineAI">YouTube</a>.</p>
+  <p class="slate-small">Needs a Mac, Premiere Pro or After Effects, and the Claude desktop app on a paid Claude plan. Prices in US dollars; Gumroad adds any tax at checkout. Questions: <span class="select">hello@cutlineai.com</span>.</p>
  </div>
 </section>
+<script src="https://gumroad.com/js/gumroad.js" defer></script>
 
 
 </main>
@@ -169,6 +179,6 @@
  </div>
  <p class="tm">Cutline is independent software. Adobe, Premiere Pro and After Effects are trademarks of Adobe. Claude is a trademark of Anthropic. ChatGPT is a trademark of OpenAI. Cutline isn't made, endorsed or sponsored by any of them. &copy; 2026 Cutline.</p>
 </div></footer><div class="seq" id="seq" aria-hidden="true"><div class="seq-track"><div class="seq-marks" id="seq-marks"></div><div class="seq-head" id="seq-head"></div></div><span class="seq-tc" id="seq-tc">00:00:00:00</span></div>
-<script src="assets/site.js?v=1792517283" defer></script>
+<script src="assets/site.js?v=1792518134" defer></script>
 </body>
 </html>

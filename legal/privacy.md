@@ -59,7 +59,7 @@ Gumroad sells Cutline and takes your payment. Gumroad shares your name, email ad
 
 ## This website
 
-This site is hosted on GitHub Pages. GitHub records visitors' IP addresses in its server logs for security. The fonts come from Google Fonts, so your browser sends your IP address to Google when a page loads. The site sets no cookies and runs no analytics.
+This site is hosted on GitHub Pages. GitHub records visitors' IP addresses in its server logs for security. The fonts come from Google Fonts, so your browser sends your IP address to Google when a page loads. The home page loads Gumroad's checkout script, so the buy buttons can open Gumroad's checkout on our page; Gumroad's privacy policy covers anything you enter there. The site sets no cookies and runs no analytics.
 
 ## Emailing us
 

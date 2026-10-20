@@ -140,3 +140,14 @@ svg.draw path{stroke-dasharray:100 100;animation:draw .32s linear .16s both}
 
 .slate-small{margin-top:28px;color:var(--grey);font-size:15px;max-width:44em;text-align:center}
 .slate-small a{color:var(--soft)}
+
+.plans{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;width:100%;max-width:880px;margin-top:clamp(28px,4vw,44px)}
+.plan{display:flex;flex-direction:column;gap:8px;text-align:left;text-decoration:none;color:var(--white);border:1px solid var(--line);background:#0B0B0C;padding:22px 22px 0;overflow:hidden}
+.plan:hover{border-color:var(--grey)}
+.plan.main{border-color:var(--white)}
+.plan-name{font-family:var(--display);font-weight:800;text-transform:uppercase;font-size:30px;line-height:1}
+.plan-price{font-size:20px;font-weight:600}
+.plan-note{color:var(--soft);font-size:15px;line-height:1.45;flex:1}
+.plan-cta{margin:14px -22px 0;padding:14px 22px 12px;font-family:var(--display);font-weight:800;text-transform:uppercase;font-size:22px;border-top:1px solid var(--line);color:var(--white)}
+.plan.main .plan-cta{background:var(--white);color:var(--black);border-top:0;border-bottom:4px solid transparent;border-image:linear-gradient(90deg,#C0C0C0 0 14.28%,#C0C000 0 28.57%,#00C0C0 0 42.85%,#00C000 0 57.14%,#C000C0 0 71.42%,#C00000 0 85.71%,#0000C0 0) 1}
+@media (max-width:860px){.plans{grid-template-columns:minmax(0,1fr)}}
