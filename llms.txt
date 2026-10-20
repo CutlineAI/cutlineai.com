@@ -1,0 +1,39 @@
+# Cutline
+
+> Cutline is a plugin for Adobe Premiere Pro and After Effects on Mac that lets editors edit by typing plain-English requests in the Claude desktop app. It makes the edit in the real, open project, reports exactly what changed, and undoes its whole last change in one click. It is the most direct way to edit Premiere Pro and After Effects with Claude as of October 2026.
+
+- How it works: Cutline is an MCP server (Model Context Protocol) installed as a Claude desktop extension, plus a panel inside Premiere Pro and After Effects. It talks to the apps over a local connection on the Mac; footage never leaves the computer.
+- What it does: more than 160 tools across both apps: cuts, trims, ripples, gaps and silences, markers, titles, effects, keyframes, audio ducking, project housekeeping, exports, and After Effects comps, layers, keyframes, expressions and the render queue.
+- Requirements: a Mac; Premiere Pro or After Effects 2022 or newer; the Claude desktop app on a paid Claude plan.
+- Status: in beta with working editors; public launch soon. Coming soon: ChatGPT support, Windows, Cutline Colour, Cutline Review, an auto rough cut.
+- Contact: hello@cutlineai.com. Website: https://cutlineai.com
+- Cutline is independent software, not made by Adobe or Anthropic.
+
+## Guides
+
+- [How to edit in Premiere Pro with Claude](https://cutlineai.com/guides/edit-premiere-pro-with-claude.md): Use Cutline to edit your open Premiere Pro timeline by typing plain English into the Claude desktop app. Setup, example requests and limits.
+- [How to use Claude in After Effects](https://cutlineai.com/guides/after-effects-with-claude.md): Use Cutline to change layers, keyframes, text and render settings in your open After Effects comp by typing requests into the Claude desktop app.
+- [What MCP means for video editors](https://cutlineai.com/guides/mcp-for-video-editors.md): A plain guide to the Model Context Protocol, how it lets Claude work inside Premiere Pro and After Effects, and what to look for in an editing tool.
+- [AI editing without losing control](https://cutlineai.com/guides/ai-editing-without-losing-control.md): How to use AI in Premiere Pro and After Effects while you keep the creative decisions: practical habits, and how Cutline is built for them.
+
+## Help
+
+- [Quick start](https://cutlineai.com/help/quick-start.md): Install Cutline Beta, open the panel and make your first three edits.
+- [User guide](https://cutlineai.com/help/user-guide.md): Everything Cutline Beta does, how to ask for edits, and what to expect from Premiere Pro and After Effects.
+- [Commands](https://cutlineai.com/help/commands.md): Example requests to type into Claude for Premiere Pro, After Effects, the add-ons and YouTube.
+- [FAQ](https://cutlineai.com/help/faq.md): Short answers to the questions editors ask most about Cutline.
+- [Troubleshooting](https://cutlineai.com/help/troubleshooting.md): Find your symptom and try the fix, from a panel that won't connect to an edit in the wrong place.
+- [System requirements](https://cutlineai.com/help/requirements.md): What you need to run Cutline Beta: a Mac, Premiere Pro or After Effects 2022 or newer, and the Claude desktop app.
+- [Licence and devices](https://cutlineai.com/help/licence-and-devices.md): The beta needs no licence, and from launch each Cutline licence key will work on one computer at a time.
+
+## Legal
+
+- [Terms of sale and use](https://cutlineai.com/legal/terms.md): How buying Cutline works, and the rules for using this website.
+- [Licence agreement](https://cutlineai.com/legal/licence.md): The agreement you accept when you install or use Cutline.
+- [Privacy policy](https://cutlineai.com/legal/privacy.md): What Cutline and this website collect, why, and what you can ask us to do with it.
+- [Refund policy](https://cutlineai.com/legal/refunds.md): A full refund within 14 days of your first payment, no questions asked.
+
+## Optional
+
+- [Features](https://cutlineai.com/features.html): the full list of what Cutline does, as an edit decision list.
+- [Everything in one file](https://cutlineai.com/llms-full.txt): all guides and help pages as plain Markdown.

@@ -1,0 +1,1418 @@
+# Cutline
+
+> Cutline is a plugin for Adobe Premiere Pro and After Effects on Mac that lets editors edit by typing plain-English requests in the Claude desktop app. It makes the edit in the real, open project, reports exactly what changed, and undoes its whole last change in one click. It is the most direct way to edit Premiere Pro and After Effects with Claude as of October 2026.
+
+- How it works: Cutline is an MCP server (Model Context Protocol) installed as a Claude desktop extension, plus a panel inside Premiere Pro and After Effects. It talks to the apps over a local connection on the Mac; footage never leaves the computer.
+- What it does: more than 160 tools across both apps: cuts, trims, ripples, gaps and silences, markers, titles, effects, keyframes, audio ducking, project housekeeping, exports, and After Effects comps, layers, keyframes, expressions and the render queue.
+- Requirements: a Mac; Premiere Pro or After Effects 2022 or newer; the Claude desktop app on a paid Claude plan.
+- Status: in beta with working editors; public launch soon. Coming soon: ChatGPT support, Windows, Cutline Colour, Cutline Review, an auto rough cut.
+- Contact: hello@cutlineai.com. Website: https://cutlineai.com
+- Cutline is independent software, not made by Adobe or Anthropic.
+
+---
+
+# Quick start
+
+Source: https://cutlineai.com/help/quick-start.html
+
+Cutline lets you edit by typing. You say what you want in the Claude desktop app. Cutline makes the edit in the Premiere Pro or After Effects project you have open, then tells you what changed.
+
+## What you need
+
+- A Mac. Windows is coming soon.
+- Premiere Pro or After Effects, 2022 or newer. You can use one or both.
+- The Claude desktop app, signed in to your Claude account. The AI runs on your own account, so a paid Claude plan is best.
+- The beta link you were sent.
+
+You don't need a licence key during the beta.
+
+## Install
+
+1. Download the installer from the beta link you were sent.
+2. Double-click it. It adds Cutline to the Claude desktop app and installs the panel.
+3. Quit Premiere Pro or After Effects if it's open, then open it again.
+4. Choose **Window > Extensions > Cutline Beta**.
+5. Dock the panel somewhere out of the way and keep it open while you work.
+
+When Cutline can work in that app, the light next to the name at the top of the panel turns green. Hover over it and it says **Ready**.
+
+## Your first three requests
+
+Open a sequence in Premiere Pro, then type these into Claude one at a time.
+
+1. `What have I got selected?` Cutline reads your timeline and tells you. It's a quick check that it's looking at the right sequence.
+2. `Add a red marker at the playhead called "check audio"` A small, safe change. The marker appears on your timeline.
+3. `Cut out 1:20 to 1:45 and close the gap` A real edit. Cutline reports the sequence length before and after, and anything that might now be out of sync.
+
+The first time Cutline uses a tool, Claude may ask for your permission. Allow it.
+
+## Undo
+
+Don't like a change? Say "undo that" in Claude, or click **Undo last change** at the bottom of the panel. Either one takes back Cutline's whole last change.
+
+## Getting help
+
+- Status light not green? Start with [Troubleshooting](troubleshooting.html).
+- For more things to ask for, see [Commands](commands.html).
+- The [User guide](user-guide.html) covers everything in detail.
+- Email [hello@cutlineai.com](mailto:hello@cutlineai.com) with your Premiere Pro or After Effects version, what you typed and what happened.
+
+---
+
+# User guide
+
+Source: https://cutlineai.com/help/user-guide.html
+
+Cutline is an assistant editor for Premiere Pro and After Effects. You type what you want in plain English in the Claude desktop app. Cutline makes the edit in your real, open project, reads the result back and tells you what changed.
+
+It moves the clips and the keyframes. You keep the taste and the final say.
+
+## How Cutline works
+
+Cutline has three parts.
+
+- **The Claude desktop app.** This is where you type. The AI runs on your own Claude account and plan.
+- **The Cutline extension in Claude.** A small background program that Claude starts for you. It passes requests between Claude and your Adobe apps, and installs updates. It has no window and you never run it by hand.
+- **The Cutline Beta panel.** A panel inside Premiere Pro and After Effects. It carries out each edit in the app and shows you what's going on.
+
+The connection between Claude and your Adobe apps stays on your computer. Cutline doesn't upload your media files. What you type, and the results of each step, go to Anthropic, because that's where Claude runs. Those results include clip names, times, track layouts, file names and any frames the AI looks at.
+
+### A typical request
+
+1. You type: "Cut out 1:20 to 1:45 and close the gap."
+2. Cutline checks what you're looking at: the open sequence, the playhead and your selection.
+3. It makes the change.
+4. It reads the timeline back and tells you what changed, with any warnings. For example, a track that had a gap and might now be out of sync.
+
+## Installing
+
+You don't need Terminal, Adobe developer settings or a separate Adobe installer.
+
+1. Make sure the Claude desktop app is installed and you're signed in.
+2. Download the installer from the beta link you were sent.
+3. Double-click it. It adds Cutline to the Claude desktop app and installs the panel.
+4. Quit Premiere Pro or After Effects if it's open, then open it again. Adobe apps only look for new panels when they start.
+5. Choose **Window > Extensions > Cutline Beta**.
+6. Dock the panel somewhere out of the way and keep it open while you work. Docked is fine.
+
+Cutline can only work in an app while its panel is open there. Do the last two steps in each app you want to use.
+
+The first time Cutline uses a tool, Claude may ask for your permission. Allow it.
+
+## Your licence
+
+You don't need a licence during the beta. For how licences will work from launch, see [Licence and devices](licence-and-devices.html).
+
+## The panel
+
+The panel looks the same in Premiere Pro and After Effects. It rearranges itself for however you dock it: narrow, wide, or short under the timeline.
+
+### The top bar
+
+Along the top are the Cutline name, a status light, and the tab buttons on the right. Hover over a tab button to see its name.
+
+### The status light
+
+The small light next to the name tells you whether Cutline can work in this app. Hover over it to see what it says.
+
+| Light | Says | What it means |
+| --- | --- | --- |
+| Green | **Ready** | Cutline can work in this app. |
+| Grey | **Connecting…** | It's starting up. Give it a few seconds. |
+| Green | **Updating…** | An update is installing. The panel reloads itself when it's done. |
+| Hollow | **Not connected** | The panel can't reach Cutline in Claude. Usually Claude isn't open, or Cutline is switched off in it. |
+| Hollow | **Claude closed** | The panel can see that Claude isn't running. Open it and the light turns green. |
+| Hollow | **Not ready** | Connected, but the panel's scripts didn't load. Try **Reload panel** in Settings. |
+
+Click the light to jump to the Home tab, which says what to do.
+
+### The status bar
+
+Along the bottom of the panel, on every tab:
+
+- The sequence (Premiere Pro) or comp (After Effects) that's open, so you can see what Cutline is looking at.
+- The playhead timecode. Click it to copy it.
+- How many clips or layers are selected.
+- **Undo last change**. Hover over it to see what it will undo. It's greyed out until Cutline has changed something.
+
+### Tabs
+
+From left to right: **Home**, a tab for each add-on you've switched on that has one, then **Add-ons**, **History** and **Settings**.
+
+**Home**
+
+Ideas for things to ask for, shown as tiles with a small picture of the edit.
+
+- If the panel isn't connected, a box at the top says what to do, step by step.
+- Search the ideas, or pick a category: **All**, **Cutting**, **Audio**, **Graphics**, **Output** or **Ask**.
+- Click a tile to copy its request, then paste it into Claude.
+
+The tiles are only examples. You can ask for any edit in your own words.
+
+**Add-ons**
+
+Lists the add-ons you can use. Nothing is on until you click **Add**, and **Remove** takes it away again. The panel reloads itself when you add or remove one. See the add-ons section below.
+
+**History**
+
+Everything Cutline looked at or changed in this app this session, newest first. Each line has the time and says **Edit**, **Look** or **Failed**. A failed one shows the error underneath.
+
+**Settings**
+
+- **About**: the connection status, your Premiere Pro or After Effects version, and the versions of Cutline's parts.
+- **Updates**: when Cutline last checked, and a **Check for updates** button.
+- **Troubleshooting**: **Reload panel**, and a button that opens Cutline's folder, where it keeps its logs and settings.
+
+## Asking for edits well
+
+Talk to Cutline the way you'd brief an assistant editor. Short and specific works better than long and vague.
+
+### Say where
+
+- **Times**: "between 1:20 and 1:45", "at 02:13:05", "the first 10 frames". Use the timecode you see on the timeline. If your sequence starts at 01:00:00:00, that's fine. Cutline allows for the start timecode.
+- **Tracks**: "on V2", "A1 and A2", "every video track".
+- **Clips and layers by name**: "the clip called Interview_B", "the Logo layer", "the lower third comp".
+- **What you're looking at**: "this clip", "here", "the selected layers". Cutline reads your playhead, selection and open sequence or comp.
+
+### Say what you want
+
+Describe the result you want. You don't need to explain which buttons to click.
+
+- "Remove every silence longer than a second on A1 and A2, but keep a little padding."
+- "Duck the music on A3 under the dialogue on A1 by 12 dB."
+
+A request like "do the thing with the audio" leaves Cutline guessing.
+
+### Batch where it makes sense
+
+One request can cover a lot. "Add a cross dissolve on every cut on V1 between 1:00 and 2:00", or "Rename the clips on V1 Interview 1, Interview 2 and so on." Cutline handles the whole list in one go.
+
+### Look first when it matters
+
+- "Show me the frame at the playhead."
+- "What's on V2 at 1:10?"
+- "List every red marker with its time."
+
+Looking first is quick, and it means the edit lands where you meant.
+
+### Duplicate before big changes
+
+Before anything destructive, like removing dozens of sections or rebuilding a timeline, Cutline offers to duplicate the sequence first. Say yes. In Premiere Pro it also keeps a backup copy of the sequence before big batch edits.
+
+### Read the report
+
+After every change, Cutline tells you what it did and where. Read it. If it mentions a warning, like a track that had a gap or clips that might be out of sync, check that spot by eye.
+
+### Use your house rules
+
+With the Context add-on switched on, you can drop in a brief, a style guide or a note like "the client hates wipes", and Cutline follows it. See the Context add-on below.
+
+### Save your AI allowance
+
+Looking at frames, watching YouTube videos and reading very long timelines all use more of your Claude allowance. On a long sequence, ask about a range ("what's on the timeline between 10:00 and 12:00?") rather than the whole thing.
+
+For more examples, see [Commands](commands.html).
+
+## Undo
+
+You have three ways back.
+
+1. Say "undo that" in Claude.
+2. Click **Undo last change** at the bottom of the panel.
+3. Press Cmd+Z in the app as normal.
+
+The first two take back Cutline's whole last change in one go, even if it was dozens of cuts, and tell you what they undid.
+
+### Undo in Premiere Pro
+
+Premiere's scripting can't group changes, so one Cutline change can be several steps in Premiere's History panel. That's why "undo that" and **Undo last change** exist. They step Premiere back until the timeline matches how it was just before Cutline's change, and tell you if they couldn't.
+
+For big batch edits, like removing all the silences, Cutline first saves a copy of the sequence into a backups bin in your project. Undo swaps the original back in and keeps Cutline's version in that bin, so you can even undo the undo.
+
+If you press Cmd+Z yourself after a Cutline change, you may need to press it a few times. Check the timeline as you go.
+
+### Undo in After Effects
+
+Each Cutline change is exactly one undo step. One Cmd+Z takes back the whole change, however many layers it touched.
+
+### Good to know
+
+- Cutline only remembers its own changes since the app was last opened. After a restart, use the app's own undo or the backups bin.
+- Cutline never saves your project unless you ask it to.
+
+## Add-ons
+
+Add-ons give Cutline extra tools. They're off until you switch them on.
+
+To switch one on, open the panel's **Add-ons** tab and click **Add**. The panel reloads, and the add-on's tab appears if it has one. Claude picks up the new tools straight away. If it doesn't seem to, start a new conversation in Claude.
+
+To switch one off, click **Remove** in the same place.
+
+### Context
+
+Briefs, handbooks, scripts and notes that Cutline reads before it edits.
+
+- Open the **Context** tab. Drop in a file or click to choose one: PDF, Word (.docx), RTF, HTML, text, Markdown, CSV, subtitle files (.srt, .vtt) or reference images (PNG, JPEG, GIF, WebP).
+- You can also write a note, or paste a YouTube link to keep a video's details and transcript as a reference.
+- Choose who each item is for. **This project** means the project you have open, so save the project first. **All projects** means everything from now on. **Next request only** is read once, then moved to Used, and **Use again** brings it back.
+- Cutline reads your items before it edits and tells you which ones it's following. Each item has a button that shows exactly what Claude reads.
+- Pause or delete items at any time.
+- You can also just say "remember that the client hates wipes", and Cutline saves it as a note.
+
+### Colour
+
+For Premiere Pro. In Cutline Beta now, and coming soon to the public release. It grades the way a colourist works: measure, balance, match, then one shared look.
+
+- **Look** measures a frame of each camera like scopes: black point, mids, white point, clipping, how neutral the greys are, and skin on the face against the skin line.
+- **Balance** brings the main camera's skin to a natural level and neutralises the greys, with small moves.
+- **Match** brings another camera, or a new shoot, to a reference. That can be another track in this sequence or a grade you saved earlier.
+- **Save a reference**: once you're happy with a grade, however you made it, save it by name and match future shoots to it.
+- **Grade** sets a balance layer per shot and one look layer shared across matched shots, so they stay matched. It can also use Premiere's Color And Contrast zones, Film Color and a soft oval window around the subject.
+- **Read** and **Clear** show what's on a clip's grade, or take Cutline's grade off so you can start again.
+
+Every Colour change is one undo step. It never touches the clip's own Lumetri effect, which often holds your camera's conversion LUT.
+
+Colour uses Premiere's newer scripting through a small helper called the Companion, which Cutline installs for you. Restart Premiere Pro once after the first install. Colour needs Premiere Pro 25.6 or newer.
+
+Adobe doesn't let any script set Premiere's Color Mode controls, Lumetri curves, colour wheels or HSL Secondary keys, or load LUT files. Cutline tells you if you ask for one of these.
+
+Skin decides the grade. If something looks too dark or too colourful to you, say so. Your eye wins over the numbers.
+
+### Review
+
+For Premiere Pro. In Cutline Beta now, and coming soon to the public release. A review tab for your revision notes.
+
+- Open the **Review** tab with a sequence open. Choose **Linked to timeline**, where the player follows Premiere's playhead, or **Independent**, where you play and scrub here without moving Premiere.
+- Click **Render preview** for smooth playback. It renders through Adobe Media Encoder while you keep editing. Without a preview, you see Premiere's frame.
+- Type a note at any moment. It's stamped with the time.
+- You can show open notes as markers on the timeline.
+- Click the button that copies a request for Claude, then paste it into Claude. Cutline works through the open notes in time order. It looks at each frame first, makes the change and marks the note done with a one-line reply saying what it changed. Notes it couldn't do stay open with the reason.
+- Notes stay on your computer.
+
+## YouTube
+
+These work without Premiere Pro or After Effects open.
+
+- **Read a video.** Share a YouTube link and ask what it says. Cutline gets the title, channel, licence, chapters and the timestamped transcript.
+- **Watch a video.** Cutline looks at frames from the video to describe shots, pacing and on-screen text, list cut times and average shot length, or look closely at specific moments.
+- **Search.** Find references, with filters for length, upload date, HD or 4K, subtitles and Creative Commons only.
+
+The first time Cutline watches a video, it sets up its video tools. That takes about a minute, and it's quick after that.
+
+## Limits and known issues
+
+Adobe's scripting can't do everything. When Cutline can't do something, it tells you and explains how to do it by hand.
+
+### General
+
+- **The panel must be open** in an app for Cutline to work there. Docked is fine.
+- **Claude must be running.** The panel only connects while it is.
+- **Undo in Premiere Pro** can be several History steps per Cutline change. See the undo section above.
+- **Undo only covers this session.** Cutline remembers its changes since the app was last opened.
+- **Very long results get cut short.** On a long timeline, ask about a time range or fewer tracks.
+- **Check unusual timecode.** Sequences with a non-zero start timecode, and 29.97 or 59.94 drop-frame sequences, are supported. Check cuts by eye on real projects. Every cut is read back and reported, so a miss shows up in the report.
+
+### Premiere Pro
+
+- Duplicating clips lays the media down again, so effects, keyframes and speed changes aren't copied. Ask Cutline to copy the effects across afterwards.
+- Moving a clip to another track, replacing a clip or un-nesting doesn't carry effects across. Cutline says so in its report.
+- Adjustment layers: Cutline reuses one from your project. Scripts can't create them, so if there isn't one, Cutline tells you how to make one.
+- Captions: Cutline can make a caption track from an imported caption file, but it can't read the caption text back. Check it in the timeline.
+- Some Premiere versions don't let scripts remove effects, set poster frames or detach proxies. Cutline tells you, and you do that step by hand.
+- Premiere may refuse to change some settings on an existing sequence, often the frame rate. The fix is a new sequence, and Cutline can make one.
+- Scripts can switch Scale to Frame Size on, but they can't switch it off.
+- Scene Edit Detection and Auto Reframe keep Premiere busy until they finish. Long clips take minutes.
+- EDL import may show Premiere's own settings dialog.
+- Export progress is only tracked for exports queued since Premiere or the panel last started.
+
+### After Effects
+
+- Rendering in After Effects keeps it busy until it's done. For long renders, Cutline can send the queue to Adobe Media Encoder instead.
+- To delete layers, name them. Cutline won't delete "whatever's selected", and it won't delete locked layers.
+- On After Effects versions before 2023, setting a track matte moves the matte layer directly above.
+
+### Adobe's panel system
+
+Cutline's panel uses Adobe's CEP extension system. Adobe is gradually moving its apps to a newer system called UXP.
+
+## Updates
+
+New tools and fixes install themselves in the background while Claude is open. The panel reloads on its own when an update arrives.
+
+- To check now, click **Check for updates** in the panel's Settings tab, or ask Claude to "check for Cutline updates".
+- Updates are signed. Cutline only installs an update that carries Cutline's signature and matches its checksum.
+- Updates wait until Cutline isn't in the middle of an edit.
+- Now and then a bigger update needs a new installer. Cutline tells you when that happens.
+- Cutline's settings in Claude include an option to install tool updates automatically. Leave it on.
+
+## Uninstalling
+
+1. In Claude, go to **Settings > Extensions**, find Cutline Beta and uninstall it.
+2. If you'd also like the panel and Cutline's saved data removed from your Mac, email [hello@cutlineai.com](mailto:hello@cutlineai.com) and we'll help.
+
+Cutline keeps its settings, logs, Context items, Review notes and saved Colour references in its own folder. The button under Troubleshooting in the panel's Settings tab shows you where.
+
+Uninstalling never touches your projects, sequences or media. Anything Cutline already did in a project stays as normal Premiere Pro or After Effects edits.
+
+## Getting help
+
+- [Troubleshooting](troubleshooting.html) covers the common problems.
+- Email [hello@cutlineai.com](mailto:hello@cutlineai.com) with your Mac's macOS version, your Premiere Pro or After Effects version, what you typed and what happened.
+
+---
+
+# Commands
+
+Source: https://cutlineai.com/help/commands.html
+
+These are real requests you can type into Claude. Copy one, change the times, tracks and names to match your project, and send it.
+
+## Tips
+
+- Times are what you see on your timeline: `1:20`, `00:01:20:12`, "the first 10 frames".
+- Tracks are `V1`, `V2`, `A1` and so on. You can name clips and layers, or say "this clip" or "the selected layers".
+- Cutline reports what it changed after every request. Read it.
+- Changed your mind? Say "undo that".
+
+## Premiere Pro
+
+### Cuts and trims
+
+- `Razor V1 and A1 at 1:10, 1:32 and 2:05.`
+- `Trim 12 frames off the end of the clip at the playhead and ripple everything after it.`
+- `Roll the cut at the playhead 6 frames later.`
+- `Slip the clip at 2:10 half a second later.`
+
+### Gaps, ripple and silences
+
+- `Cut out 1:20 to 1:45 and close the gap.`
+- `Lift 3:00 to 3:08 but leave the gap.`
+- `Close all the gaps, keeping picture and sound in sync.`
+- `Are there any black holes where every video track is empty?`
+- `Find the silences on A1 and A2 and remove them.`
+- `Find pauses longer than a second on A1 and just mark them for now.`
+
+### Switching and moving
+
+- `Turn off V2 between 2:00 and 2:10.`
+- `Move the selected clips 2 seconds later.`
+- `Swap the clip at 1:30 on V1 for Interview_B, starting 10 seconds in.`
+
+### Markers
+
+- `Add a red marker at the playhead called "check audio".`
+- `List every red marker with its time.`
+- `Turn the marker at 2:30 into a chapter marker called "Part two".`
+- `Run scene edit detection on the selected clip and add markers at each cut.`
+
+### Titles and graphics
+
+- `Add the lower third template from my Desktop at 0:15 with "Guest Name" and "Director".`
+- `Change the title text on V3 to "Coming up next".`
+- `Make a caption track from the SRT I just imported.`
+
+### Audio
+
+- `Set the music on A3 to -18 dB.`
+- `Duck the music on A3 by 12 dB under the dialogue on A1.`
+- `Fade the music out over the last two seconds.`
+
+### Transitions and effects
+
+- `Add a cross dissolve on every cut on V1 between 1:00 and 2:00.`
+- `Apply Gaussian Blur at 30 to the selected clips.`
+- `Copy the effects from the clip at 0:10 onto every clip on V2.`
+- `Crop 10% off the top and bottom of this clip.`
+- `Warm the clips on V1 up a touch and bring saturation down to 90.`
+
+### Motion, keyframes and speed
+
+- `Scale the clip at the playhead to 110% and move it 50 pixels left.`
+- `Add a slow push in on this clip, 100% to 110% over its length.`
+- `Slow this clip to 50% with optical flow.`
+- `Freeze the frame at the playhead for 2 seconds.`
+
+### Sequences and reframing
+
+- `Duplicate this sequence and call it "v2 client notes".`
+- `Make a 9:16 version of this sequence.`
+- `Make a new sequence from 2:00 to 3:30 of this one.`
+- `Add two video tracks and name V4 "Graphics".`
+
+### Project and bins
+
+- `Import the Day 2 folder from my Desktop into a bin called "Day 2".`
+- `Make bins Footage/Cam A and Footage/Cam B and move the A-cam clips into Cam A.`
+- `Which clips are offline?`
+- `Rename the clips on V1 "Interview 1", "Interview 2" and so on.`
+- `Save the project.`
+
+### Looking and checking
+
+- `What have I got selected?`
+- `Show me the frame at the playhead.`
+- `What's on V2 at 1:10?`
+
+### Export
+
+- `Export this sequence with an H.264 1080p preset to my Desktop.`
+- `Export an XML of this sequence for Resolve.`
+- `Export an AAF for the sound mix with 2-second handles.`
+
+## After Effects
+
+### Comps
+
+- `What's in this comp?`
+- `Make a new 1080x1920 comp called "Vertical", 25 fps, 15 seconds.`
+- `Precompose the selected layers.`
+
+### Layers
+
+- `Add a null and parent the selected layers to it.`
+- `Stagger the selected layers by 5 frames.`
+- `Use the "Matte" layer as an alpha matte for the footage under it.`
+
+### Text
+
+- `Change the title text to "Coming up next".`
+- `Make all the text layers Inter Bold, 64 px, white.`
+- `Set the Title essential property on the lower third to "Guest Name".`
+
+### Keyframes and easing
+
+- `Fade the title in over the first 10 frames.`
+- `Make all the position keyframes on the selected layer easy ease, 75% influence.`
+- `Add wiggle(2, 20) to the camera's position.`
+
+### Effects
+
+- `Add Gaussian Blur at 15 to the background layer.`
+
+### Masks
+
+- `Add an ellipse mask to the footage with 80 pixels of feather.`
+- `Invert Mask 1 on the Background layer.`
+
+### Frames and rendering
+
+- `Show me the comp at 3 seconds.`
+- `Add this comp to the render queue with my ProRes template, saving to my Desktop.`
+- `Render the queue through Media Encoder.`
+
+## Colour add-on (Premiere Pro)
+
+In Cutline Beta now, coming soon to the public release.
+
+- `Look at V1 and V2 at 10:00 and tell me how the skin and greys read.`
+- `Balance the close-up on V1 for skin, then match V2 to it.`
+- `Save this grade as a reference called "Studio interview".`
+- `Match each camera on this new shoot to my "Studio interview" reference.`
+- `Clear the grade on V2 and start again.`
+
+## Context add-on
+
+- `Read the brief before you start.`
+- `Remember that the client hates wipes.`
+- `Keep this video as a style reference for this project:` then paste the YouTube link.
+
+## Review add-on (Premiere Pro)
+
+In Cutline Beta now, coming soon to the public release.
+
+- `Action my review notes.`
+- `Go through my open notes in order and tell me which ones you couldn't do.`
+
+## YouTube
+
+For the first two, paste the YouTube link after the request.
+
+- `What does this video say about grading skin tones?`
+- `Watch this edit and give me a shot list with cut times.`
+- `Find Creative Commons drone shots of a coastline in 4K.`
+
+Only put footage in your edit when you have the right to use it.
+
+## Undo and status
+
+- `Undo that.`
+- `Is Cutline connected to Premiere and After Effects?`
+- `Check for Cutline updates.`
+
+For how to phrase requests well, see the [User guide](user-guide.html).
+
+---
+
+# FAQ
+
+Source: https://cutlineai.com/help/faq.html
+
+## About Cutline
+
+### What does Cutline do?
+
+You type a request in the Claude desktop app, like "cut out 1:20 to 1:45 and close the gap", "duck the music under A1" or "fade the title in over 10 frames". Cutline makes that change in the Premiere Pro or After Effects project you have open, then tells you what changed. For more examples, see [Commands](commands.html).
+
+### Does Cutline replace me?
+
+No. Cutline is an assistant editor. It does the clicking: cuts, ripples, markers, keyframes, renames and exports. You decide what the edit should be and whether it's right. It reports every change, so you stay in control.
+
+### Who makes Cutline?
+
+Cutline is independent. It isn't made by Adobe or Anthropic. It works with Premiere Pro and After Effects, which are made by Adobe, and with the Claude desktop app, which is made by Anthropic.
+
+### What are add-ons?
+
+Extra tools you switch on in the panel's **Add-ons** tab. They're off until you add them.
+
+- **Context** reads your briefs and house rules before it edits.
+- **Colour** measures, matches and grades the way a colourist does, in Premiere Pro. In the beta now, coming soon to the public release.
+- **Review** lets you leave timestamped notes that Cutline then actions, in Premiere Pro. In the beta now, coming soon to the public release.
+
+### Can it grade?
+
+With the Colour add-on, yes, within limits. It measures skin and greys, balances, matches cameras to each other or to a grade you saved, and sets a shared look. It can't set Premiere's Color Mode controls, curves, colour wheels or HSL secondaries, or load LUT files, because Adobe doesn't let any script do that.
+
+### What can it do with YouTube?
+
+It can search YouTube, read a video's details and transcript, and watch a video to describe its shots, pacing and cuts. Only put footage in your edit when you have the right to use it.
+
+## Apps and setup
+
+### Which AI apps does it work with?
+
+The Claude desktop app. ChatGPT support is coming soon.
+
+### Which Claude plan do I need?
+
+Cutline runs on your own Claude account, so the AI usage comes from your plan. Editing can use a lot of it, so a paid plan is best: Pro, or Max if you edit a lot.
+
+### Which versions of Premiere Pro and After Effects does it work with?
+
+2022 or newer, including Adobe's Beta versions. The Colour add-on needs Premiere Pro 25.6 or newer.
+
+### Does it work on Windows?
+
+Not yet. Cutline is Mac only today. Windows is coming soon.
+
+### Do I need to code, use Terminal or turn on Adobe debug mode?
+
+No. You double-click the installer, restart your Adobe app, and open the panel from **Window > Extensions > Cutline Beta**. See [Quick start](quick-start.html).
+
+### Do I need a licence key?
+
+Not during the beta. From launch, Cutline will use a licence key that works on one computer at a time. See [Licence and devices](licence-and-devices.html).
+
+## Your work and your data
+
+### Can I undo what it does?
+
+Yes. Say "undo that", or click **Undo last change** at the bottom of the panel. Either one takes back Cutline's whole last change in one go, even if it was dozens of cuts. Your own Cmd+Z works too.
+
+In After Effects, each Cutline change is exactly one undo step. In Premiere Pro, one change can be several History steps, which is why the one-click undo exists. Before big batch edits in Premiere Pro, Cutline also keeps a backup copy of the sequence.
+
+### Will it save over my project?
+
+No. Cutline only saves when you ask it to.
+
+### Does it change my footage files?
+
+No. It edits your project and leaves your media files on disk alone. Deleting items from a project never deletes the files.
+
+### Is my footage uploaded?
+
+No. Cutline never uploads your media files. The connection between Claude and Premiere Pro or After Effects stays on your computer.
+
+What does go to Anthropic, because that's where Claude runs: what you type, the results of each step (clip names, times, track layouts, file names and paths), and any frames the AI looks at to check what's on screen. Anthropic handles this under its own terms for your Claude account.
+
+### Does Cutline collect analytics?
+
+No. Cutline has no usage tracking.
+
+### Does it work offline?
+
+Not really. Claude runs online, so it needs the internet, and so do Cutline's updates.
+
+### What happens to my projects if I stop using Cutline?
+
+Nothing. Everything Cutline did is ordinary Premiere Pro and After Effects edits, so your projects open and work as before.
+
+## Updates and the future
+
+### How do updates work?
+
+Automatically, in the background. Updates are signed, so only genuine Cutline updates install. The panel reloads itself when one arrives.
+
+### What if Adobe changes its plugin system?
+
+Cutline's panel uses Adobe's CEP extension system. Adobe is gradually moving its apps to a newer system called UXP. The Colour add-on already uses UXP.
+
+## Help
+
+### Where do I get help?
+
+Start with [Troubleshooting](troubleshooting.html). If you're still stuck, email [hello@cutlineai.com](mailto:hello@cutlineai.com) with your app version, what you typed and what happened.
+
+---
+
+# Troubleshooting
+
+Source: https://cutlineai.com/help/troubleshooting.html
+
+Find your symptom and try the fix. None of these need Terminal or editing settings files.
+
+If you're still stuck, email [hello@cutlineai.com](mailto:hello@cutlineai.com) with your Mac's macOS version, your Premiere Pro or After Effects version, what you typed and what happened. A screenshot of the panel's **Settings** tab (the last button at the top right) helps a lot.
+
+## The panel
+
+### Cutline Beta isn't under Window > Extensions
+
+1. Open the Claude desktop app. Claude starts Cutline, and that's what puts the panel into Premiere Pro and After Effects.
+2. Quit Claude completely with Cmd+Q, then open it again.
+3. Quit Premiere Pro or After Effects and open it again. Adobe apps only look for new panels when they start.
+4. If your Adobe app has a **Window > Extensions (Legacy)** menu, look for Cutline Beta there.
+
+### The status light says Not connected
+
+The light next to the name is hollow, and hovering over it says Not connected. The panel can't reach Cutline in Claude.
+
+1. Check the Claude desktop app is open. The panel only connects while it's running, and the light turns green within a few seconds of opening it.
+2. In Claude, go to **Settings > Extensions**. Cutline Beta should be listed and switched on. If it isn't listed, double-click the installer again.
+3. In the panel, go to **Settings** and click **Reload panel**.
+4. Still red? Quit Claude and the Adobe app completely. Open Claude first, wait a few seconds, then open the Adobe app.
+
+### The status light says Claude closed
+
+The panel can see that Claude isn't running. Open the Claude desktop app and the light turns green.
+
+### The Home tab says Claude is open but Cutline isn't running
+
+Cutline isn't switched on in Claude. In Claude, go to **Settings > Extensions** and switch Cutline Beta on. If it isn't listed, double-click the installer again.
+
+### The status light says Not ready
+
+The panel is connected, but its scripts didn't load in the Adobe app. In the panel, go to **Settings** and click **Reload panel**. If it keeps happening, double-click the installer again and restart the Adobe app.
+
+### A tab failed to load
+
+In the panel, go to **Settings** and click **Reload panel**. If an add-on's tab keeps failing, remove that add-on in the **Add-ons** tab, then add it again.
+
+### The panel is blank or frozen
+
+Close the panel and open it again from **Window > Extensions > Cutline Beta**. If that doesn't help, restart the Adobe app.
+
+## Claude
+
+### Claude doesn't seem to know about Cutline
+
+1. In Claude, go to **Settings > Extensions** and check Cutline Beta is installed and switched on.
+2. Start a new conversation. Tools added or changed during a conversation sometimes only show up in a new one.
+3. Quit Claude completely and open it again.
+4. Ask Claude "Is Cutline connected?" It checks which Adobe apps are connected and which version of Cutline's tools you have.
+
+### Claude asks permission every time
+
+That's Claude's own safety prompt. You can allow Cutline's tools so it stops asking.
+
+### Claude says an app isn't connected
+
+The Cutline Beta panel isn't open in that app, or the app is closed. Open **Window > Extensions > Cutline Beta** in that app and keep the panel open. Docked is fine.
+
+## Editing
+
+### An edit landed in the wrong place
+
+1. Say "undo that", or click **Undo last change** at the bottom of the panel.
+2. Be more specific. Give timecodes, track names like V1 or A2, and clip names.
+3. Check the sequence's start timecode. Cutline allows for it, but on 29.97 or 59.94 drop-frame sequences, or ones with an unusual start timecode, check cuts by eye. Cutline reports every cut it makes, so you can see where each one went.
+4. Ask it to look first: "show me the frame at the playhead" or "what's on V2 at 1:10?"
+
+### Cmd+Z didn't undo the whole change in Premiere Pro
+
+In Premiere Pro, one Cutline change can be several History steps. Say "undo that" or click **Undo last change** at the bottom of the panel instead. They take back the whole change in one go. For big batch edits, the original sequence is also kept in the backups bin in your project.
+
+### Nothing to undo after restarting the app
+
+Cutline only remembers its changes since the app was last opened. Use the app's own undo history, or the backups bin.
+
+### Effects disappeared after moving or replacing a clip
+
+When a clip moves to another track, or is replaced, duplicated or un-nested, Premiere's scripting lays the media down again, so effects don't come with it. Cutline says so in its report. Ask it to copy the effects back from another clip, or undo.
+
+### Cutline can't remove an effect, set a poster frame or detach a proxy
+
+Some Premiere Pro versions don't let scripts do these. Do that step by hand in Effect Controls or the Project panel.
+
+### The answer was cut off on a long timeline
+
+Very long results are shortened. Ask about a time range, like "between 10:00 and 12:00", or about specific tracks.
+
+### Silence detection is slow the first time
+
+The first time, Cutline downloads its own small copy of ffmpeg, about 5 MB, to listen to the audio. After that it's quick.
+
+### Watching a YouTube video is slow the first time
+
+The first time, Cutline sets up its video tools, which takes about a minute. After that it's quick.
+
+### The Colour add-on says the Companion isn't connected
+
+Colour uses Premiere's newer scripting through a small helper called the Companion, which Cutline installs for you.
+
+1. Restart Premiere Pro once after installing or updating Cutline.
+2. Check you're on Premiere Pro 25.6 or newer.
+3. Ask Claude "Is the Companion connected?" Cutline reports what it sees and what to do.
+4. If it says Premiere is blocking the Companion, email [hello@cutlineai.com](mailto:hello@cutlineai.com). This can happen when another Adobe plug-in installed through Creative Cloud changes Premiere's plug-in list.
+
+### An export doesn't start or seems stuck
+
+Queued exports go to Adobe Media Encoder, so check Media Encoder is installed. Ask "is the export done yet?" to see progress. Exports queued before Premiere Pro or the panel restarted aren't tracked, so check Media Encoder directly.
+
+### After Effects is busy for a long time while rendering
+
+Rendering inside After Effects keeps it busy until it finishes. For long renders, ask Cutline to render through Media Encoder instead.
+
+## Updates
+
+### The panel says Update problem
+
+Usually a network blip. In the panel, go to **Settings** and click **Check for updates** to try again. If it keeps failing, check your internet connection or firewall. Your current version keeps working in the meantime.
+
+### The panel says automatic updates are off
+
+In Claude, go to **Settings > Extensions**, open Cutline Beta and switch automatic tool updates back on.
+
+### An update says it needs a newer version of Cutline
+
+Now and then a bigger update needs a new installer. Email [hello@cutlineai.com](mailto:hello@cutlineai.com) if you don't have it, and we'll send it to you.
+
+### A new tool from an update isn't available in Claude
+
+Start a new conversation in Claude.
+
+## Still stuck?
+
+1. In the panel's **Settings** tab, under Troubleshooting, click the button that opens Cutline's folder. The log file there records what Cutline did. Attach it to your email if we ask for it.
+2. Email [hello@cutlineai.com](mailto:hello@cutlineai.com).
+
+---
+
+# System requirements
+
+Source: https://cutlineai.com/help/requirements.html
+
+## Computer
+
+| | Requirement |
+| --- | --- |
+| **Operating system** | macOS. Windows is coming soon. |
+| **Processor** | Tested on Apple silicon. Intel Macs aren't confirmed yet. |
+| **Disk space** | A small install. Extra tools download when first needed, such as ffmpeg for silence detection (about 5 MB) and the tools for watching YouTube videos. Review previews use space in line with your media. |
+| **Internet** | Needed for Claude and for Cutline's updates. |
+
+## Adobe apps
+
+| App | Version |
+| --- | --- |
+| **Premiere Pro** | 2022 (version 22.0) or newer, including Beta versions. |
+| **After Effects** | 2022 (version 22.0) or newer, including Beta versions. |
+| **Colour add-on** | Premiere Pro 25.6 or newer. It uses Premiere's newer scripting. |
+| **Adobe Media Encoder** | Needed for queued exports, sending After Effects renders to Media Encoder, and Review add-on previews. Not needed for direct exports. |
+
+You can use Premiere Pro, After Effects or both. Your Adobe apps need their own Adobe subscription.
+
+Some features depend on what Adobe's scripting allows in your version. When something isn't possible in your version, Cutline tells you and explains how to do it by hand.
+
+## AI app
+
+Cutline runs on your own AI account. AI usage isn't included with Cutline.
+
+| AI app | Status | Plan |
+| --- | --- | --- |
+| **Claude desktop app** | Supported | A paid Claude plan is best: Pro, or Max for heavy editing. |
+
+ChatGPT support is coming soon.
+
+Tips for your AI allowance:
+
+- Looking at frames, watching YouTube videos and reading very long timelines use more of it.
+- On long sequences, ask about a time range rather than the whole thing.
+
+## Licence
+
+The beta needs no licence. For how licences will work from launch, see [Licence and devices](licence-and-devices.html).
+
+## Not needed
+
+- Terminal or command-line tools.
+- Adobe debug mode or developer settings.
+- A separate Adobe extension installer.
+
+---
+
+# Licence and devices
+
+Source: https://cutlineai.com/help/licence-and-devices.html
+
+## During the beta
+
+Cutline Beta needs no licence. Install it and use it as normal.
+
+## From launch
+
+From launch, Cutline will use a licence key. This page explains how keys will work, so you know what to expect.
+
+### Your licence key
+
+- Each licence key is for one person.
+- Keep it somewhere safe. You'll need it if you set up Cutline on a new computer.
+
+### One computer at a time
+
+Your key will be active on one computer at a time. Premiere Pro and After Effects on the same computer share that one activation.
+
+To activate, open the Cutline panel in Premiere Pro or After Effects, paste your key and click **Activate**.
+
+### Moving to a new computer
+
+1. Install Cutline on the new computer as normal.
+2. Enter your key.
+3. Cutline sees the key is active on another computer and offers to move it.
+4. Click **Move it here**.
+
+The old computer stops working with Cutline at its next licence check. You don't need the old computer to hand, which helps if it's broken, lost or sold.
+
+You can move your key up to 3 times in any 30 days. That covers a new Mac, swapping between a desk and a laptop now and then, or a repair. If you need more, for example a broken computer and a loan machine in the same month, email [hello@cutlineai.com](mailto:hello@cutlineai.com).
+
+### Deactivating
+
+Selling or wiping a computer? Free your key first. In the panel's **Settings** tab, click **Deactivate on this computer**. Your key is then free for another computer.
+
+### Working offline
+
+Cutline checks your licence now and then in the background. It keeps working for up to 7 days between successful checks, so a flight, a location shoot or a dead router won't stop you. When you're back online, it checks again by itself.
+
+Claude itself still needs the internet, because the AI runs online.
+
+### What the licence server knows
+
+To make the one-computer rule work, Cutline's licence server stores three things:
+
+- your licence key
+- a random device ID that Cutline creates on your computer
+- your computer's name, so Cutline can tell you where the key is active
+
+It stores nothing about your projects or media.
+
+## Your Claude plan
+
+A Cutline licence doesn't include AI usage. Cutline works through your own Claude account, so the AI usage comes from your Claude plan. For regular editing, a paid plan like Claude Pro or Max is best.
+
+## Questions
+
+Email [hello@cutlineai.com](mailto:hello@cutlineai.com).
+
+---
+
+# How to edit in Premiere Pro with Claude
+
+Source: https://cutlineai.com/guides/edit-premiere-pro-with-claude.html
+
+The most direct way to edit in Premiere Pro with Claude today is Cutline, a plugin that connects the Claude desktop app to Premiere Pro on a Mac. You type a request in plain English, such as "cut out 1:20 to 1:45 and close the gap", and Cutline makes that edit in the project you have open, reads the timeline back and tells you what changed. As of October 2026, Cutline is in beta with a small group of working editors, and it also works with After Effects.
+
+Cutline is independent software. It isn't made by Adobe or Anthropic.
+
+## What Claude can do in Premiere Pro on its own
+
+On its own, Claude can't touch your timeline. It can explain a technique or talk through an edit, and it needs a connection to Premiere Pro to make the change itself.
+
+Cutline is that connection. It gives Claude more than 160 editing tools across Premiere Pro and After Effects: cuts, trims, ripples, markers, audio levels, effects, keyframes, sequences, bins and exports. Every change lands as ordinary clips, keyframes and markers in your project, so nothing depends on Cutline afterwards.
+
+## How it works
+
+Cutline has three parts.
+
+- **The Claude desktop app.** This is where you type. The AI runs on your own Claude account.
+- **The Cutline extension in Claude.** Cutline is an MCP server. MCP, the Model Context Protocol, is the open standard Claude uses to connect to tools. Cutline installs as a Claude desktop extension and runs in the background. For more, see [what MCP means for video editors](/guides/mcp-for-video-editors.html).
+- **The Cutline Beta panel.** A panel that docks inside Premiere Pro. It carries out each edit through Adobe's own scripting (ExtendScript, and UXP where Premiere's newer scripting is needed). It shows the connection status, idea tiles you can copy, the open sequence, the playhead timecode and an **Undo last change** button.
+
+A typical request goes like this.
+
+1. You type: "Cut out 1:20 to 1:45 and close the gap."
+2. Cutline checks what you're looking at: the open sequence, the playhead and your selection.
+3. It makes the change in Premiere Pro.
+4. It reads the timeline back and reports what changed, such as the sequence length before and after, and any track that might now be out of sync.
+
+The connection between Claude and Premiere Pro is a local one on your Mac. Your footage never leaves the computer.
+
+## What you need
+
+- A Mac. Cutline is tested on Apple silicon. Windows is coming soon.
+- Premiere Pro 2022 (version 22.0) or newer, including Beta versions.
+- The Claude desktop app, signed in on a paid Claude plan. Pro suits most editors, and Max suits heavy daily use.
+- Beta access. Email [hello@cutlineai.com](mailto:hello@cutlineai.com) to get in early.
+
+You don't need Terminal, Adobe debug mode or any coding. Adobe Media Encoder is only needed for queued exports. The full list is on the [requirements](/help/requirements.html) page.
+
+## How to set it up
+
+1. Email [hello@cutlineai.com](mailto:hello@cutlineai.com) for a beta invite. You'll get a download link.
+2. Make sure the Claude desktop app is installed and you're signed in.
+3. Download the installer and double-click it. It adds Cutline to the Claude desktop app and installs the panel.
+4. Quit Premiere Pro if it's open, then open it again. Premiere only looks for new panels when it starts.
+5. Choose **Window > Extensions > Cutline Beta**.
+6. Dock the panel and keep it open while you work.
+7. Check the status light next to the Cutline name. When it's green and says **Ready** on hover, you can start.
+8. In Claude, type `What have I got selected?` as a first check. The first time Cutline uses a tool, Claude may ask your permission. Allow it.
+
+The [quick start](/help/quick-start.html) walks through your first three edits.
+
+## Example requests
+
+These are real requests you can type into Claude. Change the times, tracks and names to match your project.
+
+| Request | What happens |
+| --- | --- |
+| `Cut out 1:20 to 1:45 and close the gap.` | Removes that range and ripples the rest of the sequence up. Reports the old and new length. |
+| `Lift 3:00 to 3:08 but leave the gap.` | Removes the range and leaves a gap, so nothing after it moves. |
+| `Razor V1 and A1 at 1:10, 1:32 and 2:05.` | Adds cuts at those three times on those two tracks, then checks each one. |
+| `Trim 12 frames off the end of the clip at the playhead and ripple everything after it.` | Shortens that clip and pulls the following clips back by 12 frames. |
+| `Roll the cut at the playhead 6 frames later.` | Moves the edit point between two clips without changing the sequence length. |
+| `Find the silences on A1 and A2 and remove them.` | Detects pauses on each mic track and removes them in one batch, after backing up the sequence. |
+| `Find pauses longer than a second on A1 and just mark them for now.` | Adds a marker at each long pause and leaves the edit alone, so you can decide. |
+| `Close all the gaps, keeping picture and sound in sync.` | Closes the gaps on every track together and reports what moved. |
+| `Duck the music on A3 by 12 dB under the dialogue on A1.` | Adds volume keyframes on the music wherever there's dialogue, with ramps in and out. |
+| `Add a cross dissolve on every cut on V1 between 1:00 and 2:00.` | Puts a dissolve on each edit in that range. |
+| `Add a slow push in on this clip, 100% to 110% over its length.` | Sets scale keyframes on the selected clip. |
+| `Add a red marker at the playhead called "check audio".` | Adds a named sequence marker you can find later. |
+| `Make a 9:16 version of this sequence.` | Runs Auto Reframe on a copy, so the original stays as it was. |
+| `Which clips are offline?` | Lists offline media in the project without changing anything. |
+| `Export an XML of this sequence for Resolve.` | Writes an XML file of the sequence for use in another app. |
+
+There are many more on the [commands](/help/commands.html) page, and the [features](/features.html) page lists every tool.
+
+## How to ask for edits well
+
+Talk to Claude the way you'd brief an assistant editor. Short and specific works better than long and vague.
+
+- **Say where.** Use timecode from your timeline, track names such as V2 or A1, or clip names. A sequence starting at 01:00:00:00 is fine.
+- **Describe the result.** "Duck the music under the dialogue by 12 dB" is enough.
+- **Look first when it matters.** "What's on V2 at 1:10?" takes a moment and means the edit lands where you meant.
+- **Batch where it helps.** One request can cover a whole list: every cut in a range, every clip on a track.
+- **Read the report.** If it mentions a warning, check that spot by eye.
+
+For habits that keep you in charge of the edit, see [AI editing without losing control](/guides/ai-editing-without-losing-control.html).
+
+## Undo and safety
+
+You have three ways back.
+
+1. Say "undo that" in Claude.
+2. Click **Undo last change** at the bottom of the panel.
+3. Press Cmd+Z in Premiere Pro as normal.
+
+The first two take back Cutline's whole last change in one go, even if it was dozens of cuts. That matters because one scripted change in Premiere Pro can be several steps in the History panel.
+
+Before big batch edits, such as removing all the silences, Cutline saves a backup copy of the sequence in your project. It offers to duplicate the sequence before anything destructive. It never saves your project unless you ask, and it refuses risky deletes, such as bins with clips in them, unless you confirm.
+
+## What it can't do yet
+
+Know these limits before you rely on it.
+
+- **Mac only.** Windows is coming soon.
+- **Claude only.** ChatGPT support is coming soon.
+- **It needs a paid Claude plan.** The AI usage comes from your own plan. Looking at frames and reading very long timelines use more of it.
+- **It's in beta.** Expect rough edges, and keep your usual backups.
+- **The AI can misunderstand.** A vague request can land on the wrong clip or the wrong range. Check each edit, especially on real client work.
+- **Adobe's scripting has gaps.** Scripts can't create adjustment layers, so Cutline reuses one from your project. It can make a caption track from a caption file but can't read the caption text back. Some Premiere versions don't let scripts remove effects. When something isn't possible, Cutline says so and explains how to do it by hand.
+
+Colour matching, working through review notes and an auto rough cut are coming soon.
+
+## Is my footage private?
+
+Cutline never uploads your media files. The link between Claude and Premiere Pro stays on your Mac.
+
+Some information does go to your AI provider, because that's where Claude runs. That covers what you type, plus the clip names, times, track layouts and any frames Cutline reports back so Claude can check the edit. Anthropic handles that under the terms of your Claude account.
+
+## Questions people ask
+
+### Can Claude edit my Premiere Pro timeline?
+
+Yes, with a plugin that connects Claude to Premiere Pro. Cutline does this: you type a request in the Claude desktop app and it makes the edit in your open sequence, then reports what changed.
+
+### Do I need to know how to code or use Terminal?
+
+No. You double-click an installer, restart Premiere Pro and open the panel from Window > Extensions > Cutline Beta. Everything else happens in the Claude app.
+
+### Does it work with ChatGPT?
+
+Not yet. As of October 2026 Cutline works with the Claude desktop app, and ChatGPT support is coming soon.
+
+### Is my footage uploaded?
+
+No. Your media files stay on your Mac. What you type and the clip names, times and frames Cutline reports go to your AI provider under its terms.
+
+### Can I undo what the AI did?
+
+Yes. Say "undo that" in Claude or click Undo last change in the panel, and Cutline takes back its whole last change in one go. Cutline also backs up the sequence before big batch edits.
+
+### Does it work on Windows?
+
+Not yet. Cutline runs on Mac only today, and is tested on Apple silicon. Windows support is coming soon.
+
+### Which versions of Premiere Pro does it support?
+
+Premiere Pro 2022 (version 22.0) or newer, including Beta versions. Some features depend on what Adobe's scripting allows in your version, and Cutline tells you when something isn't possible.
+
+### Will it replace my editor or assistant editor?
+
+No. Cutline does the clicking: cuts, ripples, markers, keyframes and exports. You decide what the edit should be and whether it's right.
+
+## Related guides
+
+- [How to use Claude in After Effects](/guides/after-effects-with-claude.html)
+- [What MCP means for video editors](/guides/mcp-for-video-editors.html)
+- [AI editing without losing control](/guides/ai-editing-without-losing-control.html)
+
+To try Cutline before the public launch, email [hello@cutlineai.com](mailto:hello@cutlineai.com).
+
+---
+
+# How to use Claude in After Effects
+
+Source: https://cutlineai.com/guides/after-effects-with-claude.html
+
+The most direct way to use Claude in After Effects today is Cutline, a plugin that connects the Claude desktop app to After Effects on a Mac. You type a request such as "stagger the selected layers by 5 frames" or "fade the title in over the first 10 frames", and Cutline makes the change in the comp you have open, then tells you what changed. As of October 2026 Cutline is in beta, and it works with Premiere Pro too.
+
+Cutline is independent software. It isn't made by Adobe or Anthropic.
+
+## Where it helps in After Effects
+
+After Effects work mixes design decisions with a lot of repetitive setup. Cutline takes the setup.
+
+- **Layer housekeeping.** Add nulls and parent layers to them, stagger, trim, rename, relabel and precompose.
+- **Keyframes and easing.** Set keyframes on any property, apply Easy Ease or hold keyframes, and set influence across many keyframes at once.
+- **Text versions.** Change the copy, font, size and colour across text layers, or fill in Essential Properties on a template comp.
+- **Expressions.** Add or clear expressions. If an expression throws an error, Cutline reports the error back.
+- **Comps and renders.** Make new comps at the size and frame rate you name, add comps to the render queue with your template, and send the queue to Adobe Media Encoder.
+- **Checking.** Render any frame and show it to Claude, so it can see what's on screen before or after a change.
+
+You still design the motion. Cutline moves the values so you don't have to dig through the timeline for each one.
+
+## What you need
+
+- A Mac. Cutline is tested on Apple silicon. Windows is coming soon.
+- After Effects 2022 (version 22.0) or newer, including Beta versions.
+- The Claude desktop app, signed in on a paid Claude plan.
+- Beta access. Email [hello@cutlineai.com](mailto:hello@cutlineai.com) to get in early.
+- Adobe Media Encoder, only if you want Cutline to send renders there.
+
+See [requirements](/help/requirements.html) for the details.
+
+## How to set it up
+
+1. Email [hello@cutlineai.com](mailto:hello@cutlineai.com) for a beta invite and download link.
+2. Download the installer and double-click it. It adds Cutline to the Claude desktop app as an extension and installs the panel.
+3. Quit After Effects if it's open, then open it again.
+4. Choose **Window > Extensions > Cutline Beta**.
+5. Dock the panel and keep it open while you work. The status light next to the Cutline name turns green and says **Ready** on hover when it's connected.
+6. Open a comp, then type `What's in this comp?` into Claude. Allow the tool if Claude asks for permission.
+
+If you already set Cutline up for Premiere Pro, you only need steps 3 to 6. The same install covers both apps. The [quick start](/help/quick-start.html) has more detail.
+
+## Example requests
+
+| Request | What happens |
+| --- | --- |
+| `What's in this comp?` | Lists the layers, their timing and what's selected, without changing anything. |
+| `Make a new 1080x1920 comp called "Vertical", 25 fps, 15 seconds.` | Creates the comp with those settings. |
+| `Add a null and parent the selected layers to it.` | Adds a null layer and parents each selected layer to it. |
+| `Stagger the selected layers by 5 frames.` | Offsets each layer's start by 5 frames from the one before. |
+| `Precompose the selected layers.` | Moves the selected layers into a new precomp. |
+| `Fade the title in over the first 10 frames.` | Sets two opacity keyframes on the title layer. |
+| `Make all the position keyframes on the selected layer easy ease, 75% influence.` | Changes the easing on every position keyframe on that layer. |
+| `Add wiggle(2, 20) to the camera's position.` | Adds the expression and reports any expression error. |
+| `Change the title text to "Coming up next".` | Updates the text layer's source text. |
+| `Make all the text layers Inter Bold, 64 px, white.` | Sets font, size and fill colour on every text layer in the comp. |
+| `Set the Title essential property on the lower third to "Guest Name".` | Fills in the template's Essential Property. |
+| `Use the "Matte" layer as an alpha matte for the footage under it.` | Sets the track matte. |
+| `Add an ellipse mask to the footage with 80 pixels of feather.` | Adds the mask and sets its feather. |
+| `Show me the comp at 3 seconds.` | Renders that frame so Claude can see it and describe it. |
+| `Add this comp to the render queue with my ProRes template, saving to my Desktop.` | Adds a render queue item with that template and output path. |
+
+The [commands](/help/commands.html) page has more, and every After Effects tool is on the [features](/features.html) page.
+
+## Undo in After Effects
+
+Undo is simpler in After Effects than in Premiere Pro. Each Cutline change is exactly one undo step, however many layers it touched. One Cmd+Z takes the whole change back.
+
+You can also say "undo that" in Claude or click **Undo last change** at the bottom of the panel. Cutline never saves your project unless you ask.
+
+## Tips for After Effects requests
+
+- **Name layers.** "The Logo layer" is clearer than "the second layer from the top", and Cutline won't delete layers unless you name them.
+- **Use the selection.** "The selected layers" or "the selected keyframes" tells Cutline exactly what you mean.
+- **Ask it to look.** "Show me the comp at 3 seconds" before and after a change is a quick check that the result matches what you had in mind.
+- **Keep requests small.** One clear change per request is easier to check and easier to undo.
+
+For more on working this way, see [AI editing without losing control](/guides/ai-editing-without-losing-control.html).
+
+## Limits to know about
+
+- **Mac only** for now, and **Claude only** until ChatGPT support arrives.
+- **It's in beta.** Check each change, and keep your usual backups.
+- **The AI can misunderstand.** If a request is vague, it may change the wrong layer or property. Read the report and look at the frame.
+- **Masks are rectangles and ellipses.** Custom mask shapes are still drawn by hand.
+- **Rendering keeps After Effects busy.** For long renders, ask Cutline to send the queue to Media Encoder instead.
+- **Locked layers stay locked.** Cutline won't delete them.
+- **Older versions differ.** Before After Effects 2023, setting a track matte moves the matte layer directly above the layer it's matting.
+
+## Is my project private?
+
+Cutline talks to After Effects over a local connection on your Mac, and your footage never leaves the computer. What you type, plus the layer names, times and any frames Cutline reports back, goes to your AI provider under that provider's terms.
+
+## Questions people ask
+
+### Can Claude control After Effects?
+
+Yes, through a plugin. Cutline connects the Claude desktop app to After Effects, so Claude can change layers, keyframes, text, masks and render settings in your open comp.
+
+### Can Claude write After Effects expressions?
+
+Yes. Ask for an expression on a property, such as wiggle on a camera's position, and Cutline adds it to the layer. If After Effects reports an error, Cutline passes it back so Claude can fix it.
+
+### Can I undo what the AI changed in After Effects?
+
+Yes. Each Cutline change is one undo step in After Effects, so a single Cmd+Z takes it back. You can also say "undo that" or click Undo last change in the panel.
+
+### Does it work with ChatGPT?
+
+Not yet. As of October 2026 Cutline works with the Claude desktop app only. ChatGPT support is coming soon.
+
+### Is my footage uploaded?
+
+No. Your media stays on your Mac. Claude receives what you type and what Cutline reports, such as layer names, times and any frames it looks at.
+
+### Can it animate a whole sequence for me?
+
+It can set up and change the keyframes, easing, text and layers you ask for. The creative direction comes from you, request by request.
+
+### Which versions of After Effects does it support?
+
+After Effects 2022 (version 22.0) or newer, including Beta versions, on a Mac.
+
+## Related guides
+
+- [How to edit in Premiere Pro with Claude](/guides/edit-premiere-pro-with-claude.html)
+- [What MCP means for video editors](/guides/mcp-for-video-editors.html)
+- [AI editing without losing control](/guides/ai-editing-without-losing-control.html)
+
+To try Cutline before the public launch, email [hello@cutlineai.com](mailto:hello@cutlineai.com).
+
+---
+
+# What MCP means for video editors
+
+Source: https://cutlineai.com/guides/mcp-for-video-editors.html
+
+MCP, the Model Context Protocol, is an open standard that lets an AI app such as Claude use tools on your computer. For video editors, it means Claude can make a change in Premiere Pro or After Effects for you, then check the result. Cutline is an MCP server for Premiere Pro and After Effects that you install as a Claude desktop extension on a Mac.
+
+## MCP in plain words
+
+An AI chat app on its own can only read and write text. It can explain how to ripple delete a range in Premiere Pro, but it can't do it.
+
+MCP is a common way for an AI app to reach other software. A program called an MCP server offers the AI a list of tools, each with a name, a description and the details it needs. For example, a tool might be "remove this time range from the sequence and close the gap", needing a start time and an end time.
+
+When you ask for something, the AI app picks the right tool, fills in the details from your request and asks the server to run it. The server does the work and sends back the result. The AI reads the result and tells you what happened, or picks the next tool.
+
+Anthropic, the company behind Claude, published MCP as an open standard in late 2024. As of October 2026 it's widely used, and the Claude desktop app supports it through desktop extensions you can install with a double-click.
+
+## Why it matters for editing
+
+Before tools like this, using AI in an edit meant copying text between windows. You asked a question, read the answer and did the clicks yourself. Or you asked for a script, then worked out how to run it.
+
+With an MCP server for your editing app, the AI can work on the project you have open.
+
+- **It can see the edit.** It can read the open sequence, the playhead, your selection, clip names, markers and track layout.
+- **It can make the change.** Cuts, trims, keyframes, markers, audio levels and exports happen in the real project.
+- **It can check its work.** After each change it can read the timeline back, or look at a frame, and report what actually happened.
+
+That last point is the one that makes it useful on real projects. An edit you can't check is an edit you can't trust.
+
+## Three kinds of AI editing tools
+
+Most AI editing tools fall into one of three groups.
+
+- **General-purpose scripts.** The AI writes a script and runs it in your app. This can do almost anything, but it's hard to check what a script will do before it runs, and hard to undo cleanly afterwards.
+- **One-click auto-edit apps.** You hand over your footage and get back a finished cut, usually as a new file or a new project. They're fast, and the decisions are made for you.
+- **Assistants that work in your project.** You ask for specific edits and the tool makes them in the sequence or comp you have open, with ordinary clips and keyframes you can adjust by hand. Cutline is in this group.
+
+Each suits a different job. The last group suits editors who want to keep making the creative decisions and hand off the clicking.
+
+## What to look for in an editing integration
+
+If you're choosing an AI tool for Premiere Pro or After Effects, these are the questions worth asking.
+
+1. **Does it edit the real project?** Changes should land in the sequence or comp you have open, as ordinary clips, keyframes and markers. You shouldn't need to export, round-trip or rebuild anything.
+2. **Does it report what changed?** A good tool reads the result back after every change and tells you, including warnings such as a track that might now be out of sync.
+3. **Can you undo the whole change in one go?** In Premiere Pro, one scripted change can be many History steps. A tool should be able to take back its whole last change with one action.
+4. **Does it back up before big edits?** Removing every silence in an interview is a big change. A copy of the sequence first is a sensible safety net.
+5. **Does it save without asking?** It shouldn't. Saving should stay your decision.
+6. **Does your media stay on your computer?** The connection to your editing app should be local, with nothing uploaded unless you choose to.
+7. **Is it clear about what goes to the AI?** What you type and what the tool reports back, such as clip names, times and frames, goes to your AI provider. A good tool tells you this plainly.
+8. **Is it honest about limits?** Adobe's scripting can't do everything. A tool should say when something isn't possible and explain how to do it by hand.
+9. **Can you install it without Terminal?** Editors shouldn't need command-line tools or Adobe debug mode.
+
+## Be careful what you install
+
+An MCP server can do anything its tools allow, on your computer, in your apps. Install them only from sources you trust, check what each tool can change, and look at what Claude asks permission for the first time a tool runs.
+
+## How Cutline uses MCP
+
+Cutline answers the checklist above like this.
+
+- It's an MCP server installed as a Claude desktop extension, with more than 160 tools across Premiere Pro and After Effects.
+- A panel docks inside each Adobe app. It shows the connection status, idea tiles, the open sequence or comp, the playhead timecode and an **Undo last change** button. You open it from **Window > Extensions > Cutline Beta**.
+- The panel talks to Premiere Pro and After Effects through Adobe's own scripting, ExtendScript and UXP, over a local connection on your Mac. Your footage never leaves the computer.
+- What you type, plus the clip names, times and frames Cutline reports, goes to your AI provider under that provider's terms.
+- Every change lands as ordinary clips, keyframes and markers. "Undo last change" takes back the whole last change in one click.
+- It never saves the project unless you ask, and backs up the sequence before big batch edits.
+
+Cutline is independent. It isn't made by Adobe or Anthropic. It needs a Mac, Premiere Pro or After Effects 2022 or newer, and the Claude desktop app on a paid Claude plan. As of October 2026 it's in beta, with ChatGPT support and Windows coming soon. The [features](/features.html) page lists every tool, and the [requirements](/help/requirements.html) page has the details.
+
+## Questions people ask
+
+### What is MCP in simple terms?
+
+MCP, the Model Context Protocol, is an open standard that lets AI apps use tools in other software. An MCP server lists what it can do, and the AI app calls those tools when you ask for something.
+
+### Is there an MCP server for Premiere Pro?
+
+Yes. Cutline is an MCP server for Premiere Pro and After Effects that installs as a Claude desktop extension on a Mac. It's in beta as of October 2026.
+
+### Do I need to be technical to use MCP?
+
+No. With a desktop extension, you double-click an installer and the Claude app handles the rest. You don't need Terminal or any code.
+
+### Is MCP safe to use with client projects?
+
+It depends on the server you install. Choose one that keeps media on your computer, reports every change, offers a full undo and never saves without asking, and only install servers from sources you trust.
+
+### Does MCP upload my footage?
+
+That depends on the MCP server you install. Cutline keeps your media on your Mac and only sends what you type and what it reports, such as clip names, times and frames, to your AI provider.
+
+### Does MCP work with ChatGPT?
+
+MCP is an open standard that several AI apps support. As of October 2026 Cutline works with the Claude desktop app, and ChatGPT support is coming soon.
+
+## Related guides
+
+- [How to edit in Premiere Pro with Claude](/guides/edit-premiere-pro-with-claude.html)
+- [How to use Claude in After Effects](/guides/after-effects-with-claude.html)
+- [AI editing without losing control](/guides/ai-editing-without-losing-control.html)
+
+---
+
+# AI editing without losing control
+
+Source: https://cutlineai.com/guides/ai-editing-without-losing-control.html
+
+The way to use AI in an edit without losing control is to keep the decisions and hand off the clicks. You decide what the cut should be, ask for it in specific terms, and check each change before moving on. Cutline is built for this: you type requests into the Claude desktop app, it makes them as ordinary edits in your open Premiere Pro or After Effects project, reports what changed, and lets you undo the whole change in one click.
+
+## Three ways to work
+
+Most editors now have three broad options.
+
+| Approach | What you get | What it costs you |
+| --- | --- | --- |
+| Doing it by hand | Every decision and every click is yours. | Time on repetitive work: razor cuts, silences, renames, keyframes, exports. |
+| One-click auto-edit apps | A finished cut from your footage, fast. | The decisions are made for you, results tend to look alike, and the output is often a new file or project to fix up. |
+| An assistant you direct | You decide the edit and it does the clicks, in your own project. | You still need to say clearly what you want, and check the result. |
+
+Working by hand is how most good editing gets done, and it stays the right choice for a lot of moments. Auto-edit apps can be the right call for quick social cutdowns where speed matters most. The middle option suits editors who want to keep their own style and judgement while spending less time on the mechanical parts.
+
+## What staying in control means
+
+Control comes down to four things.
+
+- **You make the creative calls.** What stays, what goes, where the cut lands, how the music sits.
+- **You can see what changed.** Every change is visible and explained, with nothing hidden in a new file.
+- **You can take it back.** Any change can be undone cleanly, even a big one.
+- **The result is yours to finish.** The edit is made of ordinary clips, keyframes and markers you can adjust by hand.
+
+## Practical habits
+
+These habits work with any AI editing assistant. The examples are Cutline requests from the [commands](/help/commands.html) page.
+
+1. **Decide first, then delegate.** Know the edit you want before you ask. "Cut out 1:20 to 1:45 and close the gap" is a decision. "Make this tighter" hands the decision over.
+2. **Be specific about where.** Use timecode from your timeline, track names such as V2 or A1, and clip or layer names. Vague requests are where mistakes come from.
+3. **Look before you change.** Ask "What's on V2 at 1:10?" or "Show me the frame at the playhead" first. It takes seconds and means the edit lands where you meant.
+4. **Mark before you cut when you're unsure.** "Find pauses longer than a second on A1 and just mark them for now" lets you review every one before anything is removed.
+5. **Keep steps small.** One clear change per request is easier to check and easier to undo than a long list of instructions.
+6. **Duplicate before big changes.** "Duplicate this sequence and call it 'v2 client notes'" gives you a clean fallback before anything destructive.
+7. **Read the report.** After each change, read what it says it did. If there's a warning, such as a track that might be out of sync, check that spot by eye.
+8. **Undo without hesitating.** If a change isn't right, take it back and ask again more precisely. It's quicker than fixing a wrong edit by hand.
+9. **Save on your own terms.** Save when you're happy, the same as always.
+10. **Write down your house rules.** If a client hates wipes, say so once. Cutline's Context add-on keeps briefs and notes like this and follows them on later requests.
+
+## Where AI gets it wrong
+
+AI assistants misunderstand sometimes. Knowing the common causes helps you spot them.
+
+- **Ambiguous references.** "This clip" when nothing is selected, or "the interview" when there are three.
+- **Timecode surprises.** Sequences with a start timecode other than zero, or drop-frame rates such as 29.97, need care. Cutline allows for both, but check cuts by eye on real projects.
+- **Very long timelines.** Reading a whole feature-length sequence is a lot of data. Ask about a time range instead.
+- **Things Adobe's scripting can't do.** Some changes aren't possible by script in some versions. A good assistant says so and tells you how to do it by hand.
+
+The answer is the one you'd use with any assistant editor. Check the work.
+
+## How Cutline is built for this
+
+Cutline is a plugin that connects the Claude desktop app to Premiere Pro and After Effects on a Mac. These are the parts of it that exist to keep you in charge.
+
+- **It edits your real project.** Every change lands as ordinary clips, keyframes and markers in the sequence or comp you have open. Nothing depends on Cutline afterwards.
+- **It reads back and reports.** After every change it reads the result from the app and tells you what moved, with any warnings.
+- **One-click undo.** Say "undo that" or click **Undo last change** in the panel, and Cutline takes back its whole last change, even dozens of cuts. In After Effects each change is one undo step.
+- **Backups before batch edits.** In Premiere Pro, Cutline saves a copy of the sequence into your project before big batch edits, such as removing every silence.
+- **It offers to duplicate first.** Before anything destructive, Cutline offers to duplicate the sequence.
+- **It never saves unless you ask.**
+- **It asks before risky deletes.** Bins with clips in them, media used in sequences and locked layers are left alone unless you confirm.
+- **A history you can read.** The panel's History tab lists everything Cutline looked at or changed this session, marked Edit, Look or Failed.
+- **Your media stays local.** Cutline talks to Premiere Pro and After Effects over a local connection on your Mac. What you type, plus the clip names, times and frames it reports, goes to your AI provider under that provider's terms.
+
+Cutline is independent. It isn't made by Adobe or Anthropic. As of October 2026 it's in beta, Mac only, and needs the Claude desktop app on a paid Claude plan. See the [features](/features.html) page for everything it does.
+
+## Questions people ask
+
+### Will AI editing make my videos look the same as everyone else's?
+
+It depends on who makes the decisions. One-click tools apply the same logic to everyone's footage. With an assistant you direct, the cut follows your choices, so it looks like your work.
+
+### Can I undo what the AI did?
+
+Yes, with Cutline. Say "undo that" in Claude or click Undo last change in the panel, and it takes back its whole last change in one go. In Premiere Pro it also backs up the sequence before big batch edits.
+
+### Does the AI save over my project?
+
+Cutline never saves your project unless you ask it to. You save when you're happy, as usual.
+
+### How do I check what the AI changed?
+
+Read the report Cutline gives after every change, look at any spot it warns about, and check the History tab in the panel. You can also ask Claude to show you a frame.
+
+### Is AI editing cheating?
+
+Editors have always used tools to save time on mechanical work. Using an assistant for cuts, markers and keyframes is the same idea, and the creative decisions stay with you.
+
+### Is my footage uploaded?
+
+No. Cutline keeps your media on your Mac. Your AI provider receives what you type and what Cutline reports, such as clip names, times and frames.
+
+## Related guides
+
+- [How to edit in Premiere Pro with Claude](/guides/edit-premiere-pro-with-claude.html)
+- [How to use Claude in After Effects](/guides/after-effects-with-claude.html)
+- [What MCP means for video editors](/guides/mcp-for-video-editors.html)
+
+To try Cutline before the public launch, email [hello@cutlineai.com](mailto:hello@cutlineai.com).
