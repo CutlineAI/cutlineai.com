@@ -12,73 +12,142 @@
 <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:ital,wght@0,400;0,500;0,600;1,400&display=swap">
-<link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/site.css?v=1792504248">
+<link rel="stylesheet" href="assets/home.css?v=1792504248">
 </head>
-<body>
+<body class="home">
 <header class="top"><div class="wrap">
  <a class="brand" href="index.html" aria-label="Cutline home"><svg class="mark" viewBox="0 0 200 112" aria-hidden="true"><rect x="4" y="4" width="112" height="48" fill="#fff"/><rect x="128" y="4" width="68" height="48" fill="#8A8A8A"/><rect x="26" y="60" width="62" height="48" fill="#8A8A8A"/><rect x="100" y="60" width="96" height="48" fill="#fff"/></svg><span>Cutline</span></a>
  <nav><a href="features.html">Features</a><a href="help/index.html">Help</a><a href="index.html#beta">Beta access</a></nav>
 </div><span class="bars" aria-hidden="true"><i style="background:#C0C0C0"></i><i style="background:#C0C000"></i><i style="background:#00C0C0"></i><i style="background:#00C000"></i><i style="background:#C000C0"></i><i style="background:#C00000"></i><i style="background:#0000C0"></i></span></header>
 <main>
+<section class="stage" data-marker="The edit">
+ <div class="demo" id="demo">
+  <div class="wrap demo-grid">
+   <div class="cmd">
+    <h1>Say the edit.</h1>
+    <p class="lede">Type what you want in your Claude app. Cutline makes the edit in your real Premiere Pro or After Effects timeline, then tells you what changed.</p>
+    <p class="cmd-label" id="cmd-label">In the Claude app</p>
+    <div class="cmd-line" aria-labelledby="cmd-label"><span id="typed" class="typed"></span><span class="caret" aria-hidden="true"></span></div>
+    <p class="try">Run another edit:</p>
+    <div class="try-list">
+     <button type="button" data-cmd="cut" aria-pressed="true">Cut a range and close the gap</button>
+     <button type="button" data-cmd="gaps" aria-pressed="false">Remove every gap</button>
+     <button type="button" data-cmd="duck" aria-pressed="false">Duck the music</button>
+     <button type="button" data-cmd="markers" aria-pressed="false">Mark every scene change</button>
+    </div>
+    <button type="button" id="undo" class="undo" hidden>Undo last change</button>
+    <p class="sim">A simulation of what Cutline does in your timeline. In beta with a small group of working editors. <a href="#slate">Get in early</a></p>
+   </div>
 
-<section class="hero"><div class="wrap">
- <p class="status">In beta. Public launch soon.</p>
- <h1>Say the edit.</h1>
- <p class="lede">Type what you want in your Claude app. Cutline makes the edit in your real Premiere Pro or After Effects timeline, then tells you exactly what changed.</p>
- <div class="ctas"><a class="strap" href="#beta">Ask for beta access</a><a class="quiet" href="features.html">See what it can do</a></div>
-</div>
-<figure class="frame wide"><img src="img/frames/hero.png" width="1920" height="1080" alt="A Premiere Pro timeline zoomed in on one edit point. A caption reads: cut 0:12 to 0:18, close the gap. Done, 6 seconds gone. A red line marks the cut."></figure>
+   <div class="monitor" aria-hidden="true">
+    <div class="picture" id="picture">
+     <span class="burn"><b id="mon-name"></b><b id="mon-tc">00:00:00:00</b></span>
+     <div class="mon-strap" id="strap" hidden>
+      <span class="strap-cmd" id="strap-cmd"></span>
+      <span class="strap-bars"></span>
+      <span class="strap-res" id="strap-res"></span>
+      <svg class="res-mark" id="res-mark" hidden viewBox="0 0 300 10" preserveAspectRatio="none"><path pathLength="100" d="M2 5 C 100 7, 200 4, 298 2"/></svg>
+     </div>
+    </div>
+   </div>
+  </div>
+
+  <div class="timeline" aria-hidden="true">
+   <div class="tl-inner">
+    <div class="ruler" id="ruler"><div class="seq-markers" id="seq-markers"></div></div>
+    <div class="tracks">
+     <div class="track"><span class="tname">V2</span><div class="lane" id="lane-V2"></div></div>
+     <div class="track"><span class="tname">V1</span><div class="lane" id="lane-V1"></div></div>
+     <div class="track"><span class="tname">A1</span><div class="lane" id="lane-A1"></div></div>
+     <div class="track"><span class="tname">A2</span><div class="lane" id="lane-A2"></div></div>
+     <div class="marks" id="marks"></div>
+     <div class="playhead" id="playhead"></div>
+    </div>
+   </div>
+  </div>
+  <p class="visually-hidden" role="status" id="demo-status"></p>
+ </div>
 </section>
 
-<section class="lane"><div class="wrap">
- <h2>The middle lane</h2>
- <div class="pair">
-  <figure class="frame"><img src="img/frames/sub1.jpg" width="1920" height="1080" loading="lazy" alt="A dark, out-of-focus night shot with the subtitle: Everyone knows AI edited that."></figure>
-  <figure class="frame"><img src="img/frames/sub2.png" width="1920" height="1080" loading="lazy" alt="The same zoomed timeline with the subtitle: They don't have to."></figure>
+<section class="lane-cut" id="lane" data-shot="a" data-marker="The middle lane">
+ <div class="lane-frame">
+  <img class="shot shot-a" src="img/frames/plain-a.jpg" width="1920" height="1080" alt="">
+  <img class="shot shot-b" src="img/frames/plain-b.png" width="1920" height="1080" alt="">
+  <p class="sub sub-a"><span>Everyone knows AI edited that.</span></p>
+  <p class="sub sub-b"><span>They don&rsquo;t have to.</span></p>
  </div>
- <div class="copy">
-  <p>Some editors won't let AI near a timeline. Others let one-click apps cut the whole thing, and you can tell. Same zooms, same captions, same edit as everyone else.</p>
-  <p>Cutline sits in between. It does the clicking. You make the calls. Every change lands as normal clips, keyframes and markers in your own project, so you can change any of it by hand, or take the whole thing back with one click.</p>
+</section>
+
+<section class="lane-words" data-marker="Why it's different">
+ <div class="wrap narrow">
+  <p>Some editors won&rsquo;t let AI near a timeline. Others hand the whole edit to a one-click app, and you can tell: same zooms, same captions, same cut as everyone else.</p>
+  <p>Cutline sits in between. It does the clicking. You make the calls. Every change lands as ordinary clips, keyframes and markers in your own project, so you can change any of it by hand, or take the whole thing back with one click.</p>
  </div>
-</div></section>
+</section>
 
-<section class="how"><div class="wrap">
- <h2>How it works</h2>
- <ol class="steps">
-  <li><h3>Type it</h3><p>In the Claude desktop app, in plain English. &ldquo;Remove every gap in this sequence.&rdquo; &ldquo;Duck the music under the dialogue.&rdquo;</p></li>
-  <li><h3>It edits</h3><p>Cutline makes the change in the sequence or comp you have open. Not a copy, not a web app. Your project.</p></li>
-  <li><h3>It tells you</h3><p>It reads the result back and lists exactly what moved. Not right? One click undoes Cutline&rsquo;s whole last change.</p></li>
- </ol>
- <figure class="frame letterbox"><img src="img/frames/black.png" width="1920" height="1080" loading="lazy" alt="A black frame with the subtitle: Don't lose control to save time. Just save time."></figure>
-</div></section>
-
-<section class="does"><div class="wrap">
- <h2>What it can do</h2>
- <div class="grid3">
-  <div><h3>Premiere Pro</h3><p>Cuts, trims, ripples, gaps and silences, markers, titles and effects, keyframes, audio ducking, project housekeeping and exports. More than 110 tools.</p></div>
-  <div><h3>After Effects</h3><p>Comps and layers, keyframes and easing, expressions, text, effects, masks and the render queue. More than 50 tools.</p></div>
-  <div><h3>Cutline Context</h3><p>Drop in a brief, a style guide or a script. Cutline reads it before it edits and tells you what it&rsquo;s following.</p></div>
+<section class="panel-sec" data-marker="The panel">
+ <div class="wrap panel-grid">
+  <figure class="panel-shot" id="panel-shot">
+   <img src="img/panel/panel-home@2x.png" width="440" height="720" loading="lazy" alt="The Cutline Beta panel docked in Premiere Pro, showing the open sequence and timecode, the last change Cutline made, and an Undo last change button.">
+  </figure>
+  <div class="panel-copy">
+   <h2>It lives next to your timeline</h2>
+   <p>Cutline Beta docks as a panel in Premiere Pro and After Effects. It shows what you have open, the last change it made and a button to take it back. You talk to it from the Claude desktop app, the same way you&rsquo;d brief an assistant editor.</p>
+   <p>It never saves your project unless you ask, keeps a backup of the sequence before big batch edits, and asks before anything risky.</p>
+  </div>
  </div>
- <p class="more"><a href="features.html">Every feature, listed</a></p>
- <div class="soon"><h3>Coming soon</h3><p>Cutline Colour, Cutline Review, ChatGPT support, Windows and an auto rough cut.</p></div>
-</div></section>
+</section>
 
-<section class="need"><div class="wrap">
- <h2>What you need</h2>
- <ul class="plain">
-  <li>A Mac. Windows is coming.</li>
-  <li>Premiere Pro or After Effects, 2022 or newer.</li>
-  <li>The Claude desktop app on a paid Claude plan. Cutline runs on your own AI account, so your AI costs stay with you.</li>
- </ul>
- <p class="more"><a href="help/requirements.html">Full requirements</a></p>
-</div></section>
+<section class="edl-sec" data-marker="What it can do">
+ <div class="wrap">
+  <h2>The edit decision list</h2>
+  <p class="edl-intro">Commands Cutline understands, and what it does with them. More than 160 tools across Premiere Pro and After Effects.</p>
+  <div class="edl-scroll">
+   <table class="edl">
+    <thead><tr><th scope="col">Event</th><th scope="col">Track</th><th scope="col">You type</th><th scope="col">Cutline does</th></tr></thead>
+    <tbody>
+     <tr><td>001</td><td>V A</td><td>cut 0:12 to 0:18 and close the gap</td><td>Razors every track at both points, lifts out the range, closes the gap and checks sync.</td></tr>
+     <tr><td>002</td><td>A</td><td>take out the silences over half a second on the mic tracks</td><td>Finds the silences on each mic track and removes them in one pass.</td></tr>
+     <tr><td>003</td><td>V A</td><td>remove every gap in this sequence</td><td>Closes the gaps and keeps every track in sync.</td></tr>
+     <tr><td>004</td><td>A</td><td>duck the music under the dialogue</td><td>Keyframes the music down under each line of dialogue, with ramps.</td></tr>
+     <tr><td>005</td><td>V</td><td>make a 9:16 version of this sequence</td><td>Makes a reframed copy and leaves the original alone.</td></tr>
+     <tr><td>006</td><td>V</td><td>add a cross dissolve between every clip on V1</td><td>Places a dissolve at every edit on V1.</td></tr>
+     <tr><td>007</td><td>V</td><td>change the title to &ldquo;Day 2, Lisbon&rdquo;</td><td>Changes the graphic&rsquo;s text without you opening a single panel.</td></tr>
+     <tr><td>008</td><td>V A</td><td>find all the offline media and relink it from the Footage drive</td><td>Lists what&rsquo;s missing, then relinks it.</td></tr>
+     <tr><td>009</td><td>V A</td><td>export an XML for Resolve and an AAF for the mix</td><td>Exports both, with handles on the AAF.</td></tr>
+     <tr><td>010</td><td>AE</td><td>animate the headline in from the left over 12 frames</td><td>Sets eased position keys, ready to tweak in the graph editor.</td></tr>
+     <tr><td>011</td><td>AE</td><td>add a null and parent the logo layers to it</td><td>Adds the null and parents the layers to it.</td></tr>
+     <tr><td>012</td><td>Context</td><td>follow the client&rsquo;s brand guide on this project</td><td>Reads the guide you added and tells you which rules it&rsquo;s following.</td></tr>
+     <tr class="soon"><td>013</td><td>Colour</td><td>match this shot to the last one</td><td>Coming soon.</td></tr>
+     <tr class="soon"><td>014</td><td>Review</td><td>work through the client&rsquo;s notes</td><td>Coming soon.</td></tr>
+    </tbody>
+   </table>
+  </div>
+  <p class="more"><a href="features.html">Every feature, listed</a></p>
+ </div>
+</section>
 
-<section class="beta" id="beta"><div class="wrap">
- <h2>Get in early</h2>
- <p>Cutline is in beta with a small group of working editors. If you cut in Premiere Pro or After Effects every week and want to try it before launch, email us and tell us what you edit.</p>
- <p class="address"><a class="strap" href="mailto:hello@cutlineai.com?subject=Cutline%20beta">hello@cutlineai.com</a></p>
- <p class="follow">Or follow along on <a href="https://www.instagram.com/editcutline/">Instagram</a>, <a href="https://x.com/editcutline">X</a> and <a href="https://www.youtube.com/@CutlineAI">YouTube</a>.</p>
-</div></section>
+<section class="need-sec" data-marker="What you need">
+ <div class="wrap narrow">
+  <h2>What you need</h2>
+  <p>A Mac with Premiere Pro or After Effects, 2022 or newer, and the Claude desktop app on a paid Claude plan. Cutline runs on your own AI account, so your AI costs stay yours. Windows and ChatGPT support are coming.</p>
+  <p class="more"><a href="help/requirements.html">Full requirements</a></p>
+ </div>
+</section>
+
+<section class="slate" id="slate" data-marker="Get in early">
+ <div class="slate-frame">
+  <p class="sub"><span>Cutline is in beta with a small group of working editors.</span><span>If you cut every week and want in, email us what you edit.</span></p>
+  <div class="slate-strap">
+   <a class="strap-cmd" href="mailto:hello@cutlineai.com?subject=Cutline%20beta">hello@cutlineai.com</a>
+   <span class="strap-bars"></span>
+   <span class="strap-res">or follow along on <a href="https://www.instagram.com/editcutline/">Instagram</a>, <a href="https://x.com/editcutline">X</a> and <a href="https://www.youtube.com/@CutlineAI">YouTube</a></span>
+  </div>
+ </div>
+</section>
+
+<div class="seq" id="seq" aria-hidden="true"><div class="seq-track"><div class="seq-marks" id="seq-marks"></div><div class="seq-head" id="seq-head"></div></div><span class="seq-tc" id="seq-tc">00:00:00:00</span></div>
 
 </main>
 <footer class="foot"><div class="wrap">
@@ -90,5 +159,6 @@
  </div>
  <p class="tm">Cutline is independent software. Adobe, Premiere Pro and After Effects are trademarks of Adobe. Claude is a trademark of Anthropic. ChatGPT is a trademark of OpenAI. Cutline isn't made, endorsed or sponsored by any of them. &copy; 2026 Cutline.</p>
 </div></footer>
+<script src="assets/home.js?v=1792504248" defer></script>
 </body>
 </html>

@@ -10,6 +10,7 @@
 html{-webkit-text-size-adjust:100%}
 body{background:var(--black);color:var(--white);font-family:var(--body);font-size:var(--step0);line-height:1.55}
 img{max-width:100%;height:auto;display:block}
+[hidden]{display:none!important}
 a{color:var(--white);text-decoration-thickness:1px;text-underline-offset:3px}
 a:hover{text-decoration-color:var(--marker)}
 :focus-visible{outline:2px solid var(--marker);outline-offset:3px}
@@ -125,5 +126,6 @@ td{color:var(--soft)}
   .side a[aria-current]{text-decoration:underline}
   .cols{grid-template-columns:1fr 1fr}
   .top .wrap{flex-wrap:wrap}
+  .top{position:static}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
