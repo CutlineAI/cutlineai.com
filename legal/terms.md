@@ -9,7 +9,9 @@ These terms cover this website and buying Cutline. Using Cutline itself is cover
 
 ## Who you're dealing with
 
-Cutline is made by the Cutline team ("we", "us"). We'll list our full trading name and address on this page before Cutline goes on sale.
+Cutline is made by the Cutline team ("we", "us"). You can reach us at hello@cutlineai.com, and we reply from that address.
+
+Gumroad sells Cutline on our behalf as the merchant of record, so your purchase, payment, tax and receipt are handled by Gumroad. We're registering Cutline as a UK company, and we'll add the company name, number and registered address to this page as soon as that's done.
 
 ## Buying Cutline
 

@@ -14,7 +14,7 @@ Version 2026-10-20. Last updated 20 October 2026.
 
 ## Who we are
 
-Cutline ("we", "us") decides how the data described here is used, which makes us the controller under UK data protection law. Contact us at hello@cutlineai.com. We'll list our full trading name and address here before Cutline goes on sale.
+Cutline ("we", "us") decides how the data described here is used, which makes us the controller under UK data protection law. Contact us at hello@cutlineai.com. We're registering Cutline as a UK company, and we'll add the company name, number and registered address here as soon as that's done.
 
 ## Using Cutline
 
