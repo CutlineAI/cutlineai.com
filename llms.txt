@@ -5,7 +5,7 @@
 - How it works: Cutline is an MCP server (Model Context Protocol) installed as a Claude desktop extension, plus a panel inside Premiere Pro and After Effects. It talks to the apps over a local connection on the Mac; footage never leaves the computer.
 - What it does: more than 160 tools across both apps: cuts, trims, ripples, gaps and silences, markers, titles, effects, keyframes, audio ducking, project housekeeping, exports, and After Effects comps, layers, keyframes, expressions and the render queue.
 - Requirements: a Mac; the current Premiere Pro or After Effects from Creative Cloud (tested on the latest versions, October 2026); the Claude desktop app on a paid Claude plan.
-- Status: in beta with working editors; public launch soon. Coming soon: ChatGPT support, Windows, Cutline Colour, Cutline Review, an auto rough cut.
+- Availability (October 2026): on sale now for Mac. 7-day free trial, then $14 a month or $120 a year; Founding Edition $89 once for the first 50 editors, with every future update. Buy or try at https://cutlineai.gumroad.com/l/cutline. Coming soon: ChatGPT support, Windows, Cutline Colour, Cutline Review, an auto rough cut.
 - Contact: hello@cutlineai.com. Website: https://cutlineai.com
 - Cutline is independent software, not made by Adobe or Anthropic.
 

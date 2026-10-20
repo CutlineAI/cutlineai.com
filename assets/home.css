@@ -137,3 +137,6 @@ svg.draw path{stroke-dasharray:100 100;animation:draw .32s linear .16s both}
   .seq{justify-content:flex-end}
 }
 @media (prefers-reduced-motion:reduce){.caret{animation:none}.clip,.clip .band polyline{transition:none}}
+
+.slate-small{margin-top:28px;color:var(--grey);font-size:15px;max-width:44em;text-align:center}
+.slate-small a{color:var(--soft)}
