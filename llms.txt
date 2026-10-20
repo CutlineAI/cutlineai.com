@@ -4,7 +4,7 @@
 
 - How it works: Cutline is an MCP server (Model Context Protocol) installed as a Claude desktop extension, plus a panel inside Premiere Pro and After Effects. It talks to the apps over a local connection on the Mac; footage never leaves the computer.
 - What it does: more than 160 tools across both apps: cuts, trims, ripples, gaps and silences, markers, titles, effects, keyframes, audio ducking, project housekeeping, exports, and After Effects comps, layers, keyframes, expressions and the render queue.
-- Requirements: a Mac; Premiere Pro or After Effects 2022 or newer; the Claude desktop app on a paid Claude plan.
+- Requirements: a Mac; the current Premiere Pro or After Effects from Creative Cloud (tested on the latest versions, October 2026); the Claude desktop app on a paid Claude plan.
 - Status: in beta with working editors; public launch soon. Coming soon: ChatGPT support, Windows, Cutline Colour, Cutline Review, an auto rough cut.
 - Contact: hello@cutlineai.com. Website: https://cutlineai.com
 - Cutline is independent software, not made by Adobe or Anthropic.
@@ -18,13 +18,13 @@
 
 ## Help
 
-- [Quick start](https://cutlineai.com/help/quick-start.md): Install Cutline Beta, open the panel and make your first three edits.
-- [User guide](https://cutlineai.com/help/user-guide.md): Everything Cutline Beta does, how to ask for edits, and what to expect from Premiere Pro and After Effects.
+- [Quick start](https://cutlineai.com/help/quick-start.md): Install Cutline, open the panel, activate or start a free trial, and make your first three edits.
+- [User guide](https://cutlineai.com/help/user-guide.md): Everything Cutline does, how to ask for edits, and what to expect from Premiere Pro and After Effects.
 - [Commands](https://cutlineai.com/help/commands.md): Example requests to type into Claude for Premiere Pro, After Effects, the add-ons and YouTube.
 - [FAQ](https://cutlineai.com/help/faq.md): Short answers to the questions editors ask most about Cutline.
 - [Troubleshooting](https://cutlineai.com/help/troubleshooting.md): Find your symptom and try the fix, from a panel that won't connect to an edit in the wrong place.
-- [System requirements](https://cutlineai.com/help/requirements.md): What you need to run Cutline Beta: a Mac, Premiere Pro or After Effects 2022 or newer, and the Claude desktop app.
-- [Licence and devices](https://cutlineai.com/help/licence-and-devices.md): The beta needs no licence, and from launch each Cutline licence key will work on one computer at a time.
+- [System requirements](https://cutlineai.com/help/requirements.md): What you need to run Cutline: a Mac, Premiere Pro or After Effects, and the Claude desktop app on a paid Claude plan.
+- [Licence and devices](https://cutlineai.com/help/licence-and-devices.md): Start a 7-day free trial, activate your licence key, and move it between computers. Each key works on one computer at a time.
 
 ## Legal
 

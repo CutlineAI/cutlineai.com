@@ -59,13 +59,13 @@ An MCP server can do anything its tools allow, on your computer, in your apps. I
 Cutline answers the checklist above like this.
 
 - It's an MCP server installed as a Claude desktop extension, with more than 160 tools across Premiere Pro and After Effects.
-- A panel docks inside each Adobe app. It shows the connection status, idea tiles, the open sequence or comp, the playhead timecode and an **Undo last change** button. You open it from **Window > Extensions > Cutline Beta**.
+- A panel docks inside each Adobe app. It shows the connection status, idea tiles, the open sequence or comp, the playhead timecode and an **Undo last change** button. You open it from **Window > Extensions > Cutline**.
 - The panel talks to Premiere Pro and After Effects through Adobe's own scripting, ExtendScript and UXP, over a local connection on your Mac. Your footage never leaves the computer.
 - What you type, plus the clip names, times and frames Cutline reports, goes to your AI provider under that provider's terms.
 - Every change lands as ordinary clips, keyframes and markers. "Undo last change" takes back the whole last change in one click.
 - It never saves the project unless you ask, and backs up the sequence before big batch edits.
 
-Cutline is independent. It isn't made by Adobe or Anthropic. It needs a Mac, Premiere Pro or After Effects 2022 or newer, and the Claude desktop app on a paid Claude plan. As of October 2026 it's in beta, with ChatGPT support and Windows coming soon. The [features](/features.html) page lists every tool, and the [requirements](/help/requirements.html) page has the details.
+Cutline is independent. It isn't made by Adobe or Anthropic. It needs a Mac, Premiere Pro or After Effects, and the Claude desktop app on a paid Claude plan. As of October 2026 it's available with a 7-day free trial, and ChatGPT support and Windows are coming soon. The [features](/features.html) page lists every tool, and the [requirements](/help/requirements.html) page has the details.
 
 ## Questions people ask
 
@@ -75,7 +75,7 @@ MCP, the Model Context Protocol, is an open standard that lets AI apps use tools
 
 ### Is there an MCP server for Premiere Pro?
 
-Yes. Cutline is an MCP server for Premiere Pro and After Effects that installs as a Claude desktop extension on a Mac. It's in beta as of October 2026.
+Yes. Cutline is an MCP server for Premiere Pro and After Effects that installs as a Claude desktop extension on a Mac. It's available as of October 2026, with a 7-day free trial.
 
 ### Do I need to be technical to use MCP?
 

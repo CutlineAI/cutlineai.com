@@ -1,6 +1,6 @@
 # User guide
 
-Everything Cutline Beta does, how to ask for edits, and what to expect from Premiere Pro and After Effects.
+Everything Cutline does, how to ask for edits, and what to expect from Premiere Pro and After Effects.
 
 
 Cutline is an assistant editor for Premiere Pro and After Effects. You type what you want in plain English in the Claude desktop app. Cutline makes the edit in your real, open project, reads the result back and tells you what changed.
@@ -13,7 +13,7 @@ Cutline has three parts.
 
 - **The Claude desktop app.** This is where you type. The AI runs on your own Claude account and plan.
 - **The Cutline extension in Claude.** A small background program that Claude starts for you. It passes requests between Claude and your Adobe apps, and installs updates. It has no window and you never run it by hand.
-- **The Cutline Beta panel.** A panel inside Premiere Pro and After Effects. It carries out each edit in the app and shows you what's going on.
+- **The Cutline panel.** A panel inside Premiere Pro and After Effects. It carries out each edit in the app and shows you what's going on.
 
 The connection between Claude and your Adobe apps stays on your computer. Cutline doesn't upload your media files. What you type, and the results of each step, go to Anthropic, because that's where Claude runs. Those results include clip names, times, track layouts, file names and any frames the AI looks at.
 
@@ -29,10 +29,10 @@ The connection between Claude and your Adobe apps stays on your computer. Cutlin
 You don't need Terminal, Adobe developer settings or a separate Adobe installer.
 
 1. Make sure the Claude desktop app is installed and you're signed in.
-2. Download the installer from the beta link you were sent.
+2. Download Cutline.mcpb from your Gumroad receipt or library.
 3. Double-click it. It adds Cutline to the Claude desktop app and installs the panel.
 4. Quit Premiere Pro or After Effects if it's open, then open it again. Adobe apps only look for new panels when they start.
-5. Choose **Window > Extensions > Cutline Beta**.
+5. Choose **Window > Extensions > Cutline**.
 6. Dock the panel somewhere out of the way and keep it open while you work. Docked is fine.
 
 Cutline can only work in an app while its panel is open there. Do the last two steps in each app you want to use.
@@ -41,7 +41,7 @@ The first time Cutline uses a tool, Claude may ask for your permission. Allow it
 
 ## Your licence
 
-You don't need a licence during the beta. For how licences will work from launch, see [Licence and devices](licence-and-devices.html).
+The first time you open the panel, tick **I agree to the licence agreement and the privacy policy**, then paste your licence key and click **Activate**, or click **Try it free for 7 days**. See [Licence and devices](licence-and-devices.html).
 
 ## The panel
 
@@ -201,7 +201,7 @@ Briefs, handbooks, scripts and notes that Cutline reads before it edits.
 
 ### Colour
 
-For Premiere Pro. In Cutline Beta now, and coming soon to the public release. It grades the way a colourist works: measure, balance, match, then one shared look.
+For Premiere Pro. Coming soon. It grades the way a colourist works: measure, balance, match, then one shared look.
 
 - **Look** measures a frame of each camera like scopes: black point, mids, white point, clipping, how neutral the greys are, and skin on the face against the skin line.
 - **Balance** brings the main camera's skin to a natural level and neutralises the greys, with small moves.
@@ -220,7 +220,7 @@ Skin decides the grade. If something looks too dark or too colourful to you, say
 
 ### Review
 
-For Premiere Pro. In Cutline Beta now, and coming soon to the public release. A review tab for your revision notes.
+For Premiere Pro. Coming soon. A review tab for your revision notes.
 
 - Open the **Review** tab with a sequence open. Choose **Linked to timeline**, where the player follows Premiere's playhead, or **Independent**, where you play and scrub here without moving Premiere.
 - Click **Render preview** for smooth playback. It renders through Adobe Media Encoder while you keep editing. Without a preview, you see Premiere's frame.
@@ -287,7 +287,7 @@ New tools and fixes install themselves in the background while Claude is open. T
 
 ## Uninstalling
 
-1. In Claude, go to **Settings > Extensions**, find Cutline Beta and uninstall it.
+1. In Claude, go to **Settings > Extensions**, find Cutline and uninstall it.
 2. If you'd also like the panel and Cutline's saved data removed from your Mac, email [hello@cutlineai.com](mailto:hello@cutlineai.com) and we'll help.
 
 Cutline keeps its settings, logs, Context items, Review notes and saved Colour references in its own folder. The button under Troubleshooting in the panel's Settings tab shows you where.

@@ -2,7 +2,7 @@
 
 Use Cutline to change layers, keyframes, text and render settings in your open After Effects comp by typing requests into the Claude desktop app.
 
-The most direct way to use Claude in After Effects today is Cutline, a plugin that connects the Claude desktop app to After Effects on a Mac. You type a request such as "stagger the selected layers by 5 frames" or "fade the title in over the first 10 frames", and Cutline makes the change in the comp you have open, then tells you what changed. As of October 2026 Cutline is in beta, and it works with Premiere Pro too.
+The most direct way to use Claude in After Effects today is Cutline, a plugin that connects the Claude desktop app to After Effects on a Mac. You type a request such as "stagger the selected layers by 5 frames" or "fade the title in over the first 10 frames", and Cutline makes the change in the comp you have open, then tells you what changed. As of October 2026 Cutline is available for Mac with a 7-day free trial, and it works with Premiere Pro too.
 
 Cutline is independent software. It isn't made by Adobe or Anthropic.
 
@@ -22,19 +22,19 @@ You still design the motion. Cutline moves the values so you don't have to dig t
 ## What you need
 
 - A Mac. Cutline is tested on Apple silicon. Windows is coming soon.
-- After Effects 2022 (version 22.0) or newer, including Beta versions.
+- After Effects, the current version from Creative Cloud. Cutline is tested on the latest versions (October 2026); tell us if your version gives you trouble.
 - The Claude desktop app, signed in on a paid Claude plan.
-- Beta access. Email [hello@cutlineai.com](mailto:hello@cutlineai.com) to get in early.
+- A Cutline licence, or the 7-day free trial, which needs no key and no card.
 - Adobe Media Encoder, only if you want Cutline to send renders there.
 
 See [requirements](/help/requirements.html) for the details.
 
 ## How to set it up
 
-1. Email [hello@cutlineai.com](mailto:hello@cutlineai.com) for a beta invite and download link.
+1. Get Cutline from [cutlineai.com](/), then download Cutline.mcpb from your Gumroad receipt or library.
 2. Download the installer and double-click it. It adds Cutline to the Claude desktop app as an extension and installs the panel.
 3. Quit After Effects if it's open, then open it again.
-4. Choose **Window > Extensions > Cutline Beta**.
+4. Choose **Window > Extensions > Cutline**.
 5. Dock the panel and keep it open while you work. The status light next to the Cutline name turns green and says **Ready** on hover when it's connected.
 6. Open a comp, then type `What's in this comp?` into Claude. Allow the tool if Claude asks for permission.
 
@@ -80,7 +80,7 @@ For more on working this way, see [AI editing without losing control](/guides/ai
 ## Limits to know about
 
 - **Mac only** for now, and **Claude only** until ChatGPT support arrives.
-- **It's in beta.** Check each change, and keep your usual backups.
+- **It's new.** Check each change, and keep your usual backups.
 - **The AI can misunderstand.** If a request is vague, it may change the wrong layer or property. Read the report and look at the frame.
 - **Masks are rectangles and ellipses.** Custom mask shapes are still drawn by hand.
 - **Rendering keeps After Effects busy.** For long renders, ask Cutline to send the queue to Media Encoder instead.
@@ -119,7 +119,7 @@ It can set up and change the keyframes, easing, text and layers you ask for. The
 
 ### Which versions of After Effects does it support?
 
-After Effects 2022 (version 22.0) or newer, including Beta versions, on a Mac.
+The current version of After Effects from Creative Cloud, on a Mac. Cutline is tested on the latest versions (October 2026).
 
 ## Related guides
 

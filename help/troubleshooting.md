@@ -9,19 +9,19 @@ If you're still stuck, email [hello@cutlineai.com](mailto:hello@cutlineai.com) w
 
 ## The panel
 
-### Cutline Beta isn't under Window > Extensions
+### Cutline isn't under Window > Extensions
 
 1. Open the Claude desktop app. Claude starts Cutline, and that's what puts the panel into Premiere Pro and After Effects.
 2. Quit Claude completely with Cmd+Q, then open it again.
 3. Quit Premiere Pro or After Effects and open it again. Adobe apps only look for new panels when they start.
-4. If your Adobe app has a **Window > Extensions (Legacy)** menu, look for Cutline Beta there.
+4. If your Adobe app has a **Window > Extensions (Legacy)** menu, look for Cutline there.
 
 ### The status light says Not connected
 
 The light next to the name is hollow, and hovering over it says Not connected. The panel can't reach Cutline in Claude.
 
 1. Check the Claude desktop app is open. The panel only connects while it's running, and the light turns green within a few seconds of opening it.
-2. In Claude, go to **Settings > Extensions**. Cutline Beta should be listed and switched on. If it isn't listed, double-click the installer again.
+2. In Claude, go to **Settings > Extensions**. Cutline should be listed and switched on. If it isn't listed, double-click the installer again.
 3. In the panel, go to **Settings** and click **Reload panel**.
 4. Still red? Quit Claude and the Adobe app completely. Open Claude first, wait a few seconds, then open the Adobe app.
 
@@ -31,7 +31,7 @@ The panel can see that Claude isn't running. Open the Claude desktop app and the
 
 ### The Home tab says Claude is open but Cutline isn't running
 
-Cutline isn't switched on in Claude. In Claude, go to **Settings > Extensions** and switch Cutline Beta on. If it isn't listed, double-click the installer again.
+Cutline isn't switched on in Claude. In Claude, go to **Settings > Extensions** and switch Cutline on. If it isn't listed, double-click the installer again.
 
 ### The status light says Not ready
 
@@ -43,13 +43,13 @@ In the panel, go to **Settings** and click **Reload panel**. If an add-on's tab 
 
 ### The panel is blank or frozen
 
-Close the panel and open it again from **Window > Extensions > Cutline Beta**. If that doesn't help, restart the Adobe app.
+Close the panel and open it again from **Window > Extensions > Cutline**. If that doesn't help, restart the Adobe app.
 
 ## Claude
 
 ### Claude doesn't seem to know about Cutline
 
-1. In Claude, go to **Settings > Extensions** and check Cutline Beta is installed and switched on.
+1. In Claude, go to **Settings > Extensions** and check Cutline is installed and switched on.
 2. Start a new conversation. Tools added or changed during a conversation sometimes only show up in a new one.
 3. Quit Claude completely and open it again.
 4. Ask Claude "Is Cutline connected?" It checks which Adobe apps are connected and which version of Cutline's tools you have.
@@ -60,7 +60,7 @@ That's Claude's own safety prompt. You can allow Cutline's tools so it stops ask
 
 ### Claude says an app isn't connected
 
-The Cutline Beta panel isn't open in that app, or the app is closed. Open **Window > Extensions > Cutline Beta** in that app and keep the panel open. Docked is fine.
+The Cutline panel isn't open in that app, or the app is closed. Open **Window > Extensions > Cutline** in that app and keep the panel open. Docked is fine.
 
 ## Editing
 
@@ -124,7 +124,7 @@ Usually a network blip. In the panel, go to **Settings** and click **Check for u
 
 ### The panel says automatic updates are off
 
-In Claude, go to **Settings > Extensions**, open Cutline Beta and switch automatic tool updates back on.
+In Claude, go to **Settings > Extensions**, open Cutline and switch automatic tool updates back on.
 
 ### An update says it needs a newer version of Cutline
 

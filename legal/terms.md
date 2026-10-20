@@ -19,6 +19,7 @@ Gumroad sells Cutline on our behalf as the merchant of record, so your purchase,
 - **Prices** are shown on the checkout page before you pay, including any tax.
 - **Subscriptions** renew automatically at the end of each month or year until you cancel. Cancel any time from the link in your Gumroad receipt or your Gumroad library. Cutline keeps working until the end of the period you've paid for.
 - **Price changes.** If we change a subscription price, we'll email you at least 30 days before it affects you, and you can cancel before then.
+- **Founding Edition** is a one-off payment for a lifetime licence, limited to the first 50 sold. It includes every future update to Cutline. The [licence agreement](licence.html) explains what "lifetime" covers, including when Adobe or AI apps change.
 - **Free trials** last for the period shown at checkout. If a trial asks for payment details and you don't cancel before it ends, your first payment is taken when it ends.
 
 ## Your right to cancel
@@ -29,7 +30,7 @@ We give you more than the law does anyway. See the [refund policy](refunds.html)
 
 ## What you need
 
-Cutline needs a Mac, Adobe Premiere Pro or After Effects, and an AI app on a plan you pay for separately. Check the [requirements](../help/requirements.html) before you buy. We can't refund your Adobe or AI subscriptions.
+Cutline needs a Mac, Adobe Premiere Pro or After Effects (tested on the latest versions), and the Claude desktop app on a paid Claude plan, which you pay for separately. It doesn't work with other AI apps, such as ChatGPT, yet. Check the [requirements](../help/requirements.html) before you buy. We can't refund your Adobe or AI subscriptions.
 
 ## Using this website
 

@@ -1,26 +1,23 @@
 # Licence and devices
 
-The beta needs no licence, and from launch each Cutline licence key will work on one computer at a time.
+Start a 7-day free trial, activate your licence key, and move it between computers. Each key works on one computer at a time.
 
 
-## During the beta
+## The free trial
 
-Cutline Beta needs no licence. Install it and use it as normal.
+The first time you open the Cutline panel, tick **I agree to the licence agreement and the privacy policy**, then click **Try it free for 7 days**. The trial needs no key and no card, and it ends by itself. You can add your key at any time.
 
-## From launch
+## Your licence key
 
-From launch, Cutline will use a licence key. This page explains how keys will work, so you know what to expect.
-
-### Your licence key
-
+- Your key is in your Gumroad receipt email, and in your Gumroad library at app.gumroad.com/library.
 - Each licence key is for one person.
 - Keep it somewhere safe. You'll need it if you set up Cutline on a new computer.
 
 ### One computer at a time
 
-Your key will be active on one computer at a time. Premiere Pro and After Effects on the same computer share that one activation.
+Your key is active on one computer at a time. Premiere Pro and After Effects on the same computer share that one activation.
 
-To activate, open the Cutline panel in Premiere Pro or After Effects, paste your key and click **Activate**.
+To activate, open the Cutline panel in Premiere Pro or After Effects, tick **I agree to the licence agreement and the privacy policy**, paste your key and click **Activate**.
 
 ### Moving to a new computer
 
@@ -37,6 +34,8 @@ You can move your key up to 3 times in any 30 days. That covers a new Mac, swapp
 
 Selling or wiping a computer? Free your key first. In the panel's **Settings** tab, click **Deactivate on this computer**. Your key is then free for another computer.
 
+To take Cutline off a computer completely, choose **Remove from this computer** in **Settings**. That frees your key and deletes the panel and Cutline's data. Then remove Cutline in the Claude desktop app under **Settings**, **Extensions**.
+
 ### Working offline
 
 Cutline checks your licence now and then in the background. It keeps working for up to 7 days between successful checks, so a flight, a location shoot or a dead router won't stop you. When you're back online, it checks again by itself.
@@ -45,13 +44,11 @@ Claude itself still needs the internet, because the AI runs online.
 
 ### What the licence server knows
 
-To make the one-computer rule work, Cutline's licence server stores three things:
+To make the one-computer rule work, Cutline's licence server stores a scrambled (hashed) copy of your key, never the key itself, plus a random device ID that Cutline creates and your computer's name, so it can tell you where the key is active. It stores nothing about your projects or media. The [privacy policy](../legal/privacy.html) lists everything it keeps, and for how long.
 
-- your licence key
-- a random device ID that Cutline creates on your computer
-- your computer's name, so Cutline can tell you where the key is active
+## Cancelling
 
-It stores nothing about your projects or media.
+Cancel a monthly or yearly plan any time from your Gumroad receipt or library. Cutline keeps working until the end of the period you've paid for. See the [refund policy](../legal/refunds.html).
 
 ## Your Claude plan
 

@@ -65,7 +65,7 @@ Cutline is a plugin that connects the Claude desktop app to Premiere Pro and Aft
 - **A history you can read.** The panel's History tab lists everything Cutline looked at or changed this session, marked Edit, Look or Failed.
 - **Your media stays local.** Cutline talks to Premiere Pro and After Effects over a local connection on your Mac. What you type, plus the clip names, times and frames it reports, goes to your AI provider under that provider's terms.
 
-Cutline is independent. It isn't made by Adobe or Anthropic. As of October 2026 it's in beta, Mac only, and needs the Claude desktop app on a paid Claude plan. See the [features](/features.html) page for everything it does.
+Cutline is independent. It isn't made by Adobe or Anthropic. As of October 2026 it's available for Mac, with a 7-day free trial, and needs the Claude desktop app on a paid Claude plan. See the [features](/features.html) page for everything it does.
 
 ## Questions people ask
 

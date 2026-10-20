@@ -1,6 +1,6 @@
 # System requirements
 
-What you need to run Cutline Beta: a Mac, Premiere Pro or After Effects 2022 or newer, and the Claude desktop app.
+What you need to run Cutline: a Mac, Premiere Pro or After Effects, and the Claude desktop app on a paid Claude plan.
 
 
 ## Computer
@@ -16,8 +16,8 @@ What you need to run Cutline Beta: a Mac, Premiere Pro or After Effects 2022 or 
 
 | App | Version |
 | --- | --- |
-| **Premiere Pro** | 2022 (version 22.0) or newer, including Beta versions. |
-| **After Effects** | 2022 (version 22.0) or newer, including Beta versions. |
+| **Premiere Pro** | The current version from Creative Cloud. Cutline is tested on the latest versions (October 2026); tell us if your version gives you trouble. |
+| **After Effects** | The current version from Creative Cloud. Cutline is tested on the latest versions (October 2026); tell us if your version gives you trouble. |
 | **Colour add-on** | Premiere Pro 25.6 or newer. It uses Premiere's newer scripting. |
 | **Adobe Media Encoder** | Needed for queued exports, sending After Effects renders to Media Encoder, and Review add-on previews. Not needed for direct exports. |
 
@@ -42,7 +42,7 @@ Tips for your AI allowance:
 
 ## Licence
 
-The beta needs no licence. For how licences will work from launch, see [Licence and devices](licence-and-devices.html).
+You need a Cutline licence key, or nothing at all for the 7-day free trial. See [Licence and devices](licence-and-devices.html).
 
 ## Not needed
 

@@ -14,8 +14,9 @@ If Cutline isn't right for you, email hello@cutlineai.com within 14 days of your
 - **First payment.** Full refund on request within 14 days of your first payment, on any plan.
 - **Yearly renewals.** Forgot to cancel? Email us within 14 days of the renewal and we'll refund the renewal.
 - **Monthly renewals.** Cancel any time and Cutline keeps working to the end of the month you've paid for. We don't refund part months.
-- **Lifetime licences** (if we offer them). Full refund on request within 14 days of purchase.
-- **If Cutline breaks.** If an update stops Cutline working for you and we can't fix it within a reasonable time, email us and we'll refund the time you couldn't use it, whenever that happens.
+- **Founding Edition and other lifetime licences.** Full refund on request within 14 days of purchase. After that, lifetime licences aren't refundable.
+- **If our update breaks Cutline.** If an update from us stops Cutline working for you and we can't fix it within a reasonable time, email us and we'll refund the unused part of your current monthly or yearly payment.
+- **If Adobe or your AI app changes.** Cutline depends on Adobe's apps and your AI app, which other companies change. If one of their updates stops Cutline working, we'll work to fix it, and you can cancel a monthly or yearly plan at any time. Outside the 14 days above, we don't give refunds for changes other companies make, including on lifetime licences. See "Adobe and AI app changes" in the [licence agreement](licence.html).
 
 Refunds go back to the card or account you paid with, through Gumroad, usually within 5 to 10 working days. Your licence key stops working when the refund goes through.
 

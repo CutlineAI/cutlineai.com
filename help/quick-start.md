@@ -1,6 +1,6 @@
 # Quick start
 
-Install Cutline Beta, open the panel and make your first three edits.
+Install Cutline, open the panel, activate or start a free trial, and make your first three edits.
 
 
 Cutline lets you edit by typing. You say what you want in the Claude desktop app. Cutline makes the edit in the Premiere Pro or After Effects project you have open, then tells you what changed.
@@ -8,18 +8,18 @@ Cutline lets you edit by typing. You say what you want in the Claude desktop app
 ## What you need
 
 - A Mac. Windows is coming soon.
-- Premiere Pro or After Effects, 2022 or newer. You can use one or both.
+- Premiere Pro, After Effects, or both, in the current versions from Creative Cloud.
 - The Claude desktop app, signed in to your Claude account. The AI runs on your own account, so a paid Claude plan is best.
-- The beta link you were sent.
+- Cutline.mcpb, from your Gumroad receipt email or your Gumroad library.
 
-You don't need a licence key during the beta.
+- Your licence key, or nothing at all for the free trial. The 7-day trial needs no key and no card.
 
 ## Install
 
-1. Download the installer from the beta link you were sent.
+1. Download Cutline.mcpb from your Gumroad receipt or library.
 2. Double-click it. It adds Cutline to the Claude desktop app and installs the panel.
 3. Quit Premiere Pro or After Effects if it's open, then open it again.
-4. Choose **Window > Extensions > Cutline Beta**.
+4. Choose **Window > Extensions > Cutline**.
 5. Dock the panel somewhere out of the way and keep it open while you work.
 
 When Cutline can work in that app, the light next to the name at the top of the panel turns green. Hover over it and it says **Ready**.

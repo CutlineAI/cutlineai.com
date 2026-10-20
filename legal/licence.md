@@ -33,7 +33,7 @@ Add-ons are covered by this licence when your plan includes them or you've bough
 
 - **Monthly and yearly plans.** Your licence lasts while your subscription is active. When it ends, Cutline stops working.
 - **Free trials.** Your licence lasts for the trial period.
-- **One-off lifetime licences** (if we offer them). Your licence has no end date. It covers updates for as long as we develop and sell Cutline, unless it ends under "Ending this agreement" below.
+- **Founding Edition and other one-off lifetime licences.** Your licence has no end date. It includes every future update to Cutline, and the add-ons a Cutline plan includes, for as long as we develop and sell Cutline. "Lifetime" means the life of Cutline, not the life of any particular version of Adobe's apps or your AI app (see "Adobe and AI app changes" below). It can still end under "Ending this agreement" below.
 
 ## What you may not do
 
@@ -77,6 +77,19 @@ Cutline acts on instructions given through an AI. AI can misunderstand, and edit
 ## Updates
 
 Cutline updates itself. Updates can add, change or remove features, for example when Adobe or AI providers change their products. We aim to keep Cutline working with current versions of Premiere Pro, After Effects and supported AI apps, but we can't guarantee it.
+
+## Adobe and AI app changes
+
+Cutline depends on software made by other companies: Adobe's apps and their scripting systems, and your AI app. They change these without asking us. For example, Adobe is moving its apps from its older scripting system (ExtendScript) to a newer one (UXP). An update from Adobe, Anthropic or another provider could stop some or all of Cutline working.
+
+When that happens, we'll work to bring Cutline back as quickly as we reasonably can, and we'll post what's affected on cutlineai.com. As far as the law allows:
+
+- a change another company makes that stops Cutline working, in whole or in part, isn't a breach of this agreement by us;
+- we don't have to keep supporting older versions of Adobe's apps or AI apps, or support a new version by a set date;
+- if a change means Cutline can't reasonably be made to work again, we can stop developing it, and lifetime licences end with it;
+- refunds for these changes follow the [refund policy](refunds.html).
+
+If you're on a monthly or yearly plan, you can cancel at any time. Where Adobe lets you keep an older version of its apps, you can keep using Cutline with a version it still works with.
 
 ## Ownership
 

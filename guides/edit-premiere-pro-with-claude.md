@@ -2,7 +2,7 @@
 
 Use Cutline to edit your open Premiere Pro timeline by typing plain English into the Claude desktop app. Setup, example requests and limits.
 
-The most direct way to edit in Premiere Pro with Claude today is Cutline, a plugin that connects the Claude desktop app to Premiere Pro on a Mac. You type a request in plain English, such as "cut out 1:20 to 1:45 and close the gap", and Cutline makes that edit in the project you have open, reads the timeline back and tells you what changed. As of October 2026, Cutline is in beta with a small group of working editors, and it also works with After Effects.
+The most direct way to edit in Premiere Pro with Claude today is Cutline, a plugin that connects the Claude desktop app to Premiere Pro on a Mac. You type a request in plain English, such as "cut out 1:20 to 1:45 and close the gap", and Cutline makes that edit in the project you have open, reads the timeline back and tells you what changed. As of October 2026, Cutline is available for Mac with a 7-day free trial, and it also works with After Effects.
 
 Cutline is independent software. It isn't made by Adobe or Anthropic.
 
@@ -18,7 +18,7 @@ Cutline has three parts.
 
 - **The Claude desktop app.** This is where you type. The AI runs on your own Claude account.
 - **The Cutline extension in Claude.** Cutline is an MCP server. MCP, the Model Context Protocol, is the open standard Claude uses to connect to tools. Cutline installs as a Claude desktop extension and runs in the background. For more, see [what MCP means for video editors](/guides/mcp-for-video-editors.html).
-- **The Cutline Beta panel.** A panel that docks inside Premiere Pro. It carries out each edit through Adobe's own scripting (ExtendScript, and UXP where Premiere's newer scripting is needed). It shows the connection status, idea tiles you can copy, the open sequence, the playhead timecode and an **Undo last change** button.
+- **The Cutline panel.** A panel that docks inside Premiere Pro. It carries out each edit through Adobe's own scripting (ExtendScript, and UXP where Premiere's newer scripting is needed). It shows the connection status, idea tiles you can copy, the open sequence, the playhead timecode and an **Undo last change** button.
 
 A typical request goes like this.
 
@@ -32,19 +32,19 @@ The connection between Claude and Premiere Pro is a local one on your Mac. Your 
 ## What you need
 
 - A Mac. Cutline is tested on Apple silicon. Windows is coming soon.
-- Premiere Pro 2022 (version 22.0) or newer, including Beta versions.
+- Premiere Pro, the current version from Creative Cloud. Cutline is tested on the latest versions (October 2026); tell us if your version gives you trouble.
 - The Claude desktop app, signed in on a paid Claude plan. Pro suits most editors, and Max suits heavy daily use.
-- Beta access. Email [hello@cutlineai.com](mailto:hello@cutlineai.com) to get in early.
+- A Cutline licence, or the 7-day free trial, which needs no key and no card.
 
 You don't need Terminal, Adobe debug mode or any coding. Adobe Media Encoder is only needed for queued exports. The full list is on the [requirements](/help/requirements.html) page.
 
 ## How to set it up
 
-1. Email [hello@cutlineai.com](mailto:hello@cutlineai.com) for a beta invite. You'll get a download link.
+1. Get Cutline from [cutlineai.com](/), then download Cutline.mcpb from your Gumroad receipt or library.
 2. Make sure the Claude desktop app is installed and you're signed in.
 3. Download the installer and double-click it. It adds Cutline to the Claude desktop app and installs the panel.
 4. Quit Premiere Pro if it's open, then open it again. Premiere only looks for new panels when it starts.
-5. Choose **Window > Extensions > Cutline Beta**.
+5. Choose **Window > Extensions > Cutline**.
 6. Dock the panel and keep it open while you work.
 7. Check the status light next to the Cutline name. When it's green and says **Ready** on hover, you can start.
 8. In Claude, type `What have I got selected?` as a first check. The first time Cutline uses a tool, Claude may ask your permission. Allow it.
@@ -106,7 +106,7 @@ Know these limits before you rely on it.
 - **Mac only.** Windows is coming soon.
 - **Claude only.** ChatGPT support is coming soon.
 - **It needs a paid Claude plan.** The AI usage comes from your own plan. Looking at frames and reading very long timelines use more of it.
-- **It's in beta.** Expect rough edges, and keep your usual backups.
+- **It's new.** Check each change, and keep your usual backups.
 - **The AI can misunderstand.** A vague request can land on the wrong clip or the wrong range. Check each edit, especially on real client work.
 - **Adobe's scripting has gaps.** Scripts can't create adjustment layers, so Cutline reuses one from your project. It can make a caption track from a caption file but can't read the caption text back. Some Premiere versions don't let scripts remove effects. When something isn't possible, Cutline says so and explains how to do it by hand.
 
@@ -126,7 +126,7 @@ Yes, with a plugin that connects Claude to Premiere Pro. Cutline does this: you 
 
 ### Do I need to know how to code or use Terminal?
 
-No. You double-click an installer, restart Premiere Pro and open the panel from Window > Extensions > Cutline Beta. Everything else happens in the Claude app.
+No. You double-click an installer, restart Premiere Pro and open the panel from Window > Extensions > Cutline. Everything else happens in the Claude app.
 
 ### Does it work with ChatGPT?
 
@@ -146,7 +146,7 @@ Not yet. Cutline runs on Mac only today, and is tested on Apple silicon. Windows
 
 ### Which versions of Premiere Pro does it support?
 
-Premiere Pro 2022 (version 22.0) or newer, including Beta versions. Some features depend on what Adobe's scripting allows in your version, and Cutline tells you when something isn't possible.
+The current version of Premiere Pro from Creative Cloud. Cutline is tested on the latest versions (October 2026). Some features depend on what Adobe's scripting allows in your version, and Cutline tells you when something isn't possible.
 
 ### Will it replace my editor or assistant editor?
 

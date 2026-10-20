@@ -22,8 +22,8 @@ Cutline is independent. It isn't made by Adobe or Anthropic. It works with Premi
 Extra tools you switch on in the panel's **Add-ons** tab. They're off until you add them.
 
 - **Context** reads your briefs and house rules before it edits.
-- **Colour** measures, matches and grades the way a colourist does, in Premiere Pro. In the beta now, coming soon to the public release.
-- **Review** lets you leave timestamped notes that Cutline then actions, in Premiere Pro. In the beta now, coming soon to the public release.
+- **Colour** measures, matches and grades the way a colourist does, in Premiere Pro. Coming soon.
+- **Review** lets you leave timestamped notes that Cutline then actions, in Premiere Pro. Coming soon.
 
 ### Can it grade?
 
@@ -45,7 +45,7 @@ Cutline runs on your own Claude account, so the AI usage comes from your plan. E
 
 ### Which versions of Premiere Pro and After Effects does it work with?
 
-2022 or newer, including Adobe's Beta versions. The Colour add-on needs Premiere Pro 25.6 or newer.
+Use the current versions from Creative Cloud. Cutline is tested on the latest versions (October 2026); tell us if your version gives you trouble.
 
 ### Does it work on Windows?
 
@@ -53,11 +53,11 @@ Not yet. Cutline is Mac only today. Windows is coming soon.
 
 ### Do I need to code, use Terminal or turn on Adobe debug mode?
 
-No. You double-click the installer, restart your Adobe app, and open the panel from **Window > Extensions > Cutline Beta**. See [Quick start](quick-start.html).
+No. You double-click the installer, restart your Adobe app, and open the panel from **Window > Extensions > Cutline**. See [Quick start](quick-start.html).
 
 ### Do I need a licence key?
 
-Not during the beta. From launch, Cutline will use a licence key that works on one computer at a time. See [Licence and devices](licence-and-devices.html).
+Yes. Your licence key is in your Gumroad receipt and library, and it works on one computer at a time. You can also start a 7-day free trial from the panel with no key and no card. See [Licence and devices](licence-and-devices.html).
 
 ## Your work and your data
 

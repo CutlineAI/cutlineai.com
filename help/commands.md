@@ -140,7 +140,7 @@ These are real requests you can type into Claude. Copy one, change the times, tr
 
 ## Colour add-on (Premiere Pro)
 
-In Cutline Beta now, coming soon to the public release.
+Coming soon.
 
 - `Look at V1 and V2 at 10:00 and tell me how the skin and greys read.`
 - `Balance the close-up on V1 for skin, then match V2 to it.`
@@ -156,7 +156,7 @@ In Cutline Beta now, coming soon to the public release.
 
 ## Review add-on (Premiere Pro)
 
-In Cutline Beta now, coming soon to the public release.
+Coming soon.
 
 - `Action my review notes.`
 - `Go through my open notes in order and tell me which ones you couldn't do.`
