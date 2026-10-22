@@ -3,7 +3,7 @@
 What Cutline and this website collect, why, and what you can ask us to do with it.
 
 
-Version 2026-10-20. Last updated 20 October 2026.
+Version 2026-10-20. Last updated 22 October 2026.
 
 ## The short version
 
@@ -61,6 +61,10 @@ Gumroad sells Cutline and takes your payment. Gumroad shares your name, email ad
 
 This site is hosted on GitHub Pages. GitHub records visitors' IP addresses in its server logs for security. The fonts come from Google Fonts, so your browser sends your IP address to Google when a page loads. The home page loads Gumroad's checkout script, so the buy buttons can open Gumroad's checkout on our page; Gumroad's privacy policy covers anything you enter there. The site sets no cookies and runs no analytics.
 
+## Instagram comments and messages
+
+If you comment a keyword on one of our Instagram posts (for example "EDIT") to ask for a link, Meta passes us your comment, its ID, your Instagram username and user ID through Instagram's official API. We use them only to send you the one message you asked for and a short public reply to your comment. We don't add you to a list or message you again unless you message us. We keep the comment ID for 8 days so we never answer the same comment twice, and otherwise only a count of how many links we've sent. Messages you send us on Instagram stay in Instagram.
+
 ## Emailing us
 
 If you write to hello@cutlineai.com, we use what you send to answer you. If you attach a log or screenshot, check it for anything confidential first, because logs can include clip and file names.
@@ -72,6 +76,7 @@ If you write to hello@cutlineai.com, we use what you send to answer you. If you 
 - To keep a record that you accepted these terms: because we have a legitimate interest in being able to show it.
 - To keep tax and accounting records: because the law requires it.
 - To answer your emails and keep Cutline secure: because we have a legitimate interest in doing so.
+- To send the link you asked for when you comment a keyword on Instagram: because you asked for it, and we have a legitimate interest in answering.
 
 We'll only send you marketing email if you've asked for it, and you can stop it at any time.
 
@@ -86,10 +91,11 @@ We'll only send you marketing email if you've asked for it, and you can stop it 
 | Record of accepting these terms | While your licence is active, then 6 years |
 | Purchase and tax records | 6 years, as UK tax law requires |
 | Support emails | 2 years after the conversation ends |
+| Instagram comment IDs from keyword comments | 8 days |
 
 ## Who else handles it
 
-We use a few providers to run Cutline: Gumroad (sales), Cloudflare (licence service and email forwarding), GitHub (updates and this website) and Google (fonts). Some of them process data in the United States. Where they do, they protect it with the safeguards UK law requires, such as the UK International Data Transfer Addendum or the UK-US data bridge.
+We use a few providers to run Cutline: Gumroad (sales), Cloudflare (licence service, Instagram link replies and email forwarding), Meta (Instagram), GitHub (updates and this website) and Google (fonts). Some of them process data in the United States. Where they do, they protect it with the safeguards UK law requires, such as the UK International Data Transfer Addendum or the UK-US data bridge.
 
 We never sell your data.
 
