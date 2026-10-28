@@ -33,7 +33,7 @@ Add-ons are covered by this licence when your plan includes them or you've bough
 
 - **Monthly and yearly plans.** Your licence lasts while your subscription is active. When it ends, Cutline stops working.
 - **Free trials.** Your licence lasts for the trial period.
-- **Founding Edition and other one-off lifetime licences.** Your licence has no end date. It includes every future update to Cutline, and the add-ons a Cutline plan includes, for as long as we develop and sell Cutline. "Lifetime" means the life of Cutline, not the life of any particular version of Adobe's apps or your AI app (see "Adobe and AI app changes" below). It can still end under "Ending this agreement" below.
+- **Founding Edition and other one-off lifetime licences.** Your licence has no end date. It includes every future update to Cutline, and the Context and Auto Cut add-ons, for as long as we develop and sell Cutline. "Lifetime" means the life of Cutline, not the life of any particular version of Adobe's apps or your AI app (see "Adobe and AI app changes" below). It can still end under "Ending this agreement" below.
 
 ## What you may not do
 
