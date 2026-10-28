@@ -3,7 +3,7 @@
 What Cutline and this website collect, why, and what you can ask us to do with it.
 
 
-Version 2026-10-20. Last updated 22 October 2026.
+Version 2026-10-28. Last updated 28 October 2026.
 
 ## The short version
 
@@ -22,7 +22,7 @@ Cutline ("we", "us") decides how the data described here is used, which makes us
 
 Cutline's relay, which your AI app starts, talks to the Cutline panel in Premiere Pro and After Effects over a private connection on your own computer. It doesn't go over your network or the internet.
 
-Cutline doesn't send your media files anywhere and doesn't change them on disk. Silence detection and colour measurements run on your computer. Cutline keeps its settings, a log of what it did (for troubleshooting), and anything you add to its add-ons in its own folder on your computer. The log stays there unless you choose to send it to us.
+Cutline doesn't send your media files anywhere and doesn't change them on disk. When you download from YouTube, Cutline keeps a note of each download (the video link, title, channel, its licence, which right you said applies, and the time) in its folder on your computer. That note is never sent anywhere. Silence detection and colour measurements run on your computer. Cutline keeps its settings, a log of what it did (for troubleshooting), and anything you add to its add-ons in its own folder on your computer. The log stays there unless you choose to send it to us.
 
 ### What goes to your AI provider
 
@@ -45,11 +45,13 @@ Cutline's licence service runs on Cloudflare (Workers and KV storage) at updates
 
 **Licence checks** also ask Gumroad's licence service whether your key is valid. **Update checks** send your licence key and device ID, so signed updates and add-ons only go to valid licences. They never include your projects, files or conversations.
 
+**Bug reports and suggestions**, only when you agree to send one: the report text (what happened, the steps, what you expected), your Cutline tools version, which Adobe apps and versions were connected, and your macOS version. Each report also carries a scrambled fingerprint of your random device ID, so reports from the same computer can be grouped and limited to 10 a day; the device ID itself isn't kept. Your AI is told to leave out private details such as names, client details and file paths unless they're needed to understand the problem. Reports are stored on the licence service (Cloudflare) until we've read them, for up to 180 days.
+
 There are **no usage analytics**. Cutline doesn't report how you use it.
 
 ### Other services Cutline contacts
 
-- **YouTube,** directly from your computer, when you ask Cutline to search, read or watch a video.
+- **YouTube,** directly from your computer, when you ask Cutline to search, read, watch or download a video.
 - **GitHub,** to download two open-source tools the YouTube features use, checked against fixed checksums.
 - **Gumroad,** to confirm your licence and subscription are valid.
 
@@ -76,6 +78,7 @@ If you write to hello@cutlineai.com, we use what you send to answer you. If you 
 - To keep a record that you accepted these terms: because we have a legitimate interest in being able to show it.
 - To keep tax and accounting records: because the law requires it.
 - To answer your emails and keep Cutline secure: because we have a legitimate interest in doing so.
+- To read and fix the bug reports and suggestions you choose to send: because we have a legitimate interest in improving Cutline.
 - To send the link you asked for when you comment a keyword on Instagram: because you asked for it, and we have a legitimate interest in answering.
 
 We'll only send you marketing email if you've asked for it, and you can stop it at any time.
@@ -92,6 +95,7 @@ We'll only send you marketing email if you've asked for it, and you can stop it 
 | Purchase and tax records | 6 years, as UK tax law requires |
 | Support emails | 2 years after the conversation ends |
 | Instagram comment IDs from keyword comments | 8 days |
+| Bug reports and suggestions you send | Until we've read them, at most 180 days |
 
 ## Who else handles it
 

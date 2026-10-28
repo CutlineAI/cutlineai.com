@@ -3,7 +3,7 @@
 The agreement you accept when you install or use Cutline.
 
 
-Version 2026-10-20. Last updated 20 October 2026.
+Version 2026-10-28. Last updated 28 October 2026.
 
 This agreement is between you and Cutline ("we", "us"). You accept it by ticking "I agree to the licence agreement and the privacy policy" in the Cutline panel before you start a free trial or activate a licence key, or by installing or using Cutline. If you don't agree, don't install or use Cutline. You can reach us at hello@cutlineai.com.
 
@@ -49,7 +49,26 @@ Nothing here limits rights you have by law that can't be excluded, such as decom
 
 ## No piracy, and respect other services' rules
 
-Cutline's YouTube tools let your AI search YouTube, read a video's details and transcript, and look at frames, so it can find references and check footage. Cutline doesn't download videos and doesn't keep copies of anything it looks at. You agree not to use Cutline, or anything it finds or shows you, to:
+Cutline's YouTube tools let your AI search YouTube, read a video's details and transcript, and look at frames, so it can find references and check footage. Cutline can also download a YouTube video, or part of one, into your project.
+
+### Downloading from YouTube
+
+You may only download a video, or part of one, that is:
+
+- **your own**;
+- **your client's**, and you have their permission;
+- **someone else's, with the owner's permission**; or
+- **licensed under Creative Commons**, in which case you must credit it as its licence requires.
+
+Never use it for anyone else's content, to keep copies for later, or to share or re-upload what you download.
+
+Before every download, Cutline asks you which of these applies and keeps a note on your computer of what you said. You're responsible for that answer being true. YouTube's own terms still apply to you.
+
+We may switch the download feature off for anyone, or for everyone, at any time, for example if YouTube or a rights holder objects. Misusing it ends your licence.
+
+### Everything else
+
+You agree not to use Cutline, or anything it finds or shows you, to:
 
 - copy, download, rip, record, re-upload or distribute anyone else's video, audio, images or other content without the right to do so;
 - get round any technical protection, paywall, access control or download restriction, on YouTube or anywhere else;
